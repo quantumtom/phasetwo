@@ -1,10 +1,23 @@
 const path = require('path');
+const exportPlugin = require('./exportPlugin');
+
+// new webpack.DefinePlugin({"process.env": {
+//         NODE_ENV: '"development"'
+//     }}),
 
 module.exports = {
-    entry: './src/index.js',
+    entry: {
+        index: './src/index.js'
+        // header: './src/header.js'
+    },
     output: {
-        filename: 'bundle.js',
-        path: path.resolve(__dirname, 'dist')
+        // filename: 'bundle.js',
+        // Prod only
+        filename: 'bundle-[chunkhash].js',
+        path: path.resolve(__dirname, 'dist'),
+        publicPath: 'https://addons.redbull.com/us/phasetwo/dist/',
+        library: 'phasetwo',
+        libraryTarget: 'amd'
     },
     module: {
         rules: [
@@ -39,5 +52,8 @@ module.exports = {
                 }],
             }
         ]
-    }
+    },
+    plugins: [
+        new exportPlugin()
+    ]
 };

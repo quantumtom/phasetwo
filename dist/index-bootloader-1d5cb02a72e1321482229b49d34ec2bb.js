@@ -1,0 +1,1 @@
+define("phasetwo", [], function() { return { start: function(options) { return new Promise(function(resolve) {System.import("https://addons.redbull.com/us/phasetwo/dist/bundle-ad874ef8a0a91172e456.js").then(function(mod) { resolve(mod.default.start({el: options.el, config: options.config, lightboxController: options.lightboxController}))}); }); } }; });

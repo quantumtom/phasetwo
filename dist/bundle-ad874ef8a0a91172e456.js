@@ -1,4 +1,4 @@
-/******/ (function(modules) { // webpackBootstrap
+define("phasetwo", [], function() { return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
 /******/
@@ -57,7 +57,7 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
+/******/ 	__webpack_require__.p = "https://addons.redbull.com/us/phasetwo/dist/";
 /******/
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(__webpack_require__.s = 2);
@@ -103,6 +103,14 @@ function component() {
 }
 
 document.body.appendChild(component());
+
+var O = {
+    start: function () {
+        console.log('here');
+    }
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (O);
 
 
 /***/ }),
@@ -764,4 +772,4 @@ module.exports = "<div class=content style=display:none>\n\t<div class=overlay>\
 module.exports = __webpack_require__.p + "14566ddc6261926359eb320b7b30724d.png";
 
 /***/ })
-/******/ ]);
+/******/ ])});;
