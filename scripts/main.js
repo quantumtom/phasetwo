@@ -1044,8 +1044,6 @@ if(ColorThief.prototype.getColor=function(a,b){var c=this.getPalette(a,5,b),d=c[
 				}
 				
 				blazy();
-
-				// elms.grid.classList.add('hide-simple');
 				
 				setTimeout(function() {
 					checkHash();
@@ -1058,8 +1056,6 @@ if(ColorThief.prototype.getColor=function(a,b){var c=this.getPalette(a,5,b),d=c[
 
 			}
 		});
-
-		// elms.grid.classList.remove('hide-simple');
 
 		bindEvents();
 		if (window.history && window.history.pushState) {
