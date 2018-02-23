@@ -6,14 +6,12 @@ const exportPlugin = require('./exportPlugin');
 //     }}),
 
 module.exports = {
-    entry: {
-        index: './src/index.js'
-        // header: './src/header.js'
-    },
+    entry: [
+        './src/index.js',
+        './src/main.js'
+    ],
     output: {
-        // filename: 'bundle.js',
-        // Prod only
-        filename: 'bundle-[chunkhash].js',
+        filename: 'bundle-[hash].js',
         path: path.resolve(__dirname, 'dist'),
         publicPath: 'https://addons.redbull.com/us/phasetwo/dist/',
         library: 'phasetwo',
