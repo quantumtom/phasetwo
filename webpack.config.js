@@ -1,15 +1,10 @@
 const path = require('path');
 const exportPlugin = require('./exportPlugin');
 
-// new webpack.DefinePlugin({"process.env": {
-//         NODE_ENV: '"development"'
-//     }}),
-
 module.exports = {
-    entry: [
-        './src/index.js',
-        './src/main.js'
-    ],
+    entry: {
+        index: './src/index.js'
+    },
     output: {
         filename: 'bundle-[hash].js',
         path: path.resolve(__dirname, 'dist'),
