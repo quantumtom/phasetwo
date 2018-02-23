@@ -241,7 +241,7 @@ if(ColorThief.prototype.getColor=function(a,b){var c=this.getPalette(a,5,b),d=c[
 			var img = document.createElement("img");
 				img.className = "b-lazy animate js-hover-image";
 				img.src = emptyPixel;
-				img.dataset.src = assetPath + jsonFile[i].src;
+				img.dataset.src = assetPath + jsonFile[i].gridsrc;
 
 			img.addEventListener( "load", function() {
 				el.appendChild(img);
@@ -318,7 +318,7 @@ if(ColorThief.prototype.getColor=function(a,b){var c=this.getPalette(a,5,b),d=c[
 			var img = document.createElement("img");
 				img.className = "b-lazy animate js-hover-image";
 				img.src = emptyPixel;
-				img.dataset.src = assetPath + jsonFile[i].src;
+				img.dataset.src = assetPath + jsonFile[i].gridsrc;
 
 			img.addEventListener( "load", function() {
 				el.appendChild(img);
