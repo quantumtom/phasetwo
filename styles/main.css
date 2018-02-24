@@ -329,7 +329,7 @@ tr {
 
 @media screen and (min-width: 768px) {
 	.btn-about-close, #btn-about-mobile, .btn-overlay-close-desktop, .btn-overlay-close, .btn-overlay-close-mobile {
-		left: 36px;
+		left: 40px;
 		top: 53px;
 	}
 }
@@ -389,8 +389,8 @@ tr {
 
 @media screen and (min-width: 768px) {
 	.btn-about-close, .btn-overlay-close{
-		top: 23px;
-		left: -4px;
+		top: 20px;
+		left: 0px;
 	}
 }
 
@@ -1235,7 +1235,6 @@ img {
 	margin: 0 auto;
 	z-index: 1000000;
 	overflow: visible;
-	min-height: 320px;
 	-webkit-transition: 0.15s all ease-in-out;
 	-moz-transition: 0.15s all ease-in-out;
 	-o-transition: 0.15s all ease-in-out;
@@ -1249,6 +1248,7 @@ img {
 
 @media screen and ( min-width: 768px ) {
 	.overlay-media {
+		min-height: 320px;
 		-webkit-transition: 0.3s all ease-in-out;
 		-moz-transition: 0.3s all ease-in-out;
 		-o-transition: 0.3s all ease-in-out;
@@ -1476,6 +1476,7 @@ img {
 .social-artwork {
 	list-style: none;
 	padding: 0;
+	margin-bottom: 40px;
 }
 
 @media screen and ( min-width: 768px) {
@@ -1510,8 +1511,8 @@ img {
 	display: inline-block;
 }
 
-.artist-name {
-	margin-left: 40px;
+.original-post {
+	margin-right: 40px;
 }
 
 #artwork-artist {
@@ -1557,6 +1558,10 @@ img {
 	}
 }*/
 
+.artist-content {
+	max-width:  850px;
+}
+
 .social-artwork li.social-links{
 	/*float: right;*/
 	margin-top: 2px;
@@ -1576,7 +1581,7 @@ img {
 
 @media screen and ( min-width: 768px) { 
 	.social-artwork {
-		padding: 32px 0 0 0;
+		padding: 22px 0 0 0;
 	}
 
 	.roxrite-image-dark {
@@ -1747,7 +1752,6 @@ img {
 }
 
 #video-holder {
-    margin-bottom: 30px;
     position: relative;
     padding-top: 75%;
     cursor: pointer;
@@ -1761,6 +1765,7 @@ img {
 
 @media screen and ( min-width: 768px) { 
 	#video-holder {
+	    margin-bottom: 30px;
 		right: 15px;
 		/*margin-top: 5%;*/
 		top: 50%;
