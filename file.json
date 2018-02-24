@@ -4,7 +4,7 @@
 		"year": 2016,
 		"name": "Art Title 1",
 		"description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</p><p> magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolorin reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>",
-		"artist": "Artist Name 1",
+		"artist": "",
 		"gridsrc": "images/artwork/sunset.jpg",
 		"src": "images/artwork/Roxrite_Archival_Photos_WIN_06_NOLOGO.jpg",
 		"type": "image",
@@ -23,7 +23,7 @@
 		"gridsrc": "images/artwork/WIN-7-FRAME-WEB.jpg",
 		"type": "video",
 		"video": "WF34N4gJAKE",
-		"original": "http://www.google.com",
+		"original": "",
 		"social": {
 			"ig": "https://www.instagram.com/",
 			"tw": ""

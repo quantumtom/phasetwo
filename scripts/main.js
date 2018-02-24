@@ -598,7 +598,11 @@ if(ColorThief.prototype.getColor=function(a,b){var c=this.getPalette(a,5,b),d=c[
 		elms.artworkYear.innerHTML = vals.year;
 		elms.artworkTitle.innerHTML = vals.name;
 		elms.artworkDescription.innerHTML = vals.description;
+		
 		elms.artworkArtist.innerHTML = vals.artist;
+		(vals.artist == "") ? elms.artworkArtist.style.display = "none" : elms.artworkArtist.style.display = "block";
+		
+		(vals.original == "") ? elms.artworkPost.style.display = "none" : elms.artworkPost.style.display = "block";
 		elms.artworkPost.href = vals.original;
 
 		elms.afterBar.style.backgroundColor = color;

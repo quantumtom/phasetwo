@@ -1511,8 +1511,8 @@ img {
 	display: inline-block;
 }
 
-.artist-name {
-	margin-left: 40px;
+.original-post {
+	margin-right: 40px;
 }
 
 #artwork-artist {
@@ -1581,7 +1581,7 @@ img {
 
 @media screen and ( min-width: 768px) { 
 	.social-artwork {
-		padding: 32px 0 0 0;
+		padding: 22px 0 0 0;
 	}
 
 	.roxrite-image-dark {
