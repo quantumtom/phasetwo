@@ -1558,6 +1558,10 @@ img {
 	}
 }*/
 
+.artist-content {
+	max-width:  850px;
+}
+
 .social-artwork li.social-links{
 	/*float: right;*/
 	margin-top: 2px;
