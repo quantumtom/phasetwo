@@ -56,6 +56,6 @@ module.exports = {
     },
     plugins: [
         new exportPlugin(),
-        new CleanWebpackPlugin(['dist']),
+        // new CleanWebpackPlugin(['dist/*']),
     ]
 };
