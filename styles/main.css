@@ -329,7 +329,7 @@ tr {
 
 @media screen and (min-width: 768px) {
 	.btn-about-close, #btn-about-mobile, .btn-overlay-close-desktop, .btn-overlay-close, .btn-overlay-close-mobile {
-		left: 36px;
+		left: 40px;
 		top: 53px;
 	}
 }
@@ -389,8 +389,8 @@ tr {
 
 @media screen and (min-width: 768px) {
 	.btn-about-close, .btn-overlay-close{
-		top: 23px;
-		left: -4px;
+		top: 20px;
+		left: 0px;
 	}
 }
 
