@@ -2,7 +2,6 @@ import './styles/main.css';
 import './styles/fonts/Druk-Wide-Bold.otf';
 import './styles/fonts/Graphik-Regular.otf';
 import Markup from './raw.html';
-import './main.js';
 
 let O = {
     start: function (options) {

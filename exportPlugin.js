@@ -4,14 +4,14 @@ module.exports = class ExportPlugin {
     apply(compiler) {
         compiler.plugin('emit', (compilation, done) => {
             const headerTemplate = `define("${compiler.options.output.library}", [], function() { return { start: function(options) { return new Promise(function(resolve) {`
-            const importTemplate = `System.import("{{replacement}}")`
-            // const mainTemplate = `.then(function () { return System.import("https://addons.redbull.com/us/phasetwo/dist/main.js")})`
-            const mainTemplate = ''
+            const importTemplate = `System.import("{{replacement}}").then(function () { return `
+            const mainTemplate = `System.import("{{replacement}}")})`
             const footerTemplate = `.then(function(mod) { resolve(mod.default.start({el: options.el, config: options.config}))}); }); } }; });`
             compilation.chunks.forEach(chunk => {
+                console.log('=============' + chunk.files.length + '============');
                 let bootloader = headerTemplate
                 bootloader += importTemplate.replace('{{replacement}}', compiler.options.output.publicPath + chunk.files[0]);
-                bootloader += mainTemplate;
+                bootloader += mainTemplate.replace('{{replacement}}', compiler.options.output.publicPath + chunk.files[0]);
                 bootloader += footerTemplate;
                 const hash = crypto.createHash('md5');
                 hash.update(bootloader);

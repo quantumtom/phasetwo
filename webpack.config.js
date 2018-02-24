@@ -1,12 +1,15 @@
 const path = require('path');
 const exportPlugin = require('./exportPlugin');
+const HTMLWebpackPlugin = require('html-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
     entry: {
-        index: './src/index.js'
+        index: './src/index.js',
+        main: './src/main.js'
     },
     output: {
-        filename: 'bundle-[hash].js',
+        filename: '[name]-[hash].js',
         path: path.resolve(__dirname, 'dist'),
         publicPath: 'https://addons.redbull.com/us/phasetwo/dist/',
         library: 'phasetwo',
@@ -46,7 +49,13 @@ module.exports = {
             }
         ]
     },
+    devServer: {
+        contentBase: path.join(__dirname, "dist"),
+        compress: true,
+        port: 9000
+    },
     plugins: [
-        new exportPlugin()
+        new exportPlugin(),
+        new CleanWebpackPlugin(['dist']),
     ]
 };
