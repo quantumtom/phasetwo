@@ -607,8 +607,8 @@ if(ColorThief.prototype.getColor=function(a,b){var c=this.getPalette(a,5,b),d=c[
 		elms.instagramArtistShare.href = vals.social.ig;
 		elms.twitterArtistShare.href = vals.social.tw;
 
-		(vals.social.ig == "") ? elms.instagramArtistShare.style.display = "none" : elms.instagramArtistShare.style.display = "inline-block"; 
-		(vals.social.tw == "") ? elms.twitterArtistShare.style.display = "none" : elms.twitterArtistShare.style.display = "inline-block";
+		(vals.social.ig == "") ? elms.instagramArtistShare.parentNode.style.display = "none" : elms.instagramArtistShare.parentNode.style.display = "inline-block"; 
+		(vals.social.tw == "") ? elms.twitterArtistShare.parentNode.style.display = "none" : elms.twitterArtistShare.parentNode.style.display = "inline-block";
 	}
 
 	function changeImage(id) {
