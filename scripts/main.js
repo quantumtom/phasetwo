@@ -149,8 +149,6 @@ if(ColorThief.prototype.getColor=function(a,b){var c=this.getPalette(a,5,b),d=c[
 	}
 
 	gridSize = (isMobile()) ? 2 : 5;
-	// gridLayout = (isMobile()) ? "grid-item-0" : "grid-item-2";
-	// gridParentWidth = (isMobile()) ? "grid-width-0" : "grid-width-2";
 	currentSizer = (isMobile()) ? "sizer-0" : "sizer-2";
 
 	// Helpers
@@ -247,12 +245,6 @@ if(ColorThief.prototype.getColor=function(a,b){var c=this.getPalette(a,5,b),d=c[
 				el.appendChild(img);
 
 			}());
-
-			// setTimeout(function() {
-			// 	document.querySelectorAll(".artwork-number").forEach(function(el){
-			// 		el.classList.add("artwork-number-visible");
-			// 	})
-			// },500)
 
 			document.querySelector('.col-' + colDecider).appendChild(el);			
 		}
@@ -353,25 +345,6 @@ if(ColorThief.prototype.getColor=function(a,b){var c=this.getPalette(a,5,b),d=c[
 		});
 	}
 
-	// function overlayMove(e) {
-	// 	elms.overlay.classList.remove("info-overlay-open");
-
-	// 	if (e.target.classList.contains("js-hover-image") && !elms.overlay.classList.contains("info-overlay-open-index")) {
-	// 		var elImg = e.target.getBoundingClientRect();
-
-	// 		elms.overlay.style.width = elImg.width + "px";
-	// 		elms.overlay.style.height = elImg.height + "px";
-	// 		elms.overlay.style.top = elImg.top + "px";
-	// 		elms.overlay.style.left = elImg.left + "px";
-
-	// 		overlayPosition.w = elms.overlay.style.width;
-	// 		overlayPosition.h = elms.overlay.style.height;
-	// 		overlayPosition.top = elms.overlay.style.top;
-	// 		overlayPosition.left = elms.overlay.style.left;
-
-	// 	};
-	// }
-
 	function overlayAbout(e) {
 		e.preventDefault();
 		overlayClose(e);
@@ -461,13 +434,6 @@ if(ColorThief.prototype.getColor=function(a,b){var c=this.getPalette(a,5,b),d=c[
 	}
 
 	function arrowColorSwitch(color) {
-		// for (var i = 0; i < elms.about.children.length; i++) {
-		// 	elms.about.children[i].style = "background: " + color;
-		// }
-
-		// for (var i = 0; i < elms.aboutMobile.children.length; i++) {
-		// 	elms.aboutMobile.children[i].style.backgroundColor = color;
-		// }
 
 		for (var i = 0; i < elms.aboutCloseMobile.children.length; i++) {
 			elms.aboutCloseMobile.children[i].style.backgroundColor = color;
@@ -498,11 +464,6 @@ if(ColorThief.prototype.getColor=function(a,b){var c=this.getPalette(a,5,b),d=c[
 		elms.body.classList.remove('no-scroll');
 
 		while (elms.videoHolder[0].firstChild) elms.videoHolder[0].removeChild(elms.videoHolder[0].firstChild);
-
-		// elms.overlay.style.width = overlayPosition.w;
-		// elms.overlay.style.height = overlayPosition.h;
-		// elms.overlay.style.top = overlayPosition.top;
-		// elms.overlay.style.left = overlayPosition.left;
 
 		document.querySelectorAll(".artwork-number-span").forEach(function(el){
 			el.removeAttribute('style');
@@ -692,9 +653,7 @@ if(ColorThief.prototype.getColor=function(a,b){var c=this.getPalette(a,5,b),d=c[
 
 					e.target.parentNode.classList.add('grid-current-item');
 
-					// setTimeout(function() {
-						overlayOpen(e);
-					// }, 500);
+					overlayOpen(e);
 				}				
 			} else {
 				openingByHover = 1;
