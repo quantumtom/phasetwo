@@ -782,35 +782,20 @@ if(ColorThief.prototype.getColor=function(a,b){var c=this.getPalette(a,5,b),d=c[
 
 		}, false);
 
-		// elms.linkHome.addEventListener('click', function(e) {
-		// 	overlayClose(e);
-		// }, false);
-		
-		// elms.grid.addEventListener("mouseover", overlayMove, false);
-		// elms.grid.addEventListener("mousemove", overlayMove, false);
-
-		// elms.grid.addEventListener("touchmove", overlayMove, false);
-		// elms.grid.addEventListener("touchend", overlayMove, false);
-
 		elms.next.addEventListener("click", nextImage, false);
 		elms.previous.addEventListener("click", previousImage, false);
 
 		elms.nextMobile.addEventListener("click", nextImage, false);
 		elms.previousMobile.addEventListener("click", previousImage, false);
-		// window.addEventListener("scroll", overlayMove, false);
 
 		elms.about.addEventListener("click", overlayAbout, false);
-		// elms.aboutMobile.addEventListener("click", overlayAbout, false);
-		// elms.aboutDesktop.addEventListener("click", overlayAbout, false);
-		// elms.overlayCloseAbout.addEventListener("click", overlayAboutClose, false);
-
 
 		// On Content
 		elms.artContent.addEventListener(transitionEvent, function(e) {
 			if (this.classList.contains("slide-content-left") && elms.overlay.classList.contains('info-overlay-open')) {
 				this.classList.remove("slide-content-left");
-				elms.overlayMedia.classList.add('overlay-media-hidden');
-				
+				// elms.overlayMedia.classList.add('overlay-media-hidden');
+				elms.overlayMedia.classList.remove('overlay-media-hidden');
 				displayArtworkInfo(currentImage, document.querySelectorAll("[data-id='"+ currentImage +"']")[0].lastChild.getAttribute("data-dominant"));
 				changeImage(currentImage);
 			}
@@ -824,39 +809,17 @@ if(ColorThief.prototype.getColor=function(a,b){var c=this.getPalette(a,5,b),d=c[
 			}
 		}, false);
 
-		// elms.overlayAbout.addEventListener(transitionEvent, function(e) {
-		// 	if (e.propertyName == 'height' && this.classList.contains('about-overlay-open')) {
-		// 		for (var i = 0; i < elms.aboutAnimation.length; i++) {
-		// 			elms.aboutAnimation[i].classList.add('about-animation-' + i);
-		// 		}
-		// 		// document.querySelector(".overlay-inside-content").style = "overflow: auto";
-		// 	}
-		// }, false);
-
-		// elms.overlayMedia.addEventListener(transitionEvent, function(e) {
-		// 	if (e.propertyName == 'transform' && !this.classList.contains('overlay-media-hidden')) {
-		// 		changeImage(currentImage, document.querySelectorAll("[class^='grid-item']")[currentImage].lastChild.getAttribute("data-dominant"));
-		// 	}
-		// }, false);
-
 		elms.afterBar.addEventListener(transitionEvent, function(e) {
 			windowWidthCheck();
-			// console.log(e.propertyName);
 			if (elms.overlay.classList.contains("info-overlay-open") && e.propertyName == 'background-color' && !this.classList.contains('after-bar-full')) {
-				elms.overlayMedia.classList.remove('overlay-media-hidden');
+				// elms.overlayMedia.classList.remove('overlay-media-hidden');
 				elms.wrapper.classList.remove('opacity-zero');
 				elms.overlay.classList.remove('js-hash-call');
-				// setTimeout(function() {
-				// console.log(e.propertyName);
 				if (!isMobile()) {
 					elms.artContent.classList.remove('slide-content-left');
 				}
 
 				elms.afterBar.style.backgroundColor = document.querySelectorAll("[data-id='"+ currentImage +"']")[0].lastChild.getAttribute("data-dominant");
-				// console.log(currentImage,document.querySelectorAll("[data-id='"+ currentImage +"']")[0].lastChild.getAttribute("data-dominant"));
-
-				// changeImage(currentImage);
-				// }, 400)
 			} 
 
 			if (elms.overlay.classList.contains("info-overlay-open") && this.classList.contains('after-bar-full') && !elms.overlay.classList.contains('js-hash-call') && !this.classList.contains('arrow-click')) { /* Side Scroll added  just !this.classList.contains('arrow-click')*/ 
@@ -867,7 +830,7 @@ if(ColorThief.prototype.getColor=function(a,b){var c=this.getPalette(a,5,b),d=c[
 			if (this.classList.contains('arrow-click')) { /* Side Scroll added */
 				elms.afterBar.classList.remove("arrow-click"); /* Side Scroll added */
 				elms.afterBar.classList.remove("after-bar-full"); /* Side Scroll added */
-				elms.overlayMedia.classList.remove('overlay-media-hidden'); /* Side Scroll added */
+				// elms.overlayMedia.classList.remove('overlay-media-hidden'); /* Side Scroll added */
 				elms.overlayInsideTop.classList.remove('overlay-inside-top-padder'); /* Side Scroll added */
 				elms.afterBar.style.backgroundColor = document.querySelectorAll("[data-id='"+ currentImage +"']")[0].lastChild.getAttribute("data-dominant");
 				// changeImage(currentImage);
@@ -1004,17 +967,15 @@ if(ColorThief.prototype.getColor=function(a,b){var c=this.getPalette(a,5,b),d=c[
 		}
 	}
 
-	function poop(i) {
+	function testing(i) {
 		// console.log(i);
 	}
 
 	function preLoad(arr) {
 		for (var i = 0; i < arr.length; i++) {
 			var img = new Image();
-			img.onload = poop(arr[i]);
+			img.onload = testing(arr[i]);
 			img.src = assetPath + arr[i];
-
-			// console.log(img);
 
 			// document.getElementById('hidden').appendChild(img);
 		}
@@ -1030,7 +991,6 @@ if(ColorThief.prototype.getColor=function(a,b){var c=this.getPalette(a,5,b),d=c[
 
 			totalElements = jsonFile.length;
 
-			// console.log(jsonFile);
 			jsonFile.forEach(function(el) {
 				allImages.push(el.src);
 			});
