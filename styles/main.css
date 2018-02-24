@@ -1235,7 +1235,6 @@ img {
 	margin: 0 auto;
 	z-index: 1000000;
 	overflow: visible;
-	min-height: 320px;
 	-webkit-transition: 0.15s all ease-in-out;
 	-moz-transition: 0.15s all ease-in-out;
 	-o-transition: 0.15s all ease-in-out;
@@ -1249,6 +1248,7 @@ img {
 
 @media screen and ( min-width: 768px ) {
 	.overlay-media {
+		min-height: 320px;
 		-webkit-transition: 0.3s all ease-in-out;
 		-moz-transition: 0.3s all ease-in-out;
 		-o-transition: 0.3s all ease-in-out;
@@ -1752,7 +1752,6 @@ img {
 }
 
 #video-holder {
-    margin-bottom: 30px;
     position: relative;
     padding-top: 75%;
     cursor: pointer;
@@ -1766,6 +1765,7 @@ img {
 
 @media screen and ( min-width: 768px) { 
 	#video-holder {
+	    margin-bottom: 30px;
 		right: 15px;
 		/*margin-top: 5%;*/
 		top: 50%;
