@@ -1142,6 +1142,7 @@ img {
 @media screen and ( min-width: 768px) {
 	.overlay-info {
 		width: 50%;
+		height: 100%;
 	}
 }
 
@@ -1279,6 +1280,11 @@ img {
 		position: relative;
 		padding-left: 38px;
 		width: 80%;
+		transform: translateY(-50%);
+		-webkit-transform: translateY(-50%);
+		-moz-transform: translateY(-50%);
+		-o-transform: translateY(-50%);
+		top: 50%;
 	}
 }
 
