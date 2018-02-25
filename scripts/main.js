@@ -921,6 +921,7 @@ if(ColorThief.prototype.getColor=function(a,b){var c=this.getPalette(a,5,b),d=c[
 					elms.afterBar.style.backgroundColor = color;
 					// elms.afterBar.style.boxShadow = "0px 4px 5px 0px " + color;
 					elms.grid.classList.remove('hide');
+					elms.overlayMedia.classList.remove('overlay-media-hidden');
 				}, 500);
 
 			} 
