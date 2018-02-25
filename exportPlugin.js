@@ -8,7 +8,6 @@ module.exports = class ExportPlugin {
             const mainTemplate = `System.import("{{replacement}}")})`
             const footerTemplate = `.then(function(mod) { resolve(mod.default.start({el: options.el, config: options.config}))}); }); } }; });`
             compilation.chunks.forEach(chunk => {
-                console.log('=============' + chunk.files.length + '============');
                 let bootloader = headerTemplate
                 bootloader += importTemplate.replace('{{replacement}}', compiler.options.output.publicPath + chunk.files[0]);
                 bootloader += mainTemplate.replace('{{replacement}}', compiler.options.output.publicPath + chunk.files[0]);
