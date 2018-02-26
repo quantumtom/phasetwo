@@ -1,12 +1,10 @@
 {
-  "name": "custom-scripts",
-  "version": "1.0.0",
-  "description": "",
+  "name": "phasetwo",
+  "version": "1.0.1",
+  "description": "RoxRite Phase Two",
   "main": "index.js",
   "scripts": {
-    "client": "webpack-dev-server --hot --inline --port 3000 --host 0.0.0.0",
-    "start": "webpack-dev-server --open",
-    "dev": "server.js",
+    "start": "webpack-dev-server --hot --inline --open",
     "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -14,16 +12,12 @@
   "license": "ISC",
   "devDependencies": {
     "clean-webpack-plugin": "^0.1.18",
-    "css-loader": "^0.28.9",
-    "express": "^4.16.2",
+    "css-loader": "^0.28.10",
     "file-loader": "^1.1.9",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^2.30.1",
     "style-loader": "^0.20.2",
     "webpack": "^3.11.0",
-    "webpack-dev-server": "^2.11.1"
-  },
-  "dependencies": {
-    "eslint": "^4.18.1"
+    "webpack-dev-server": "^2.11.2"
   }
 }
