@@ -4,8 +4,8 @@ module.exports = class ExportPlugin {
     apply(compiler) {
         compiler.plugin('emit', (compilation, done) => {
             const headerTemplate = `define("${compiler.options.output.library}", [], function() { return { start: function(options) { return new Promise(function(resolve) {`
-            const importTemplate = `System.import("{{replacement}}").then(function () { return `
-            const mainTemplate = `System.import("{{replacement}}")})`
+            const importTemplate = `System.import("{{replacement}}")`
+            const mainTemplate = `.then(function () { return System.import("{{replacement}}")})`
             const footerTemplate = `.then(function(mod) { resolve(mod.default.start({el: options.el, config: options.config}))}); }); } }; });`
             compilation.chunks.forEach(chunk => {
                 let bootloader = headerTemplate
@@ -14,10 +14,10 @@ module.exports = class ExportPlugin {
                 bootloader += footerTemplate;
                 const hash = crypto.createHash('md5');
                 hash.update(bootloader);
-                compilation.assets[`${chunk.name}-bootloader.js`] = {
-                    source: _ => bootloader,
-                    size: _ => bootloader.length
-                };
+                // compilation.assets[`${chunk.name}-bootloader.js`] = {
+                //     source: _ => bootloader,
+                //     size: _ => bootloader.length
+                // };
                 compilation.assets[`${chunk.name}-bootloader-${hash.digest("hex")}.js`] = {
                     source: _ => bootloader,
                     size: _ => bootloader.length
