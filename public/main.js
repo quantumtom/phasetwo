@@ -138,8 +138,8 @@ if(ColorThief.prototype.getColor=function(a,b){var c=this.getPalette(a,5,b),d=c[
         artworkArtist: document.getElementById('artwork-artist'),
         artworkArtistSite: document.getElementById('artwork-artist-site'),
         artworkPost: document.getElementById('artwork-original-post'),
-        // instagramArtistShare: document.getElementById('ig-social'),
-        // twitterArtistShare: document.getElementById('tw-social'),
+        instagramArtistShare: document.getElementById('ig-social'),
+        twitterArtistShare: document.getElementById('tw-social'),
         afterBar: document.querySelector(".after-bar")
     }
 
@@ -229,7 +229,7 @@ if(ColorThief.prototype.getColor=function(a,b){var c=this.getPalette(a,5,b),d=c[
             var artworkNumber = document.createElement("span");
                 artworkNumber.className = "artwork-number";
                 
-                var id = jsonFile[i].id + 1;
+                var id = jsonFile[i].id;
                 if (id < 10) {
                     id = "0" + id;
                 }
@@ -301,7 +301,7 @@ if(ColorThief.prototype.getColor=function(a,b){var c=this.getPalette(a,5,b),d=c[
             var artworkNumber = document.createElement("span");
                 artworkNumber.className = "artwork-number";
                 
-                var id = jsonFile[i].id + 1;
+                var id = jsonFile[i].id;
                 if (id < 10) {
                     id = "0" + id;
                 }
@@ -551,7 +551,7 @@ if(ColorThief.prototype.getColor=function(a,b){var c=this.getPalette(a,5,b),d=c[
 
     function updateHash() {
         if (window.history && window.history.pushState) {
-            history.pushState("", document.title, window.location.pathname + '#' + (parseInt(jsonFile[currentImage].id) + 1));
+            history.pushState("", document.title, window.location.pathname + '#' + jsonFile[currentImage].id);
         }
     }
 
@@ -561,7 +561,7 @@ if(ColorThief.prototype.getColor=function(a,b){var c=this.getPalette(a,5,b),d=c[
         // elms.loader.style.display = 'block';
         elms.loader.style.visibility = 'hidden';
 
-        elms.artworkId.innerHTML = '#' + (parseInt(vals.id) + 1);
+        elms.artworkId.innerHTML = '#' + (parseInt(vals.id));
         elms.artworkYear.innerHTML = vals.year;
         elms.artworkTitle.innerHTML = vals.name;
         elms.artworkDescription.innerHTML = vals.description;
@@ -919,7 +919,7 @@ if(ColorThief.prototype.getColor=function(a,b){var c=this.getPalette(a,5,b),d=c[
                 elms.afterBar.classList.remove('after-bar-full');
 
 				var id = jsonFile.findIndex(function(el) {
-					return el.id === parseInt(hash.substring(1) - 1);
+					return el.id === parseInt(hash.substring(1));
 				});
 
                 currentImage = id;
