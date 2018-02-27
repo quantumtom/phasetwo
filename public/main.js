@@ -136,9 +136,10 @@ if(ColorThief.prototype.getColor=function(a,b){var c=this.getPalette(a,5,b),d=c[
         artworkTitle: document.getElementById('artwork-title'),
         artworkDescription: document.getElementById('artwork-description'),
         artworkArtist: document.getElementById('artwork-artist'),
+        artworkArtistSite: document.getElementById('artwork-artist-site'),
         artworkPost: document.getElementById('artwork-original-post'),
-        instagramArtistShare: document.getElementById('ig-social'),
-        twitterArtistShare: document.getElementById('tw-social'),
+        // instagramArtistShare: document.getElementById('ig-social'),
+        // twitterArtistShare: document.getElementById('tw-social'),
         afterBar: document.querySelector(".after-bar")
     }
 
@@ -549,7 +550,6 @@ if(ColorThief.prototype.getColor=function(a,b){var c=this.getPalette(a,5,b),d=c[
     }
 
     function updateHash() {
-    	console.log(parseInt(jsonFile[currentImage].id) + 1);
         if (window.history && window.history.pushState) {
             history.pushState("", document.title, window.location.pathname + '#' + (parseInt(jsonFile[currentImage].id) + 1));
         }
@@ -572,14 +572,17 @@ if(ColorThief.prototype.getColor=function(a,b){var c=this.getPalette(a,5,b),d=c[
         (vals.original == "") ? elms.artworkPost.style.display = "none" : elms.artworkPost.style.display = "block";
         elms.artworkPost.href = vals.original;
 
+        elms.artworkArtistSite.href = vals.artisturl;
+        (vals.artisturl == "") ? elms.artworkArtistSite.style.display = "none" : elms.artworkArtistSite.style.display = "block";
+
         elms.afterBar.style.backgroundColor = color;
         // elms.afterBar.style.boxShadow = "0px 4px 5px 0px " + color;
 
-        elms.instagramArtistShare.href = vals.social.ig;
-        elms.twitterArtistShare.href = vals.social.tw;
+        // elms.instagramArtistShare.href = vals.social.ig;
+        // elms.twitterArtistShare.href = vals.social.tw;
 
-        (vals.social.ig == "") ? elms.instagramArtistShare.parentNode.style.display = "none" : elms.instagramArtistShare.parentNode.style.display = "inline-block"; 
-        (vals.social.tw == "") ? elms.twitterArtistShare.parentNode.style.display = "none" : elms.twitterArtistShare.parentNode.style.display = "inline-block";
+        // (vals.social.ig == "") ? elms.instagramArtistShare.parentNode.style.display = "none" : elms.instagramArtistShare.parentNode.style.display = "inline-block"; 
+        // (vals.social.tw == "") ? elms.twitterArtistShare.parentNode.style.display = "none" : elms.twitterArtistShare.parentNode.style.display = "inline-block";
     }
 
     function changeImage(id) {
@@ -962,8 +965,6 @@ if(ColorThief.prototype.getColor=function(a,b){var c=this.getPalette(a,5,b),d=c[
         loadJSON(function(response) {
             // Parse JSON string into object
             jsonFile = JSON.parse(response);
-
-			console.log(jsonFile);
 
             jsonFile.sort(function (a, b) {
 			    return parseInt(a.id) - parseInt(b.id);
