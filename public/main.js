@@ -1010,15 +1010,9 @@ if(ColorThief.prototype.getColor=function(a,b){var c=this.getPalette(a,5,b),d=c[
             }
         }
 
-        // if (isMobile()) {
-        //  window.onfocus = function() {
-        //      location.reload();
-        //  }
-        // } else {
-            window.onfocus = function() {
-                blazy();
-            }
-        // }
+        window.onfocus = function() {
+            blazy();
+        }
     }
     
     init();
