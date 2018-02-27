@@ -969,8 +969,6 @@ if(ColorThief.prototype.getColor=function(a,b){var c=this.getPalette(a,5,b),d=c[
 			    return parseInt(a.id) - parseInt(b.id);
 			});
 
-			console.log(jsonFile);
-
             totalElements = jsonFile.length;
 
             jsonFile.forEach(function(el) {
