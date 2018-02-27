@@ -1,85 +1,86 @@
 [
 	{
-		"id": 0,
+		"id": 1,
 		"year": 2016,
 		"name": "Art Title 1",
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolorin reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-		"artist": "",
+		"artist": "Artist Name 1",
 		"gridsrc": "images/artwork/sunset.jpg",
 		"src": "images/artwork/Roxrite_Archival_Photos_WIN_06_NOLOGO.jpg",
 		"type": "image",
 		"original": "http://www.google.com",
 		"social": {
-			"ig": "https://www.instagram.com/",
-			"tw": ""
-		}
-	},
-	{
-		"id": 1,
-		"year": 2002,
-		"name": "Art Title 2",
-		"description": "Since becoming an international champion, RoxRite hadn't battled at home in the Bay in four years. Adding to that, crew tension was in the air; there had been a vote to send Victor instead of Nasty Ray to an earlier competition. \"We were thinking for the crew\", explained RoxRite, \"and the name, and if we take Victor, we have a better chance of winning because Ray hadn’t been on point, but Ray didn’t take it well. Of course that’s understandable. So I was just like 'let’s battle'\". Ray and RoxRite would rep the Squadron for this hometown competition. \"He’s still my friend outside of whatever situation happens.\" \"We killed it\", RoxRite said, and bringing the situation full circle, the pair battled Victor in the final. \"That’s what I think our relationship is\", says Nasty Ray. \"Straightforward, honest. 'What’s bugging you?' We’re just very straightforward about it.\" (December 2014)",
-		"artist": "Artist Name 2",
-		"gridsrc": "images/artwork/WIN-7-FRAME-WEB.jpg",
-		"type": "video",
-		"video": "WF34N4gJAKE",
-		"original": "",
-		"social": {
-			"ig": "https://www.instagram.com/",
+			"ig": "",
 			"tw": ""
 		}
 	},
 	{
 		"id": 2,
-		"year": 1998,
-		"name": "Art Title 3",
+		"year": 2002,
+		"name": "Art Title 2",
 		"description": "Since becoming an international champion, RoxRite hadn't battled at home in the Bay in four years. Adding to that, crew tension was in the air; there had been a vote to send Victor instead of Nasty Ray to an earlier competition. \"We were thinking for the crew\", explained RoxRite, \"and the name, and if we take Victor, we have a better chance of winning because Ray hadn’t been on point, but Ray didn’t take it well. Of course that’s understandable. So I was just like 'let’s battle'\". Ray and RoxRite would rep the Squadron for this hometown competition. \"He’s still my friend outside of whatever situation happens.\" \"We killed it\", RoxRite said, and bringing the situation full circle, the pair battled Victor in the final. \"That’s what I think our relationship is\", says Nasty Ray. \"Straightforward, honest. 'What’s bugging you?' We’re just very straightforward about it.\" (December 2014)",
-		"artist": "Artist Name 3",
+		"artist": "Artist Name 2",
+		"gridsrc": "images/artwork/sunset.jpg",
+		"src": "images/artwork/WIN-7-FRAME-WEB.jpg",
+		"type": "video",
+		"video": "WF34N4gJAKE",
+		"original": "http://www.google.com",
+		"social": {
+			"ig": "",
+			"tw": ""
+		}
+	},
+	{
+		"id": 5,
+		"year": 1998,
+		"name": "Art Title 5",
+		"description": "Since becoming an international champion, RoxRite hadn't battled at home in the Bay in four years. Adding to that, crew tension was in the air; there had been a vote to send Victor instead of Nasty Ray to an earlier competition. \"We were thinking for the crew\", explained RoxRite, \"and the name, and if we take Victor, we have a better chance of winning because Ray hadn’t been on point, but Ray didn’t take it well. Of course that’s understandable. So I was just like 'let’s battle'\". Ray and RoxRite would rep the Squadron for this hometown competition. \"He’s still my friend outside of whatever situation happens.\" \"We killed it\", RoxRite said, and bringing the situation full circle, the pair battled Victor in the final. \"That’s what I think our relationship is\", says Nasty Ray. \"Straightforward, honest. 'What’s bugging you?' We’re just very straightforward about it.\" (December 2014)",
+		"artist": "Artist Name 5",
 		"gridsrc": "images/artwork/sunset.jpg",
 		"src": "images/artwork/08-JOSH_FREYDKIS-FINAL.png",
 		"type": "image",
 		"original": "http://www.google.com",
 		"social": {
-			"ig": "https://www.instagram.com/",
+			"ig": "",
 			"tw": ""
 		}
 	},
 	{
-		"id": 3,
+		"id": 7,
 		"year": 1999,
-		"name": "Art Title 4",
+		"name": "Art Title 7",
 		"description": "Since becoming an international champion, RoxRite hadn't battled at home in the Bay in four years. Adding to that, crew tension was in the air; there had been a vote to send Victor instead of Nasty Ray to an earlier competition. \"We were thinking for the crew\", explained RoxRite, \"and the name, and if we take Victor, we have a better chance of winning because Ray hadn’t been on point, but Ray didn’t take it well. Of course that’s understandable. So I was just like 'let’s battle'\". Ray and RoxRite would rep the Squadron for this hometown competition. \"He’s still my friend outside of whatever situation happens.\" \"We killed it\", RoxRite said, and bringing the situation full circle, the pair battled Victor in the final. \"That’s what I think our relationship is\", says Nasty Ray. \"Straightforward, honest. 'What’s bugging you?' We’re just very straightforward about it.\" (December 2014)",
-		"artist": "Artist Name 4",
+		"artist": "Artist Name 7",
 		"gridsrc": "images/artwork/sunset.jpg",
 		"src": "images/artwork/Win_14.gif",
 		"type": "image",
 		"original": "http://www.google.com",
 		"social": {
 			"ig": "",
-			"tw": "https://twitter.com/?lang=en"
+			"tw": ""
 		}
 	},
 	{
-		"id": 4,
+		"id": 9,
 		"year": 1992,
-		"name": "Art Title 5",
+		"name": "Art Title 9",
 		"description": "Since becoming an international champion, RoxRite hadn't battled at home in the Bay in four years. Adding to that, crew tension was in the air; there had been a vote to send Victor instead of Nasty Ray to an earlier competition. \"We were thinking for the crew\", explained RoxRite, \"and the name, and if we take Victor, we have a better chance of winning because Ray hadn’t been on point, but Ray didn’t take it well. Of course that’s understandable. So I was just like 'let’s battle'\". Ray and RoxRite would rep the Squadron for this hometown competition. \"He’s still my friend outside of whatever situation happens.\" \"We killed it\", RoxRite said, and bringing the situation full circle, the pair battled Victor in the final. \"That’s what I think our relationship is\", says Nasty Ray. \"Straightforward, honest. 'What’s bugging you?' We’re just very straightforward about it.\" (December 2014)",
-		"artist": "Artist Name 5",
+		"artist": "Artist Name 9",
 		"gridsrc": "images/artwork/sunset.jpg",
 		"src": "images/artwork/Win_16.gif",
 		"type": "image",
 		"original": "http://www.google.com",
 		"social": {
-			"ig": "https://www.instagram.com/",
-			"tw": "https://twitter.com/?lang=en"
+			"ig": "",
+			"tw": ""
 		}
 	},
 	{
-		"id": 5,
+		"id": 11,
 		"year": 2000,
-		"name": "Art Title 6",
+		"name": "Art Title 11",
 		"description": "Since becoming an international champion, RoxRite hadn't battled at home in the Bay in four years. Adding to that, crew tension was in the air; there had been a vote to send Victor instead of Nasty Ray to an earlier competition. \"We were thinking for the crew\", explained RoxRite, \"and the name, and if we take Victor, we have a better chance of winning because Ray hadn’t been on point, but Ray didn’t take it well. Of course that’s understandable. So I was just like 'let’s battle'\". Ray and RoxRite would rep the Squadron for this hometown competition. \"He’s still my friend outside of whatever situation happens.\" \"We killed it\", RoxRite said, and bringing the situation full circle, the pair battled Victor in the final. \"That’s what I think our relationship is\", says Nasty Ray. \"Straightforward, honest. 'What’s bugging you?' We’re just very straightforward about it.\" (December 2014)",
-		"artist": "Artist Name 6",
+		"artist": "Artist Name 11",
 		"gridsrc": "images/artwork/sunset.jpg",
 		"src": "images/artwork/17-Ben_Bauchau.jpg",
 		"type": "image",
@@ -90,116 +91,119 @@
 		}
 	},
 	{
-		"id": 6,
+		"id": 14,
 		"year": 2020,
-		"name": "Art Title 7",
+		"name": "Art Title 14",
 		"description": "Since becoming an international champion, RoxRite hadn't battled at home in the Bay in four years. Adding to that, crew tension was in the air; there had been a vote to send Victor instead of Nasty Ray to an earlier competition. \"We were thinking for the crew\", explained RoxRite, \"and the name, and if we take Victor, we have a better chance of winning because Ray hadn’t been on point, but Ray didn’t take it well. Of course that’s understandable. So I was just like 'let’s battle'\". Ray and RoxRite would rep the Squadron for this hometown competition. \"He’s still my friend outside of whatever situation happens.\" \"We killed it\", RoxRite said, and bringing the situation full circle, the pair battled Victor in the final. \"That’s what I think our relationship is\", says Nasty Ray. \"Straightforward, honest. 'What’s bugging you?' We’re just very straightforward about it.\" (December 2014)",
-		"artist": "Artist Name 7",
+		"artist": "Artist Name 14",
 		"gridsrc": "images/artwork/sunset.jpg",
+		"src": "images/artwork/WIN-21-FRAME-WEB.jpg",
 		"type": "video",
 		"video": "QNwCojCJ3-Q",
 		"original": "http://www.google.com",
 		"social": {
 			"ig": "",
-			"tw": "https://twitter.com/?lang=en"
+			"tw": ""
 		}
 	},
 	{
-		"id": 7,
+		"id": 15,
 		"year": 2013,
-		"name": "Art Title 8",
+		"name": "Art Title 15",
 		"description": "Since becoming an international champion, RoxRite hadn't battled at home in the Bay in four years. Adding to that, crew tension was in the air; there had been a vote to send Victor instead of Nasty Ray to an earlier competition. \"We were thinking for the crew\", explained RoxRite, \"and the name, and if we take Victor, we have a better chance of winning because Ray hadn’t been on point, but Ray didn’t take it well. Of course that’s understandable. So I was just like 'let’s battle'\". Ray and RoxRite would rep the Squadron for this hometown competition. \"He’s still my friend outside of whatever situation happens.\" \"We killed it\", RoxRite said, and bringing the situation full circle, the pair battled Victor in the final. \"That’s what I think our relationship is\", says Nasty Ray. \"Straightforward, honest. 'What’s bugging you?' We’re just very straightforward about it.\" (December 2014)",
-		"artist": "Artist Name 8",
+		"artist": "Artist Name 15",
 		"gridsrc": "images/artwork/sunset.jpg",
 		"src": "images/artwork/24-BLUR-NOLOGO.png",
 		"type": "image",
 		"original": "http://www.google.com",
 		"social": {
-			"ig": "https://www.instagram.com/",
-			"tw": "https://twitter.com/?lang=en"
+			"ig": "",
+			"tw": ""
 		}
 	},
 	{
-		"id": 8,
+		"id": 16,
 		"year": 2017,
-		"name": "Art Title 9",
+		"name": "Art Title 16",
 		"description": "Since becoming an international champion, RoxRite hadn't battled at home in the Bay in four years. Adding to that, crew tension was in the air; there had been a vote to send Victor instead of Nasty Ray to an earlier competition. \"We were thinking for the crew\", explained RoxRite, \"and the name, and if we take Victor, we have a better chance of winning because Ray hadn’t been on point, but Ray didn’t take it well. Of course that’s understandable. So I was just like 'let’s battle'\". Ray and RoxRite would rep the Squadron for this hometown competition. \"He’s still my friend outside of whatever situation happens.\" \"We killed it\", RoxRite said, and bringing the situation full circle, the pair battled Victor in the final. \"That’s what I think our relationship is\", says Nasty Ray. \"Straightforward, honest. 'What’s bugging you?' We’re just very straightforward about it.\" (December 2014)",
-		"artist": "Artist Name 9",
+		"artist": "Artist Name 16",
 		"gridsrc": "images/artwork/sunset.jpg",
 		"src": "images/artwork/Roxrite_Archival_Photos_WIN_28BLUR_NOLOGO.jpg",
 		"type": "image",
 		"original": "http://www.google.com",
 		"social": {
 			"ig": "",
-			"tw": "https://twitter.com/?lang=en"
+			"tw": ""
 		}
 	},
 	{
-		"id": 9,
+		"id": 18,
 		"year": 2002,
-		"name": "Art Title 10",
+		"name": "Art Title 18",
 		"description": "Since becoming an international champion, RoxRite hadn't battled at home in the Bay in four years. Adding to that, crew tension was in the air; there had been a vote to send Victor instead of Nasty Ray to an earlier competition. \"We were thinking for the crew\", explained RoxRite, \"and the name, and if we take Victor, we have a better chance of winning because Ray hadn’t been on point, but Ray didn’t take it well. Of course that’s understandable. So I was just like 'let’s battle'\". Ray and RoxRite would rep the Squadron for this hometown competition. \"He’s still my friend outside of whatever situation happens.\" \"We killed it\", RoxRite said, and bringing the situation full circle, the pair battled Victor in the final. \"That’s what I think our relationship is\", says Nasty Ray. \"Straightforward, honest. 'What’s bugging you?' We’re just very straightforward about it.\" (December 2014)",
-		"artist": "Artist Name 10",
-		"gridsrc": "images/artwork/WIN-30-FRAME-WEB.jpg",
+		"artist": "Artist Name 18",
+		"gridsrc": "images/artwork/sunset.jpg",
+		"src": "images/artwork/WIN-30-FRAME-WEB.jpg",
 		"type": "video",
 		"video": "WF34N4gJAKE",
 		"original": "http://www.google.com",
 		"social": {
 			"ig": "",
-			"tw": "https://twitter.com/?lang=en"
+			"tw": ""
 		}
 	},
 	{
-		"id": 10,
+		"id": 23,
 		"year": 2002,
-		"name": "Art Title 11",
+		"name": "Art Title 23",
 		"description": "Since becoming an international champion, RoxRite hadn't battled at home in the Bay in four years. Adding to that, crew tension was in the air; there had been a vote to send Victor instead of Nasty Ray to an earlier competition. \"We were thinking for the crew\", explained RoxRite, \"and the name, and if we take Victor, we have a better chance of winning because Ray hadn’t been on point, but Ray didn’t take it well. Of course that’s understandable. So I was just like 'let’s battle'\". Ray and RoxRite would rep the Squadron for this hometown competition. \"He’s still my friend outside of whatever situation happens.\" \"We killed it\", RoxRite said, and bringing the situation full circle, the pair battled Victor in the final. \"That’s what I think our relationship is\", says Nasty Ray. \"Straightforward, honest. 'What’s bugging you?' We’re just very straightforward about it.\" (December 2014)",
-		"artist": "Artist Name 11",
+		"artist": "Artist Name 23",
 		"gridsrc": "images/artwork/sunset.jpg",
 		"src": "images/artwork/33-ALI_GRAHAM.png",
 		"type": "image",
 		"original": "http://www.google.com",
 		"social": {
-			"ig": "https://www.instagram.com/",
-			"tw": "https://twitter.com/?lang=en"
+			"ig": "",
+			"tw": ""
 		}
 	},
 	{
-		"id": 11,
+		"id": 25,
 		"year": 2002,
-		"name": "Art Title 12",
+		"name": "Art Title 25",
 		"description": "Since becoming an international champion, RoxRite hadn't battled at home in the Bay in four years. Adding to that, crew tension was in the air; there had been a vote to send Victor instead of Nasty Ray to an earlier competition. \"We were thinking for the crew\", explained RoxRite, \"and the name, and if we take Victor, we have a better chance of winning because Ray hadn’t been on point, but Ray didn’t take it well. Of course that’s understandable. So I was just like 'let’s battle'\". Ray and RoxRite would rep the Squadron for this hometown competition. \"He’s still my friend outside of whatever situation happens.\" \"We killed it\", RoxRite said, and bringing the situation full circle, the pair battled Victor in the final. \"That’s what I think our relationship is\", says Nasty Ray. \"Straightforward, honest. 'What’s bugging you?' We’re just very straightforward about it.\" (December 2014)",
-		"artist": "Artist Name 12",
-		"gridsrc": "images/artwork/WIN34-FRAME-WEB.jpg",
+		"artist": "Artist Name 25",
+		"gridsrc": "images/artwork/sunset.jpg",
+		"src": "images/artwork/WIN34-FRAME-WEB.jpg",
 		"type": "video",
 		"video": "WF34N4gJAKE",
 		"original": "http://www.google.com",
 		"social": {
 			"ig": "",
-			"tw": "https://twitter.com/?lang=en"
+			"tw": ""
 		}
 	},
 	{
-		"id": 12,
+		"id": 27,
 		"year": 2005,
-		"name": "Art Title 13",
+		"name": "Art Title 27",
 		"description": "Since becoming an international champion, RoxRite hadn't battled at home in the Bay in four years. Adding to that, crew tension was in the air; there had been a vote to send Victor instead of Nasty Ray to an earlier competition. \"We were thinking for the crew\", explained RoxRite, \"and the name, and if we take Victor, we have a better chance of winning because Ray hadn’t been on point, but Ray didn’t take it well. Of course that’s understandable. So I was just like 'let’s battle'\". Ray and RoxRite would rep the Squadron for this hometown competition. \"He’s still my friend outside of whatever situation happens.\" \"We killed it\", RoxRite said, and bringing the situation full circle, the pair battled Victor in the final. \"That’s what I think our relationship is\", says Nasty Ray. \"Straightforward, honest. 'What’s bugging you?' We’re just very straightforward about it.\" (December 2014)",
-		"artist": "Artist Name 13",
+		"artist": "Artist Name 27",
 		"gridsrc": "images/artwork/sunset.jpg",
 		"src": "images/artwork/Win_35.gif",
 		"type": "image",
 		"original": "http://www.google.com",
 		"social": {
-			"ig": "https://www.instagram.com/",
+			"ig": "",
 			"tw": ""
 		}
 	},
 	{
-		"id": 13,
+		"id": 29,
 		"year": 2013,
-		"name": "Art Title 14",
+		"name": "Art Title 29",
 		"description": "Since becoming an international champion, RoxRite hadn't battled at home in the Bay in four years. Adding to that, crew tension was in the air; there had been a vote to send Victor instead of Nasty Ray to an earlier competition. \"We were thinking for the crew\", explained RoxRite, \"and the name, and if we take Victor, we have a better chance of winning because Ray hadn’t been on point, but Ray didn’t take it well. Of course that’s understandable. So I was just like 'let’s battle'\". Ray and RoxRite would rep the Squadron for this hometown competition. \"He’s still my friend outside of whatever situation happens.\" \"We killed it\", RoxRite said, and bringing the situation full circle, the pair battled Victor in the final. \"That’s what I think our relationship is\", says Nasty Ray. \"Straightforward, honest. 'What’s bugging you?' We’re just very straightforward about it.\" (December 2014)",
-		"artist": "Artist Name 14",
+		"artist": "Artist Name 29",
 		"gridsrc": "images/artwork/sunset.jpg",
 		"src": "images/artwork/48-BenKopp.jpg",
 		"type": "image",
@@ -210,56 +214,56 @@
 		}
 	},
 	{
-		"id": 14,
+		"id": 31,
 		"year": 2014,
-		"name": "Art Title 15",
+		"name": "Art Title 31",
 		"description": "Since becoming an international champion, RoxRite hadn't battled at home in the Bay in four years. Adding to that, crew tension was in the air; there had been a vote to send Victor instead of Nasty Ray to an earlier competition. \"We were thinking for the crew\", explained RoxRite, \"and the name, and if we take Victor, we have a better chance of winning because Ray hadn’t been on point, but Ray didn’t take it well. Of course that’s understandable. So I was just like 'let’s battle'\". Ray and RoxRite would rep the Squadron for this hometown competition. \"He’s still my friend outside of whatever situation happens.\" \"We killed it\", RoxRite said, and bringing the situation full circle, the pair battled Victor in the final. \"That’s what I think our relationship is\", says Nasty Ray. \"Straightforward, honest. 'What’s bugging you?' We’re just very straightforward about it.\" (December 2014)",
-		"artist": "Artist Name 15",
+		"artist": "Artist Name 31",
 		"gridsrc": "images/artwork/sunset.jpg",
 		"src": "images/artwork/55-JAMES_CALLAHAN.jpg",
 		"type": "image",
 		"original": "http://www.google.com",
 		"social": {
 			"ig": "",
-			"tw": "https://twitter.com/?lang=en"
+			"tw": ""
 		}
 	},
 	{
-		"id": 15,
+		"id": 35,
 		"year": 2001,
-		"name": "Art Title 16",
+		"name": "Art Title 35",
 		"description": "Since becoming an international champion, RoxRite hadn't battled at home in the Bay in four years. Adding to that, crew tension was in the air; there had been a vote to send Victor instead of Nasty Ray to an earlier competition. \"We were thinking for the crew\", explained RoxRite, \"and the name, and if we take Victor, we have a better chance of winning because Ray hadn’t been on point, but Ray didn’t take it well. Of course that’s understandable. So I was just like 'let’s battle'\". Ray and RoxRite would rep the Squadron for this hometown competition. \"He’s still my friend outside of whatever situation happens.\" \"We killed it\", RoxRite said, and bringing the situation full circle, the pair battled Victor in the final. \"That’s what I think our relationship is\", says Nasty Ray. \"Straightforward, honest. 'What’s bugging you?' We’re just very straightforward about it.\" (December 2014)",
-		"artist": "Artist Name 16",
+		"artist": "Artist Name 35",
 		"gridsrc": "images/artwork/sunset.jpg",
 		"src": "images/artwork/56-PRISCILLA_WITTE-FINAL.png",
 		"type": "image",
 		"original": "http://www.google.com",
 		"social": {
-			"ig": "https://www.instagram.com/",
-			"tw": "https://twitter.com/?lang=en"
+			"ig": "",
+			"tw": ""
 		}
 	},
 	{
-		"id": 16,
+		"id": 47,
 		"year": 1992,
-		"name": "Art Title 17",
+		"name": "Art Title 47",
 		"description": "Since becoming an international champion, RoxRite hadn't battled at home in the Bay in four years. Adding to that, crew tension was in the air; there had been a vote to send Victor instead of Nasty Ray to an earlier competition. \"We were thinking for the crew\", explained RoxRite, \"and the name, and if we take Victor, we have a better chance of winning because Ray hadn’t been on point, but Ray didn’t take it well. Of course that’s understandable. So I was just like 'let’s battle'\". Ray and RoxRite would rep the Squadron for this hometown competition. \"He’s still my friend outside of whatever situation happens.\" \"We killed it\", RoxRite said, and bringing the situation full circle, the pair battled Victor in the final. \"That’s what I think our relationship is\", says Nasty Ray. \"Straightforward, honest. 'What’s bugging you?' We’re just very straightforward about it.\" (December 2014)",
-		"artist": "Artist Name 17",
+		"artist": "Artist Name 47",
 		"gridsrc": "images/artwork/sunset.jpg",
 		"src": "images/artwork/57-DanceNY_FlyingGif-V2_GKA.gif",
 		"type": "image",
 		"original": "http://www.google.com",
 		"social": {
 			"ig": "",
-			"tw": "https://twitter.com/?lang=en"
+			"tw": ""
 		}
 	},
 	{
-		"id": 17,
+		"id": 49,
 		"year": 1988,
-		"name": "Art Title 18",
+		"name": "Art Title 49",
 		"description": "Since becoming an international champion, RoxRite hadn't battled at home in the Bay in four years. Adding to that, crew tension was in the air; there had been a vote to send Victor instead of Nasty Ray to an earlier competition. \"We were thinking for the crew\", explained RoxRite, \"and the name, and if we take Victor, we have a better chance of winning because Ray hadn’t been on point, but Ray didn’t take it well. Of course that’s understandable. So I was just like 'let’s battle'\". Ray and RoxRite would rep the Squadron for this hometown competition. \"He’s still my friend outside of whatever situation happens.\" \"We killed it\", RoxRite said, and bringing the situation full circle, the pair battled Victor in the final. \"That’s what I think our relationship is\", says Nasty Ray. \"Straightforward, honest. 'What’s bugging you?' We’re just very straightforward about it.\" (December 2014)",
-		"artist": "Artist Name 18",
+		"artist": "Artist Name 49",
 		"gridsrc": "images/artwork/sunset.jpg",
 		"src": "images/artwork/66-Roxrite_dance_clean_v02.gif",
 		"type": "image",
@@ -270,99 +274,99 @@
 		}
 	},
 	{
-		"id": 18,
+		"id": 50,
 		"year": 2020,
-		"name": "Art Title 19",
+		"name": "Art Title 50",
 		"description": "Since becoming an international champion, RoxRite hadn't battled at home in the Bay in four years. Adding to that, crew tension was in the air; there had been a vote to send Victor instead of Nasty Ray to an earlier competition. \"We were thinking for the crew\", explained RoxRite, \"and the name, and if we take Victor, we have a better chance of winning because Ray hadn’t been on point, but Ray didn’t take it well. Of course that’s understandable. So I was just like 'let’s battle'\". Ray and RoxRite would rep the Squadron for this hometown competition. \"He’s still my friend outside of whatever situation happens.\" \"We killed it\", RoxRite said, and bringing the situation full circle, the pair battled Victor in the final. \"That’s what I think our relationship is\", says Nasty Ray. \"Straightforward, honest. 'What’s bugging you?' We’re just very straightforward about it.\" (December 2014)",
-		"artist": "Artist Name 19",
+		"artist": "Artist Name 50",
 		"gridsrc": "images/artwork/sunset.jpg",
 		"src": "images/artwork/Win_70.gif",
 		"type": "image",
 		"original": "http://www.google.com",
 		"social": {
-			"ig": "https://www.instagram.com/",
-			"tw": "https://twitter.com/?lang=en"
+			"ig": "",
+			"tw": ""
 		}
 	},
 	{
-		"id": 19,
+		"id": 52,
 		"year": 2028,
-		"name": "Art Title 20",
+		"name": "Art Title 52",
 		"description": "Since becoming an international champion, RoxRite hadn't battled at home in the Bay in four years. Adding to that, crew tension was in the air; there had been a vote to send Victor instead of Nasty Ray to an earlier competition. \"We were thinking for the crew\", explained RoxRite, \"and the name, and if we take Victor, we have a better chance of winning because Ray hadn’t been on point, but Ray didn’t take it well. Of course that’s understandable. So I was just like 'let’s battle'\". Ray and RoxRite would rep the Squadron for this hometown competition. \"He’s still my friend outside of whatever situation happens.\" \"We killed it\", RoxRite said, and bringing the situation full circle, the pair battled Victor in the final. \"That’s what I think our relationship is\", says Nasty Ray. \"Straightforward, honest. 'What’s bugging you?' We’re just very straightforward about it.\" (December 2014)",
-		"artist": "Artist Name 20",
+		"artist": "Artist Name 52",
 		"gridsrc": "images/artwork/sunset.jpg",
 		"src": "images/artwork/78.gif",
 		"type": "image",
 		"original": "http://www.google.com",
 		"social": {
 			"ig": "",
-			"tw": "https://twitter.com/?lang=en"
+			"tw": ""
 		}
 	},
 	{
-		"id": 20,
+		"id": 56,
 		"year": 2019,
-		"name": "Art Title 21",
+		"name": "Art Title 56",
 		"description": "Since becoming an international champion, RoxRite hadn't battled at home in the Bay in four years. Adding to that, crew tension was in the air; there had been a vote to send Victor instead of Nasty Ray to an earlier competition. \"We were thinking for the crew\", explained RoxRite, \"and the name, and if we take Victor, we have a better chance of winning because Ray hadn’t been on point, but Ray didn’t take it well. Of course that’s understandable. So I was just like 'let’s battle'\". Ray and RoxRite would rep the Squadron for this hometown competition. \"He’s still my friend outside of whatever situation happens.\" \"We killed it\", RoxRite said, and bringing the situation full circle, the pair battled Victor in the final. \"That’s what I think our relationship is\", says Nasty Ray. \"Straightforward, honest. 'What’s bugging you?' We’re just very straightforward about it.\" (December 2014)",
-		"artist": "Artist Name 21",
+		"artist": "Artist Name 56",
 		"gridsrc": "images/artwork/sunset.jpg",
 		"src": "images/artwork/81-BryanWoodland.png",
 		"type": "image",
 		"original": "http://www.google.com",
 		"social": {
-			"ig": "https://www.instagram.com/",
-			"tw": "https://twitter.com/?lang=en"
+			"ig": "",
+			"tw": ""
 		}
 	},
 	{
-		"id": 21,
+		"id": 59,
 		"year": 2019,
-		"name": "Art Title 22",
+		"name": "Art Title 59",
 		"description": "Since becoming an international champion, RoxRite hadn't battled at home in the Bay in four years. Adding to that, crew tension was in the air; there had been a vote to send Victor instead of Nasty Ray to an earlier competition. \"We were thinking for the crew\", explained RoxRite, \"and the name, and if we take Victor, we have a better chance of winning because Ray hadn’t been on point, but Ray didn’t take it well. Of course that’s understandable. So I was just like 'let’s battle'\". Ray and RoxRite would rep the Squadron for this hometown competition. \"He’s still my friend outside of whatever situation happens.\" \"We killed it\", RoxRite said, and bringing the situation full circle, the pair battled Victor in the final. \"That’s what I think our relationship is\", says Nasty Ray. \"Straightforward, honest. 'What’s bugging you?' We’re just very straightforward about it.\" (December 2014)",
-		"artist": "Artist Name 22",
+		"artist": "Artist Name 59",
 		"gridsrc": "images/artwork/sunset.jpg",
 		"src": "images/artwork/86-BIGCHECK.png",
 		"type": "image",
 		"original": "http://www.google.com",
 		"social": {
-			"ig": "https://www.instagram.com/",
+			"ig": "",
 			"tw": ""
 		}
 	},
 	{
-		"id": 22,
+		"id": 64,
 		"year": 2023,
-		"name": "Art Title 23",
+		"name": "Art Title 64",
 		"description": "Since becoming an international champion, RoxRite hadn't battled at home in the Bay in four years. Adding to that, crew tension was in the air; there had been a vote to send Victor instead of Nasty Ray to an earlier competition. \"We were thinking for the crew\", explained RoxRite, \"and the name, and if we take Victor, we have a better chance of winning because Ray hadn’t been on point, but Ray didn’t take it well. Of course that’s understandable. So I was just like 'let’s battle'\". Ray and RoxRite would rep the Squadron for this hometown competition. \"He’s still my friend outside of whatever situation happens.\" \"We killed it\", RoxRite said, and bringing the situation full circle, the pair battled Victor in the final. \"That’s what I think our relationship is\", says Nasty Ray. \"Straightforward, honest. 'What’s bugging you?' We’re just very straightforward about it.\" (December 2014)",
-		"artist": "Artist Name 23",
+		"artist": "Artist Name 64",
 		"gridsrc": "images/artwork/sunset.jpg",
 		"src": "images/artwork/Win_87.gif",
 		"type": "image",
 		"original": "http://www.google.com",
 		"social": {
 			"ig": "",
-			"tw": "https://twitter.com/?lang=en"
+			"tw": ""
 		}
 	},
 	{
-		"id": 23,
+		"id": 69,
 		"year": 2020,
-		"name": "Art Title 24",
+		"name": "Art Title 69",
 		"description": "Since becoming an international champion, RoxRite hadn't battled at home in the Bay in four years. Adding to that, crew tension was in the air; there had been a vote to send Victor instead of Nasty Ray to an earlier competition. \"We were thinking for the crew\", explained RoxRite, \"and the name, and if we take Victor, we have a better chance of winning because Ray hadn’t been on point, but Ray didn’t take it well. Of course that’s understandable. So I was just like 'let’s battle'\". Ray and RoxRite would rep the Squadron for this hometown competition. \"He’s still my friend outside of whatever situation happens.\" \"We killed it\", RoxRite said, and bringing the situation full circle, the pair battled Victor in the final. \"That’s what I think our relationship is\", says Nasty Ray. \"Straightforward, honest. 'What’s bugging you?' We’re just very straightforward about it.\" (December 2014)",
-		"artist": "Artist Name 24",
+		"artist": "Artist Name 69",
 		"gridsrc": "images/artwork/sunset.jpg",
 		"src": "images/artwork/88-CAROLYNFIGEL_FINAL.jpg",
 		"type": "image",
 		"original": "http://www.google.com",
 		"social": {
-			"ig": "https://www.instagram.com/",
+			"ig": "",
 			"tw": ""
 		}
 	},
 	{
-		"id": 24,
+		"id": 78,
 		"year": 2019,
-		"name": "Art Title 25",
+		"name": "Art Title 78",
 		"description": "Since becoming an international champion, RoxRite hadn't battled at home in the Bay in four years. Adding to that, crew tension was in the air; there had been a vote to send Victor instead of Nasty Ray to an earlier competition. \"We were thinking for the crew\", explained RoxRite, \"and the name, and if we take Victor, we have a better chance of winning because Ray hadn’t been on point, but Ray didn’t take it well. Of course that’s understandable. So I was just like 'let’s battle'\". Ray and RoxRite would rep the Squadron for this hometown competition. \"He’s still my friend outside of whatever situation happens.\" \"We killed it\", RoxRite said, and bringing the situation full circle, the pair battled Victor in the final. \"That’s what I think our relationship is\", says Nasty Ray. \"Straightforward, honest. 'What’s bugging you?' We’re just very straightforward about it.\" (December 2014)",
 		"artist": "Artist Name 25",
 		"gridsrc": "images/artwork/sunset.jpg",
@@ -370,14 +374,14 @@
 		"type": "image",
 		"original": "http://www.google.com",
 		"social": {
-			"ig": "https://www.instagram.com/",
-			"tw": "https://twitter.com/?lang=en"
+			"ig": "",
+			"tw": ""
 		}
 	},
 	{
-		"id": 25,
+		"id": 81,
 		"year": 2019,
-		"name": "Art Title 26",
+		"name": "Art Title 78",
 		"description": "Since becoming an international champion, RoxRite hadn't battled at home in the Bay in four years. Adding to that, crew tension was in the air; there had been a vote to send Victor instead of Nasty Ray to an earlier competition. \"We were thinking for the crew\", explained RoxRite, \"and the name, and if we take Victor, we have a better chance of winning because Ray hadn’t been on point, but Ray didn’t take it well. Of course that’s understandable. So I was just like 'let’s battle'\". Ray and RoxRite would rep the Squadron for this hometown competition. \"He’s still my friend outside of whatever situation happens.\" \"We killed it\", RoxRite said, and bringing the situation full circle, the pair battled Victor in the final. \"That’s what I think our relationship is\", says Nasty Ray. \"Straightforward, honest. 'What’s bugging you?' We’re just very straightforward about it.\" (December 2014)",
 		"artist": "Artist Name 26",
 		"gridsrc": "images/artwork/sunset.jpg",
@@ -386,37 +390,22 @@
 		"original": "http://www.google.com",
 		"social": {
 			"ig": "",
-			"tw": "https://twitter.com/?lang=en"
+			"tw": ""
 		}
 	},
 	{
-		"id": 26,
+		"id": 93,
 		"year": 2022,
-		"name": "Art Title 500px",
+		"name": "Art Title 93",
 		"description": "Since becoming an international champion, RoxRite hadn't battled at home in the Bay in four years. Adding to that, crew tension was in the air; there had been a vote to send Victor instead of Nasty Ray to an earlier competition. \"We were thinking for the crew\", explained RoxRite, \"and the name, and if we take Victor, we have a better chance of winning because Ray hadn’t been on point, but Ray didn’t take it well. Of course that’s understandable. So I was just like 'let’s battle'\". Ray and RoxRite would rep the Squadron for this hometown competition. \"He’s still my friend outside of whatever situation happens.\" \"We killed it\", RoxRite said, and bringing the situation full circle, the pair battled Victor in the final. \"That’s what I think our relationship is\", says Nasty Ray. \"Straightforward, honest. 'What’s bugging you?' We’re just very straightforward about it.\" (December 2014)",
-		"artist": "Artist Name 27",
+		"artist": "Artist Name 93",
 		"gridsrc": "images/artwork/sunset.jpg",
 		"src": "images/artwork/4-STILL-LIFE-OLYMPIC-500px.jpg",
 		"type": "image",
 		"original": "http://www.google.com",
 		"social": {
-			"ig": "https://www.instagram.com/",
+			"ig": "",
 			"tw": ""
-		}
-	},
-	{
-		"id": 27,
-		"year": 2020,
-		"name": "Art Title 1000px",
-		"description": "Since becoming an international champion, RoxRite hadn't battled at home in the Bay in four years. Adding to that, crew tension was in the air; there had been a vote to send Victor instead of Nasty Ray to an earlier competition. \"We were thinking for the crew\", explained RoxRite, \"and the name, and if we take Victor, we have a better chance of winning because Ray hadn’t been on point, but Ray didn’t take it well. Of course that’s understandable. So I was just like 'let’s battle'\". Ray and RoxRite would rep the Squadron for this hometown competition. \"He’s still my friend outside of whatever situation happens.\" \"We killed it\", RoxRite said, and bringing the situation full circle, the pair battled Victor in the final. \"That’s what I think our relationship is\", says Nasty Ray. \"Straightforward, honest. 'What’s bugging you?' We’re just very straightforward about it.\" (December 2014)",
-		"artist": "Artist Name 27",
-		"gridsrc": "images/artwork/sunset.jpg",
-		"src": "images/artwork/4-STILL-LIFE-OLYMPIC-1000px.jpg",
-		"type": "image",
-		"original": "http://www.google.com",
-		"social": {
-			"ig": "https://www.instagram.com/",
-			"tw": "https://twitter.com/?lang=en"
 		}
 	}
 ]

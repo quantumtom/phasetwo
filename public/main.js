@@ -220,7 +220,10 @@ if(ColorThief.prototype.getColor=function(a,b){var c=this.getPalette(a,5,b),d=c[
             var el = document.createElement("div");
                 el.className = 'grid-item';
                 el.dataset.type = jsonFile[i].type;
-                el.dataset.id = jsonFile[i].id;
+                el.dataset.id = i;
+                el.dataset.current = jsonFile[i].id;
+
+                // console.log(jsonFile[i], jsonFile[i].id);
 
             var artworkNumber = document.createElement("span");
                 artworkNumber.className = "artwork-number";
@@ -291,7 +294,8 @@ if(ColorThief.prototype.getColor=function(a,b){var c=this.getPalette(a,5,b),d=c[
             var el = document.createElement("div");
                 el.className = 'grid-item-0';
                 el.dataset.type = jsonFile[i].type;
-                el.dataset.id = jsonFile[i].id;
+                el.dataset.id = i;
+                el.dataset.current = jsonFile[i].id;
 
             var artworkNumber = document.createElement("span");
                 artworkNumber.className = "artwork-number";
@@ -545,8 +549,9 @@ if(ColorThief.prototype.getColor=function(a,b){var c=this.getPalette(a,5,b),d=c[
     }
 
     function updateHash() {
+    	console.log(parseInt(jsonFile[currentImage].id) + 1);
         if (window.history && window.history.pushState) {
-            history.pushState("", document.title, window.location.pathname + '#' + (parseInt(currentImage) + 1));
+            history.pushState("", document.title, window.location.pathname + '#' + (parseInt(jsonFile[currentImage].id) + 1));
         }
     }
 
@@ -898,7 +903,7 @@ if(ColorThief.prototype.getColor=function(a,b){var c=this.getPalette(a,5,b),d=c[
 
         // Check for individual elements
         if (!!hash && !!parseInt(hash.substring(1))) {
-            if (hash.substring(1) > 0 && hash.substring(1) <= totalElements) {
+            if (hash.substring(1) > 0 && hash.substring(1) <= 100) {
                 elms.grid.classList.add('hide');
                 elms.body.classList.add('no-scroll');
 
@@ -910,7 +915,11 @@ if(ColorThief.prototype.getColor=function(a,b){var c=this.getPalette(a,5,b),d=c[
                 elms.artContent.classList.remove('slide-content-left');
                 elms.afterBar.classList.remove('after-bar-full');
 
-                currentImage = hash.substring(1) - 1;
+				var id = jsonFile.findIndex(function(el) {
+					return el.id === parseInt(hash.substring(1) - 1);
+				});
+
+                currentImage = id;
 
                 elms.about.classList.add('overlay-open');
 
@@ -953,6 +962,14 @@ if(ColorThief.prototype.getColor=function(a,b){var c=this.getPalette(a,5,b),d=c[
         loadJSON(function(response) {
             // Parse JSON string into object
             jsonFile = JSON.parse(response);
+
+			console.log(jsonFile);
+
+            jsonFile.sort(function (a, b) {
+			    return parseInt(a.id) - parseInt(b.id);
+			});
+
+			console.log(jsonFile);
 
             totalElements = jsonFile.length;
 
