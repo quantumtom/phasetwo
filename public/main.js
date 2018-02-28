@@ -138,8 +138,8 @@ if(ColorThief.prototype.getColor=function(a,b){var c=this.getPalette(a,5,b),d=c[
         artworkArtist: document.getElementById('artwork-artist'),
         artworkArtistSite: document.getElementById('artwork-artist-site'),
         artworkPost: document.getElementById('artwork-original-post'),
-        facebookArtistShare: document.getElementById('fb-social'),
-        twitterArtistShare: document.getElementById('tw-social'),
+        // facebookArtistShare: document.getElementById('fb-social'),
+        // twitterArtistShare: document.getElementById('tw-social'),
         afterBar: document.querySelector(".after-bar")
     }
 
