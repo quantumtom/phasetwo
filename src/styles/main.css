@@ -587,6 +587,7 @@ tr {
 
 .artwork-number {
     position: absolute;
+    display: block;
     bottom: 0;
     z-index: 1;
     color: white;
@@ -594,7 +595,6 @@ tr {
     /* background-color: rgba(255,255,255,0.2); */
     /*padding-top: 4px;*/
     /* text-align: center; */
-    display: inline-block;
     opacity: 0;
     /*left: 50%;*/ /* small square */
     /*top: 50%;*/ /* small square */
@@ -1084,7 +1084,7 @@ img {
     -moz-transition: 0.15s all ease-in-out;
     -o-transition: 0.15s all ease-in-out;
     transition: 0.15s all ease-in-out;
-    /*	transition-delay: 0.3s;
+    /*  transition-delay: 0.3s;
         -webkit-transition-delay: 0.3s;
         -moz-transition-delay: 0.3s;
         -o-transition-delay: 0.3s;*/
@@ -1324,7 +1324,7 @@ img {
 }
 
 .artist-info {
-    margin-top: 30px;
+    margin: 30px auto;
 }
 
 @media screen and ( min-width: 768px) {
@@ -1345,8 +1345,11 @@ img {
 }
 
 .original-post {
-    margin-right: 40px;
     display: inline-block;
+}
+
+.original-post a {
+    margin-right: 40px;
 }
 
 #artwork-artist {

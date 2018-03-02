@@ -68,9 +68,10 @@ import articles from './file.json';
         artworkTitle: document.getElementById('artwork-title'),
         artworkDescription: document.getElementById('artwork-description'),
         artworkArtist: document.getElementById('artwork-artist'),
+        artworkArtistSite: document.getElementById('artwork-artist-site'),
         artworkPost: document.getElementById('artwork-original-post'),
-        instagramArtistShare: document.getElementById('ig-social'),
-        twitterArtistShare: document.getElementById('tw-social'),
+        // facebookArtistShare: document.getElementById('fb-social'),
+        // twitterArtistShare: document.getElementById('tw-social'),
         afterBar: document.querySelector(".after-bar")
     };
 
@@ -82,8 +83,6 @@ import articles from './file.json';
     };
 
     gridSize = (isMobile()) ? 2 : 5;
-    // gridLayout = (isMobile()) ? "grid-item-0" : "grid-item-2";
-    // gridParentWidth = (isMobile()) ? "grid-width-0" : "grid-width-2";
     currentSizer = (isMobile()) ? "sizer-0" : "sizer-2";
 
     // Helpers
@@ -154,12 +153,13 @@ import articles from './file.json';
             var el = document.createElement("div");
             el.className = 'grid-item';
             el.dataset.type = jsonFile[i].type;
-            el.dataset.id = jsonFile[i].id;
+            el.dataset.id = i;
+            el.dataset.current = jsonFile[i].id;
 
             var artworkNumber = document.createElement("span");
             artworkNumber.className = "artwork-number";
 
-            var id = jsonFile[i].id + 1;
+            var id = jsonFile[i].id;
             if (id < 10) {
                 id = "0" + id;
             }
@@ -174,18 +174,11 @@ import articles from './file.json';
             var img = document.createElement("img");
             img.className = "b-lazy animate js-hover-image";
             img.src = emptyPixel;
-            img.dataset.src = assetPath + jsonFile[i].src;
+            img.dataset.src = assetPath + jsonFile[i].gridsrc;
 
             img.addEventListener("load", function () {
                 el.appendChild(img);
-
             }());
-
-            // setTimeout(function() {
-            // 	document.querySelectorAll(".artwork-number").forEach(function(el){
-            // 		el.classList.add("artwork-number-visible");
-            // 	})
-            // },500)
 
             document.querySelector('.col-' + colDecider).appendChild(el);
         }
@@ -221,8 +214,8 @@ import articles from './file.json';
             this.el.style.transform = 'translateY(' + -(scrollTop / this.speed) + 'px)';
         }
         /* else {
-			this.el.style.transform = 'translateY(0px)';
-		}*/
+            this.el.style.transform = 'translateY(0px)';
+        }*/
     };
 
     function addMobileGrid() {
@@ -232,12 +225,13 @@ import articles from './file.json';
             var el = document.createElement("div");
             el.className = 'grid-item-0';
             el.dataset.type = jsonFile[i].type;
-            el.dataset.id = jsonFile[i].id;
+            el.dataset.id = i;
+            el.dataset.current = jsonFile[i].id;
 
             var artworkNumber = document.createElement("span");
             artworkNumber.className = "artwork-number";
 
-            var id = jsonFile[i].id + 1;
+            var id = jsonFile[i].id;
             if (id < 10) {
                 id = "0" + id;
             }
@@ -252,7 +246,7 @@ import articles from './file.json';
             var img = document.createElement("img");
             img.className = "b-lazy animate js-hover-image";
             img.src = emptyPixel;
-            img.dataset.src = assetPath + jsonFile[i].src;
+            img.dataset.src = assetPath + jsonFile[i].gridsrc;
 
             img.addEventListener("load", function () {
                 el.appendChild(img);
@@ -280,31 +274,14 @@ import articles from './file.json';
         window.bLazy = new Blazy({
             container: '.img-container',
             success: function (element) {
-                var colorThief = new ColorThief();
+                setTimeout(function() {
+                    var colorThief = new ColorThief();
 
-                element.dataset.dominant = 'rgb(' + colorThief.getColor(element) + ')';
+                    element.dataset.dominant = 'rgb(' + colorThief.getColor(element) + ')';
+                },50);
             }
         });
     }
-
-    // function overlayMove(e) {
-    // 	elms.overlay.classList.remove("info-overlay-open");
-
-    // 	if (e.target.classList.contains("js-hover-image") && !elms.overlay.classList.contains("info-overlay-open-index")) {
-    // 		var elImg = e.target.getBoundingClientRect();
-
-    // 		elms.overlay.style.width = elImg.width + "px";
-    // 		elms.overlay.style.height = elImg.height + "px";
-    // 		elms.overlay.style.top = elImg.top + "px";
-    // 		elms.overlay.style.left = elImg.left + "px";
-
-    // 		overlayPosition.w = elms.overlay.style.width;
-    // 		overlayPosition.h = elms.overlay.style.height;
-    // 		overlayPosition.top = elms.overlay.style.top;
-    // 		overlayPosition.left = elms.overlay.style.left;
-
-    // 	};
-    // }
 
     function overlayAbout(e) {
         e.preventDefault();
@@ -363,7 +340,6 @@ import articles from './file.json';
             } else if (e.target.classList.contains('artwork-number-span')) {
                 getId(e.target.parentNode);
             }
-
         }
 
         if (!isNaN(window.location.hash) && (e.target.nodeName == "IMG" || e.target.nodeName == "SPAN")) {
@@ -395,14 +371,6 @@ import articles from './file.json';
     }
 
     function arrowColorSwitch(color) {
-        // for (var i = 0; i < elms.about.children.length; i++) {
-        // 	elms.about.children[i].style = "background: " + color;
-        // }
-
-        // for (var i = 0; i < elms.aboutMobile.children.length; i++) {
-        // 	elms.aboutMobile.children[i].style.backgroundColor = color;
-        // }
-
         for (var i = 0; i < elms.aboutCloseMobile.children.length; i++) {
             elms.aboutCloseMobile.children[i].style.backgroundColor = color;
         }
@@ -432,11 +400,6 @@ import articles from './file.json';
         elms.body.classList.remove('no-scroll');
 
         while (elms.videoHolder[0].firstChild) elms.videoHolder[0].removeChild(elms.videoHolder[0].firstChild);
-
-        // elms.overlay.style.width = overlayPosition.w;
-        // elms.overlay.style.height = overlayPosition.h;
-        // elms.overlay.style.top = overlayPosition.top;
-        // elms.overlay.style.left = overlayPosition.left;
 
         document.querySelectorAll(".artwork-number-span").forEach(function (el) {
             el.removeAttribute('style');
@@ -491,16 +454,12 @@ import articles from './file.json';
 
         updateHash();
 
+        /* Side Scroll added */
         elms.artContent.classList.add("slide-content-left");
-        /* Side Scroll added */
         elms.afterBar.classList.add("arrow-click");
-        /* Side Scroll added */
         elms.afterBar.classList.add("after-bar-full");
-        /* Side Scroll added */
         elms.overlayInsideTop.classList.add('overlay-inside-top-padder');
-        /* Side Scroll added */
         elms.overlayMedia.classList.add('overlay-media-hidden');
-        /* Side Scroll added */
     }
 
     function previousImage(e) {
@@ -514,21 +473,17 @@ import articles from './file.json';
 
         updateHash();
 
+        /* Side Scroll added */
         elms.artContent.classList.add("slide-content-left");
-        /* Side Scroll added */
         elms.afterBar.classList.add("arrow-click");
-        /* Side Scroll added */
         elms.afterBar.classList.add("after-bar-full");
-        /* Side Scroll added */
         elms.overlayInsideTop.classList.add('overlay-inside-top-padder');
-        /* Side Scroll added */
         elms.overlayMedia.classList.add('overlay-media-hidden');
-        /* Side Scroll added */
     }
 
     function updateHash() {
         if (window.history && window.history.pushState) {
-            history.pushState("", document.title, window.location.pathname + '#' + (parseInt(currentImage) + 1));
+            history.pushState("", document.title, window.location.pathname + '#' + jsonFile[currentImage].id);
         }
     }
 
@@ -538,18 +493,22 @@ import articles from './file.json';
         // elms.loader.style.display = 'block';
         elms.loader.style.visibility = 'hidden';
 
-        elms.artworkId.innerHTML = '#' + (parseInt(vals.id) + 1);
+        elms.artworkId.innerHTML = '#' + (parseInt(vals.id));
         elms.artworkYear.innerHTML = vals.year;
         elms.artworkTitle.innerHTML = vals.name;
         elms.artworkDescription.innerHTML = vals.description;
+
         elms.artworkArtist.innerHTML = vals.artist;
+        (vals.artist == "") ? elms.artworkArtist.style.display = "none" : elms.artworkArtist.style.display = "block";
+        
+        (vals.original == "") ? elms.artworkPost.style.display = "none" : elms.artworkPost.style.display = "block";
         elms.artworkPost.href = vals.original;
+
+        elms.artworkArtistSite.href = vals.artisturl;
+        (vals.artisturl == "") ? elms.artworkArtistSite.style.display = "none" : elms.artworkArtistSite.style.display = "block";
 
         elms.afterBar.style.backgroundColor = color;
         // elms.afterBar.style.boxShadow = "0px 4px 5px 0px " + color;
-
-        // elms.instagramArtistShare.href = vals.social.ig;
-        // elms.twitterArtistShare.href = vals.social.tw;
     }
 
     function changeImage(id) {
@@ -600,8 +559,7 @@ import articles from './file.json';
 
             elms.videoHolder[i].innerHTML = "";
             elms.videoHolder[i].appendChild(iframe);
-        }
-        ;
+        };
     }
 
     function bindEvents() {
@@ -615,7 +573,7 @@ import articles from './file.json';
 
                 if (e.target.nodeName == "IMG" || e.target.nodeName == "SPAN") {
                     // document.querySelectorAll('.grid-item').forEach(function(el) {
-                    // 	el.classList.add('grid-hide');
+                    // el.classList.add('grid-hide');
                     // });
                     if (e.target.nodeName == "IMG") {
                         elms.afterBar.style.backgroundColor = e.target.getAttribute('data-dominant');
@@ -631,9 +589,7 @@ import articles from './file.json';
 
                     e.target.parentNode.classList.add('grid-current-item');
 
-                    // setTimeout(function() {
                     overlayOpen(e);
-                    // }, 500);
                 }
             } else {
                 openingByHover = 1;
@@ -714,7 +670,6 @@ import articles from './file.json';
             elms.afterBar.classList.add('after-bar-full');
             elms.overlayInsideTop.classList.add('overlay-inside-top-padder');
             elms.overlayMedia.classList.add('overlay-media-hidden');
-
         }, false);
 
         elms.aboutCloseMobile.addEventListener('click', function (e) {
@@ -722,37 +677,21 @@ import articles from './file.json';
             elms.afterBar.classList.add('after-bar-full');
             elms.overlayInsideTop.classList.add('overlay-inside-top-padder');
             elms.overlayMedia.classList.add('overlay-media-hidden');
-
         }, false);
-
-        // elms.linkHome.addEventListener('click', function(e) {
-        // 	overlayClose(e);
-        // }, false);
-
-        // elms.grid.addEventListener("mouseover", overlayMove, false);
-        // elms.grid.addEventListener("mousemove", overlayMove, false);
-
-        // elms.grid.addEventListener("touchmove", overlayMove, false);
-        // elms.grid.addEventListener("touchend", overlayMove, false);
 
         elms.next.addEventListener("click", nextImage, false);
         elms.previous.addEventListener("click", previousImage, false);
 
         elms.nextMobile.addEventListener("click", nextImage, false);
         elms.previousMobile.addEventListener("click", previousImage, false);
-        // window.addEventListener("scroll", overlayMove, false);
 
         elms.about.addEventListener("click", overlayAbout, false);
-        // elms.aboutMobile.addEventListener("click", overlayAbout, false);
-        // elms.aboutDesktop.addEventListener("click", overlayAbout, false);
-        // elms.overlayCloseAbout.addEventListener("click", overlayAboutClose, false);
-
 
         // On Content
         elms.artContent.addEventListener(transitionEvent, function (e) {
             if (this.classList.contains("slide-content-left") && elms.overlay.classList.contains('info-overlay-open')) {
                 this.classList.remove("slide-content-left");
-                elms.overlayMedia.classList.add('overlay-media-hidden');
+                elms.overlayMedia.classList.remove('overlay-media-hidden');
 
                 displayArtworkInfo(currentImage, document.querySelectorAll("[data-id='" + currentImage + "']")[0].lastChild.getAttribute("data-dominant"));
                 changeImage(currentImage);
@@ -767,39 +706,18 @@ import articles from './file.json';
             }
         }, false);
 
-        // elms.overlayAbout.addEventListener(transitionEvent, function(e) {
-        // 	if (e.propertyName == 'height' && this.classList.contains('about-overlay-open')) {
-        // 		for (var i = 0; i < elms.aboutAnimation.length; i++) {
-        // 			elms.aboutAnimation[i].classList.add('about-animation-' + i);
-        // 		}
-        // 		// document.querySelector(".overlay-inside-content").style = "overflow: auto";
-        // 	}
-        // }, false);
-
-        // elms.overlayMedia.addEventListener(transitionEvent, function(e) {
-        // 	if (e.propertyName == 'transform' && !this.classList.contains('overlay-media-hidden')) {
-        // 		changeImage(currentImage, document.querySelectorAll("[class^='grid-item']")[currentImage].lastChild.getAttribute("data-dominant"));
-        // 	}
-        // }, false);
-
         elms.afterBar.addEventListener(transitionEvent, function (e) {
             windowWidthCheck();
-            // console.log(e.propertyName);
             if (elms.overlay.classList.contains("info-overlay-open") && e.propertyName == 'background-color' && !this.classList.contains('after-bar-full')) {
-                elms.overlayMedia.classList.remove('overlay-media-hidden');
+                // elms.overlayMedia.classList.remove('overlay-media-hidden');
                 elms.wrapper.classList.remove('opacity-zero');
                 elms.overlay.classList.remove('js-hash-call');
-                // setTimeout(function() {
-                // console.log(e.propertyName);
+
                 if (!isMobile()) {
                     elms.artContent.classList.remove('slide-content-left');
                 }
 
                 elms.afterBar.style.backgroundColor = document.querySelectorAll("[data-id='" + currentImage + "']")[0].lastChild.getAttribute("data-dominant");
-                // console.log(currentImage,document.querySelectorAll("[data-id='"+ currentImage +"']")[0].lastChild.getAttribute("data-dominant"));
-
-                // changeImage(currentImage);
-                // }, 400)
             }
 
             if (elms.overlay.classList.contains("info-overlay-open") && this.classList.contains('after-bar-full') && !elms.overlay.classList.contains('js-hash-call') && !this.classList.contains('arrow-click')) { /* Side Scroll added  just !this.classList.contains('arrow-click')*/
@@ -807,15 +725,12 @@ import articles from './file.json';
                 overlayClose(e);
             }
 
-            if (this.classList.contains('arrow-click')) { /* Side Scroll added */
+            if (this.classList.contains('arrow-click')) {
+                /* Side Scroll added */
                 elms.afterBar.classList.remove("arrow-click");
-                /* Side Scroll added */
                 elms.afterBar.classList.remove("after-bar-full");
-                /* Side Scroll added */
-                elms.overlayMedia.classList.remove('overlay-media-hidden');
-                /* Side Scroll added */
+                // elms.overlayMedia.classList.remove('overlay-media-hidden');
                 elms.overlayInsideTop.classList.remove('overlay-inside-top-padder');
-                /* Side Scroll added */
                 elms.afterBar.style.backgroundColor = document.querySelectorAll("[data-id='" + currentImage + "']")[0].lastChild.getAttribute("data-dominant");
                 // changeImage(currentImage);
             }
@@ -918,7 +833,7 @@ import articles from './file.json';
 
         // Check for individual elements
         if (!!hash && !!parseInt(hash.substring(1))) {
-            if (hash.substring(1) > 0 && hash.substring(1) <= totalElements) {
+            if (hash.substring(1) > 0 && hash.substring(1) <= 100) {
                 elms.grid.classList.add('hide');
                 elms.body.classList.add('no-scroll');
 
@@ -930,7 +845,11 @@ import articles from './file.json';
                 elms.artContent.classList.remove('slide-content-left');
                 elms.afterBar.classList.remove('after-bar-full');
 
-                currentImage = hash.substring(1) - 1;
+                var id = jsonFile.findIndex(function(el) {
+                    return el.id === parseInt(hash.substring(1));
+                });
+
+                currentImage = id;
 
                 elms.about.classList.add('overlay-open');
 
@@ -942,6 +861,7 @@ import articles from './file.json';
                     elms.afterBar.style.backgroundColor = color;
                     // elms.afterBar.style.boxShadow = "0px 4px 5px 0px " + color;
                     elms.grid.classList.remove('hide');
+                    elms.overlayMedia.classList.remove('overlay-media-hidden');
                 }, 500);
 
             }
@@ -951,13 +871,15 @@ import articles from './file.json';
         }
     }
 
+    // function testing(i) {
+    //     console.log(i);
+    // }
+
     function preLoad(arr) {
         for (var i = 0; i < arr.length; i++) {
             var img = new Image();
-            // img.onload = poop(arr[i]);
+            // img.onload = testing(arr[i]);
             img.src = assetPath + arr[i];
-
-            // console.log(img);
 
             // document.getElementById('hidden').appendChild(img);
         }
@@ -971,9 +893,12 @@ import articles from './file.json';
             // Parse JSON string into object
             jsonFile = articles;
 
+            jsonFile.sort(function (a, b) {
+                return parseInt(a.id) - parseInt(b.id);
+            });
+
             totalElements = jsonFile.length;
 
-            // console.log(jsonFile);
             jsonFile.forEach(function (el) {
                 allImages.push(el.src);
             });
@@ -991,8 +916,6 @@ import articles from './file.json';
 
                 blazy();
 
-                // elms.grid.classList.add('hide-simple');
-
                 setTimeout(function () {
                     checkHash();
                 }, 500);
@@ -1000,12 +923,8 @@ import articles from './file.json';
                 setTimeout(function () {
                     (window.scrollY > 0) ? elms.arrowUp.classList.remove('opacity-null') : elms.arrowUp.classList.add('opacity-null');
                 }, 10);
-
-
             }
         });
-
-        // elms.grid.classList.remove('hide-simple');
 
         bindEvents();
         if (window.history && window.history.pushState) {
@@ -1014,15 +933,9 @@ import articles from './file.json';
             }
         }
 
-        // if (isMobile()) {
-        // 	window.onfocus = function() {
-        // 		location.reload();
-        // 	}
-        // } else {
         window.onfocus = function () {
             blazy();
         }
-        // }
     }
 
     init();
