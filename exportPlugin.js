@@ -9,9 +9,11 @@ module.exports = class ExportPlugin {
             const mainTemplate = `.then(function () { return System.import("{{replacement}}")})`;
             compilation.chunks.forEach(chunk => {
                 let bootloader = headerTemplate;
-                bootloader += importTemplate.replace('{{replacement}}', compiler.options.output.publicPath + chunk.files[0]);
+                importTemplate.replace('{{replacement}}', compiler.options.output.publicPath + chunk.files[0]);
+                mainTemplate.replace('{{replacement}}', compiler.options.output.publicPath + chunk.files[0]);
+                bootloader += importTemplate;
                 bootloader += footerTemplate;
-                bootloader += mainTemplate.replace('{{replacement}}', compiler.options.output.publicPath + chunk.files[0]);
+                bootloader += mainTemplate;
                 bootloader += `; }); } }; });`;
                 const hash = crypto.createHash('md5');
                 hash.update(bootloader);
