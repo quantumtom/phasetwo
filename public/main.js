@@ -93,6 +93,8 @@ if(ColorThief.prototype.getColor=function(a,b){var c=this.getPalette(a,5,b),d=c[
 
     var scrollSpeeds = [8,10,8,10];
 
+    // var backButton = true;
+
     //For Swipping:
     var touchstartX = 0,
         touchstartY = 0,
@@ -466,7 +468,7 @@ if(ColorThief.prototype.getColor=function(a,b){var c=this.getPalette(a,5,b),d=c[
         }
     }
 
-    function overlayClose(e) {
+    function overlayClose(e, backButton = true) {
         e.preventDefault();
 
         elms.body.classList.remove('no-scroll');
@@ -499,7 +501,7 @@ if(ColorThief.prototype.getColor=function(a,b){var c=this.getPalette(a,5,b),d=c[
             elms.overlay.classList.remove("info-overlay-open-index");
         },1000)
 
-        if (window.history && window.history.pushState) {
+        if (window.history && window.history.pushState && backButton) {
             history.pushState("", document.title, window.location.pathname);
         }
     }
@@ -893,8 +895,11 @@ if(ColorThief.prototype.getColor=function(a,b){var c=this.getPalette(a,5,b),d=c[
     function checkHash() {
         var hash = window.location.hash;
 
+        console.log(hash);
+
         // Check for about
         if (!!hash && hash.substring(1) === 'about') {
+        	console.log("open about")
             elms.overlayAbout.classList.add("about-overlay-open");
             elms.about.classList.add("open");
 
@@ -1007,6 +1012,15 @@ if(ColorThief.prototype.getColor=function(a,b){var c=this.getPalette(a,5,b),d=c[
         if (window.history && window.history.pushState) {
             window.onpopstate = function(e) {
                 checkHash();
+
+                if (window.location.hash == "") {
+                	overlayClose(e, false);
+
+					elms.body.classList.remove('no-scroll');
+					elms.overlayAbout.classList.remove("about-overlay-open");
+					elms.about.classList.remove("open");
+			        elms.overlayCloseAbout.style.opacity = 1;
+                }
             }
         }
 
