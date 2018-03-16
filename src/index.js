@@ -1,18 +1,19 @@
-import './styles/main.css';
+import Markup from './raw.html';
 import './styles/fonts/Druk-Wide-Bold.otf';
 import './styles/fonts/Graphik-Regular.otf';
-import Markup from './raw.html';
+import './styles/main.css';
+import './styles/overwrites.css';
 
 let O = {
     start: function (options) {
         console.log('===================== INDEX START =====================');
-        var el = options.el;
+        let el = options.el;
 
         el.innerHTML = Markup;
 
         return Promise.resolve({
             stop: function () {
-                console.log('===================== MAIN STOP =====================');
+                console.log('===================== INDEX STOP =====================');
                 return Promise.resolve();
             }
         });
