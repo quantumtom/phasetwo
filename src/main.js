@@ -161,7 +161,6 @@ import ColorThief from './scripts/color-thief.js';
 
             img.addEventListener( "load", function() {
                 el.appendChild(img);
-
             }());
 
             document.querySelector('.col-' + colDecider).appendChild(el);
@@ -193,12 +192,10 @@ import ColorThief from './scripts/color-thief.js';
         this.speed = parseInt(this.el.getAttribute('data-scrollspeed'));
     };
 
-    moveItItem.prototype.update = function(scrollTop){
-        if ( scrollTop + window.innerHeight <= document.body.clientHeight + 99) {
-            this.el.style.transform = 'translateY(' +  -(scrollTop / this.speed) + 'px)';
-        } /* else {
-            this.el.style.transform = 'translateY(0px)';
-        }*/
+    moveItItem.prototype.update = function (scrollTop) {
+        if (scrollTop + window.innerHeight <= document.body.clientHeight + 99) {
+            this.el.style.transform = 'translateY(' + -(scrollTop / this.speed) + 'px)';
+        }
     };
 
     function addMobileGrid() {
@@ -259,7 +256,6 @@ import ColorThief from './scripts/color-thief.js';
             success: function(element){
                 setTimeout(function() {
                     let colorThief = new ColorThief();
-
                     element.dataset.dominant = 'rgb(' + colorThief.getColor(element) + ')';
                 },50);
             }
@@ -323,7 +319,6 @@ import ColorThief from './scripts/color-thief.js';
             } else if (e.target.classList.contains('artwork-number-span')) {
                 getId(e.target.parentNode);
             }
-
         }
 
         if (!isNaN(window.location.hash) && (e.target.nodeName == "IMG" || e.target.nodeName == "SPAN")) {
@@ -355,7 +350,6 @@ import ColorThief from './scripts/color-thief.js';
     }
 
     function arrowColorSwitch(color) {
-
         for (let i = 0; i < elms.aboutCloseMobile.children.length; i++) {
             elms.aboutCloseMobile.children[i].style.backgroundColor = color;
         }
@@ -492,12 +486,6 @@ import ColorThief from './scripts/color-thief.js';
 
         elms.afterBar.style.backgroundColor = color;
         // elms.afterBar.style.boxShadow = "0px 4px 5px 0px " + color;
-
-        // elms.instagramArtistShare.href = vals.social.ig;
-        // elms.twitterArtistShare.href = vals.social.tw;
-
-        // (vals.social.ig == "") ? elms.instagramArtistShare.parentNode.style.display = "none" : elms.instagramArtistShare.parentNode.style.display = "inline-block";
-        // (vals.social.tw == "") ? elms.twitterArtistShare.parentNode.style.display = "none" : elms.twitterArtistShare.parentNode.style.display = "inline-block";
     }
 
     function changeImage(id) {
@@ -657,14 +645,12 @@ import ColorThief from './scripts/color-thief.js';
             elms.afterBar.classList.add('after-bar-full');
             elms.overlayInsideTop.classList.add('overlay-inside-top-padder');
             elms.overlayMedia.classList.add('overlay-media-hidden');
-
         }, false);
 
         elms.aboutCloseMobile.addEventListener('click', function(e) {
             elms.afterBar.classList.add('after-bar-full');
             elms.overlayInsideTop.classList.add('overlay-inside-top-padder');
             elms.overlayMedia.classList.add('overlay-media-hidden');
-
         }, false);
 
         elms.next.addEventListener("click", nextImage, false);
@@ -856,6 +842,10 @@ import ColorThief from './scripts/color-thief.js';
             elms.body.classList.remove("overflow");
         }
     }
+
+    // function testing(i) {
+    //     console.log(i);
+    // }
 
     function preLoad(arr) {
         let img;
