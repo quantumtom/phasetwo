@@ -12,6 +12,7 @@ module.exports = {
         filename: '[name]-[hash].js',
         path: path.resolve(__dirname, 'dist'),
         publicPath: 'https://addons.redbull.com/us/phasetwo/dist/',
+        publicPath: 'https://addons.redbull.com/us/phasetwo/dist/',
         library: 'phasetwo',
         libraryTarget: 'amd'
     },
@@ -50,7 +51,7 @@ module.exports = {
         ]
     },
     devServer: {
-        contentBase: path.join(__dirname, "public"),
+        contentBase: path.join(__dirname, 'src'),
         compress: true,
         port: 9000
     },
