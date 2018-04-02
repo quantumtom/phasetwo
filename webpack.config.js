@@ -11,8 +11,8 @@ module.exports = {
     output: {
         filename: '[name]-[hash].js',
         path: path.resolve(__dirname, 'dist'),
-        publicPath: 'dist/',
-        // publicPath: 'https://addons.redbull.com/us/phasetwo/dist/',
+        // publicPath: 'dist/',
+        publicPath: 'https://addons.redbull.com/us/phasetwo/dist/',
         library: 'phasetwo',
         libraryTarget: 'amd'
     },
