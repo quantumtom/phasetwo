@@ -8,12 +8,12 @@ module.exports = merge(webpackConfig, {
 
     devtool: 'cheap-module-source-map',
 
-    // plugins: [
-    //     new webpack.optimize.CommonsChunkPlugin({
-    //         names: ['index', 'main']
-    //     }),
-    //     new CleanWebpackPlugin(['dist'])
-    // ],
+    plugins: [
+        new webpack.optimize.CommonsChunkPlugin({
+            names: ['index', 'main']
+        }),
+        new CleanWebpackPlugin(['dist'])
+    ],
     output: {
         filename: '[name]-[hash].js',
         path: path.resolve(__dirname, 'dist'),
