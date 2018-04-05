@@ -2,6 +2,7 @@
   "name": "phasetwo",
   "version": "1.0.1",
   "description": "RoxRite Phase Two",
+  "repository": "https://github.com/quantumtom/phasetwo",
   "main": "index.js",
   "scripts": {
     "dev": "cross-env NODE_ENV=dev webpack-dev-server --hot --open --progress --config webpack.config.dev.js",
@@ -12,17 +13,23 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "clean-webpack-plugin": "^0.1.18",
+    "clean-webpack-plugin": "^0.1.19",
     "cross-env": "^5.1.3",
-    "css-loader": "^0.28.10",
+    "css-loader": "^0.28.11",
     "ejs-loader": "^0.3.0",
     "file-loader": "^1.1.9",
     "html-loader": "^0.5.5",
-    "html-webpack-plugin": "^2.30.1",
-    "style-loader": "^0.20.2",
-    "url-loader": "^0.6.2",
-    "webpack": "^3.11.0",
-    "webpack-dev-server": "^2.11.2",
+    "html-webpack-plugin": "^3.2.0",
+    "style-loader": "^0.20.3",
+    "url-loader": "^1.0.1",
+    "webpack": "^4.5.0",
+    "webpack-dev-server": "^3.1.1",
     "webpack-merge": "^4.1.2"
+  },
+  "dependencies": {
+    "ajv": "^6.4.0",
+    "eslint": "^5.0.0-alpha.0",
+    "eslint-plugin-mocha": "^5.0.0",
+    "express-generator": "^4.16.0"
   }
 }
