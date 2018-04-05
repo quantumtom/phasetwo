@@ -1,7 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const merge = require('webpack-merge');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const SplitChunksPlugin = require('split-chunks-plugin');
 const webpackConfig = require('./webpack.config');
 
 module.exports = merge(webpackConfig, {
@@ -11,10 +11,10 @@ module.exports = merge(webpackConfig, {
     devtool: 'cheap-module-source-map',
 
     plugins: [
-        new webpack.optimize.CommonsChunkPlugin({
+        new webpack.optimize.SplitChunksPlugin({
             names: ['index', 'main']
         }),
-        new CleanWebpackPlugin(['dist'])
+        new SplitChunksPlugin(['dist'])
     ],
     output: {
         filename: '[name]-[hash].js',
