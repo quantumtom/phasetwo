@@ -1,27 +1,23 @@
 const path = require('path');
-const webpack = require('webpack');
+const exportPlugin = require('./exportPlugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 const merge = require('webpack-merge');
-const SplitChunksPlugin = require('split-chunks-plugin');
 const webpackConfig = require('./webpack.config');
 
 module.exports = merge(webpackConfig, {
 
     mode: 'production',
 
-    devtool: 'cheap-module-source-map',
-
     plugins: [
-        new webpack.optimize.SplitChunksPlugin({
-            names: ['index', 'main']
-        }),
-        new SplitChunksPlugin(['dist'])
+        new exportPlugin(),
+        new CleanWebpackPlugin(['dist/*']),
     ],
     output: {
         filename: '[name]-[hash].js',
         path: path.resolve(__dirname, 'dist'),
-        library: 'phasetwo',
+        library: 'reign',
         libraryTarget: 'amd',
-        publicPath: 'https://addons.redbull.com/us/playingforchange/'
+        publicPath: 'https://addons.redbull.com/us/reign/'
     }
 
 });
