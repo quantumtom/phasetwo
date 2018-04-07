@@ -11,7 +11,7 @@ module.exports = merge(webpackConfig, {
     output: {
         pathinfo: true,
         publicPath: '/',
-        library: 'reign',
+        library: 'bcone',
         libraryTarget: 'umd',
         filename: '[name].js'
     }

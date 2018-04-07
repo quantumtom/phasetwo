@@ -13,7 +13,7 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
         // publicPath: 'dist/',
         publicPath: 'https://addons.redbull.com/us/reign/',
-        library: 'reign',
+        library: 'bcone',
         libraryTarget: 'amd'
     },
     module: {

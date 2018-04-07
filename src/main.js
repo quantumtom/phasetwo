@@ -1,26 +1,37 @@
-import Blazy from './scripts/blazy.js';
-
 // main.js Start HERE:
 (function () {
-    function blazy() {
-        window.bLazy = new Blazy({
-            error: function(ele, msg){
-                if (msg === 'missing'){
-                    console.log('data-src is missing');
-                    // data-src is missing
-                }
-                else if (msg === 'invalid') {
-                    console.log('data-src is invalid');
-                    // data-src is invalid
-                }
-            }
-        });
-    }
 
-    function init() {
-        blazy();
-    }
+    !function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+            n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+        };
 
-    init();
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = '2.0';
+
+
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+
+
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+
+
+        s.parentNode.insertBefore(t, s);
+    } (window, document, 'script',
+
+        'https://connect.facebook.net/en_US/fbevents.js');
+
+
+    fbq('init', '1424344917869616');
+
+
+    fbq('track', 'PageView');
 
 })();
