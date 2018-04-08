@@ -1,8 +1,10 @@
+@charset "UTF-8";
+
 /* ----------------------------------------------
  * defining global constants
  * --------------------------------------------- */
 /* line 33, ../pages/external-tab/stylesheets/main.css.sass */
-body {
+#page {
     background: transparent; }
 
 /* line 37, ../pages/external-tab/stylesheets/main.css.sass */
@@ -55,9 +57,6 @@ body {
     color:#cc1c4a;
 }
 
-.button-signup a, a:active, a:visited {
-    color:white;
-}
 .break{
     display:block;
     border-bottom:solid 3px #cc1c4a;
