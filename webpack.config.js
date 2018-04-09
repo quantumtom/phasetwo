@@ -12,7 +12,7 @@ module.exports = {
         filename: '[name]-[hash].js',
         path: path.resolve(__dirname, 'dist'),
         // publicPath: 'dist/',
-        publicPath: 'https://addons.redbull.com/us/reign/',
+        publicPath: 'https://addons.redbull.com/us/bcone/',
         library: 'bcone',
         libraryTarget: 'amd'
     },
