@@ -30,6 +30,7 @@
   },
   "dependencies": {
     "ajv": "^6.4.0",
+    "blazy": "^1.8.2",
     "eslint": "^4.19.1",
     "eslint-plugin-mocha": "^5.0.0",
     "express-generator": "^4.16.0"

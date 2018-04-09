@@ -1,4 +1,4 @@
-import Blazy from './scripts/blazy.js';
+import Blazy from 'blazy';
 
 // main.js Start HERE:
 (function () {
