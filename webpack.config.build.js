@@ -19,9 +19,9 @@ module.exports = merge(webpackConfig, {
     output: {
         filename: '[name]-[hash].js',
         path: path.resolve(__dirname, 'dist'),
-        library: 'phasetwo',
+        library: 'yournamehere',
         libraryTarget: 'amd',
-        publicPath: 'https://addons.redbull.com/us/playingforchange/'
+        publicPath: 'https://addons.redbull.com/us/yournamehere/'
     }
 
 });

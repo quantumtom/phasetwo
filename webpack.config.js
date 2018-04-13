@@ -13,8 +13,8 @@ module.exports = {
         filename: '[name]-[hash].js',
         path: path.resolve(__dirname, 'dist'),
         // publicPath: 'dist/',
-        publicPath: 'https://addons.redbull.com/us/phasetwo/dist/',
-        library: 'phasetwo',
+        publicPath: 'https://addons.redbull.com/us/yournamehere/',
+        library: 'yournamehere',
         libraryTarget: 'amd'
     },
     module: {

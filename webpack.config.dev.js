@@ -10,7 +10,7 @@ module.exports = merge(webpackConfig, {
     output: {
         pathinfo: true,
         publicPath: '/',
-        library: 'pfc',
+        library: 'yournamehere',
         libraryTarget: 'umd',
         filename: '[name].js'
     }
