@@ -1,7 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
 const merge = require('webpack-merge');
-const SplitChunksPlugin = require('split-chunks-plugin');
 const webpackConfig = require('./webpack.config');
 
 module.exports = merge(webpackConfig, {
@@ -13,8 +12,7 @@ module.exports = merge(webpackConfig, {
     plugins: [
         new webpack.optimize.SplitChunksPlugin({
             names: ['index', 'main']
-        }),
-        new SplitChunksPlugin(['dist'])
+        })
     ],
     output: {
         filename: '[name]-[hash].js',
