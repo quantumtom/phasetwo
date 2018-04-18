@@ -10,7 +10,7 @@ module.exports = merge(webpackConfig, {
     output: {
         pathinfo: true,
         publicPath: '/',
-        library: 'yournamehere',
+        library: 'roxrite',
         libraryTarget: 'umd',
         filename: '[name].js'
     }
