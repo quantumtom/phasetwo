@@ -1,7 +1,7 @@
 {
   "name": "phasetwo",
   "version": "1.0.1",
-  "description": "RoxRite Phase Two",
+  "description": "Red Bull Reign USA Event Info",
   "repository": "https://github.com/quantumtom/phasetwo",
   "main": "index.js",
   "scripts": {
