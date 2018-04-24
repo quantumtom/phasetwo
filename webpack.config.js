@@ -1,5 +1,4 @@
 const path = require('path');
-const exportPlugin = require('./exportPlugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const pkg = require('./package.json');
 const name = pkg.name;
@@ -15,8 +14,8 @@ module.exports = {
         filename: '[name]-[hash].js',
         path: path.resolve(__dirname, 'dist'),
         // publicPath: 'dist/',
-        publicPath: 'https://addons.redbull.com/us/' + name + '/',
-        library: name,
+        publicPath: 'https://addons.redbull.com/us/reign/',
+        library: 'reign',
         libraryTarget: 'amd'
     },
     module: {
@@ -59,7 +58,6 @@ module.exports = {
         port: 9000
     },
     plugins: [
-        new exportPlugin(),
         new CleanWebpackPlugin(['dist/*']),
     ]
 };
