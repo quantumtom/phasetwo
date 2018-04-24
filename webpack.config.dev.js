@@ -13,7 +13,7 @@ module.exports = merge(webpackConfig, {
     output: {
         pathinfo: true,
         publicPath: '/',
-        library: 'reign',
+        library: name,
         libraryTarget: 'umd',
         filename: '[name].js'
     }

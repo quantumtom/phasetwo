@@ -3,6 +3,8 @@ const exportPlugin = require('./exportPlugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const merge = require('webpack-merge');
 const webpackConfig = require('./webpack.config');
+const pkg = require('./package.json');
+const name = pkg.name;
 
 module.exports = merge(webpackConfig, {
 
@@ -18,9 +20,9 @@ module.exports = merge(webpackConfig, {
     output: {
         filename: '[name]-[hash].js',
         path: path.resolve(__dirname, 'dist'),
-        library: 'reign',
+        library: name,
         libraryTarget: 'amd',
-        publicPath: 'https://addons.redbull.com/us/reign/'
+        publicPath: 'https://addons.redbull.com/us/' + name + '/'
     }
 
 });
