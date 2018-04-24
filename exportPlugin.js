@@ -18,9 +18,9 @@ module.exports = class ExportPlugin {
                 compilation.assets[`${chunk.name}-bootloader-${hash.digest("hex")}.js`] = {
                     source: _ => bootloader,
                     size: _ => bootloader.length
-                }
+                };
             });
-            done()
-        })
+            done();
+        });
     }
 };
