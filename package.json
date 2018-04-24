@@ -1,6 +1,6 @@
 {
-  "name": "phasetwo",
-  "version": "1.0.1",
+  "name": "reign",
+  "version": "1.1.0",
   "description": "Webpack Custom Script Compiler",
   "repository": "https://github.com/quantumtom/phasetwo",
   "main": "index.js",
