@@ -1,6 +1,5 @@
 import Blazy from 'blazy';
 
-// main.js Start HERE:
 (function () {
     function blazy() {
         window.bLazy = new Blazy({
