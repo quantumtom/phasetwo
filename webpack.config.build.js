@@ -13,6 +13,10 @@ module.exports = merge(webpackConfig, {
         new webpack.optimize.SplitChunksPlugin({
             filename: 'index.js',
             name: 'reign',
+            automaticNameDelimiter: '-',
+            chunks: 'all',
+            minChunks: 2,
+            runtimeChunk: true
         })
     ],
     output: {
