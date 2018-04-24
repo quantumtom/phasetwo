@@ -1,5 +1,7 @@
 const path = require('path');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const pkg = require('./package.json');
+const name = pkg.name;
 
 module.exports = {
     mode: 'development',

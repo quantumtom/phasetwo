@@ -1,5 +1,7 @@
 const merge = require('webpack-merge');
 const webpackConfig = require('./webpack.config');
+const pkg = require('./package.json');
+const name = pkg.name;
 
 module.exports = merge(webpackConfig, {
 

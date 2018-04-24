@@ -11,6 +11,9 @@ module.exports = merge(webpackConfig, {
     plugins: [
         new exportPlugin(),
         new CleanWebpackPlugin(['dist/*']),
+        new webpack.optimize.SplitChunksPlugin({
+            names: ['index', 'main']
+        })
     ],
     output: {
         filename: '[name]-[hash].js',
