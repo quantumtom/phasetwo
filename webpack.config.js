@@ -13,7 +13,7 @@ module.exports = {
         filename: '[name]-[hash].js',
         path: path.resolve(__dirname, 'dist'),
         publicPath: 'https://addons.redbull.com/us/reign/',
-        library: 'reign',
+        library: 'reignLib',
         libraryTarget: 'amd'
     },
     module: {
