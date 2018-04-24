@@ -8,11 +8,12 @@ module.exports = merge(webpackConfig, {
     mode: 'development',
 
     devtool: 'eval',
+    // devtool: 'cheap-module-source-map',
 
     output: {
         pathinfo: true,
         publicPath: '/',
-        library: name,
+        library: 'reign',
         libraryTarget: 'umd',
         filename: '[name].js'
     }

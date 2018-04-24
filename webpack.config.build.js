@@ -1,5 +1,6 @@
 const path = require('path');
-const webpack = require('webpack');
+const exportPlugin = require('./exportPlugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 const merge = require('webpack-merge');
 const webpackConfig = require('./webpack.config');
 
@@ -7,9 +8,9 @@ module.exports = merge(webpackConfig, {
 
     mode: 'production',
 
-    devtool: 'cheap-module-source-map',
-
     plugins: [
+        new exportPlugin(),
+        new CleanWebpackPlugin(['dist/*']),
         new webpack.optimize.SplitChunksPlugin({
             names: ['index', 'main']
         })
@@ -17,9 +18,9 @@ module.exports = merge(webpackConfig, {
     output: {
         filename: '[name]-[hash].js',
         path: path.resolve(__dirname, 'dist'),
-        library: name,
+        library: 'reign',
         libraryTarget: 'amd',
-        publicPath: 'https://addons.redbull.com/us/' + name + '/'
+        publicPath: 'https://addons.redbull.com/us/reign/'
     }
 
 });
