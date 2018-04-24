@@ -13,9 +13,8 @@ module.exports = {
     output: {
         filename: '[name]-[hash].js',
         path: path.resolve(__dirname, 'dist'),
-        // publicPath: 'dist/',
-        publicPath: 'https://addons.redbull.com/us/reign/',
-        library: 'reign',
+        publicPath: 'https://addons.redbull.com/us/' + name + '/',
+        library: name,
         libraryTarget: 'amd'
     },
     module: {
