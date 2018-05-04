@@ -1,19 +1,14 @@
 @font-face {
-    font-family: DrukWideBold;
+    font-family: HarbourMedium;
     font-weight: bold;
-    src: url("./fonts/Druk-Wide-Bold.otf") format("opentype");
-}
-
-@font-face {
-    font-family: GraphikRegular;
-    src: url("./fonts/Graphik-Regular.otf") format("opentype");
+    src: url("./fonts/HarbourMedium.ttf") format("truetype");
 }
 
 body {
     padding: 0;
     margin: 0;
     background-color: #000000;
-    font-family: GraphikRegular, sans-serif;
+    font-family: HarbourMedium, sans-serif;
     /*overflow: hidden;*/
 }
 
@@ -34,7 +29,7 @@ p {
 }
 
 h1, h2, h3 {
-    font-family: DrukWideBold, sans-serif;
+    font-family: HarbourMedium, sans-serif;
 }
 
 h2 {
@@ -141,10 +136,6 @@ tr {
         left: 18px;
     }
 }
-
-/*iframe {
-  pointer-events: none;
-}*/
 
 .gallery-swipper {
     position: absolute;
@@ -481,7 +472,7 @@ tr {
 }
 
 .grid {
-    margin: 130px auto 0;
+    margin: 30px auto 0;
     overflow: hidden;
     min-width: 250px;
 }
@@ -571,7 +562,7 @@ tr {
     -o-transition: all 200ms;
     transition: all 200ms;
     text-align: center;
-    font-family: DrukWideBold, sans-serif;
+    font-family: HarbourMedium, sans-serif;
 }
 
 @media screen and (min-width: 768px) {
@@ -583,6 +574,8 @@ tr {
 }
 
 .artwork-number-span {
+    font-size: 15px;
+    font-family: HarbourMedium, sans-serif;
     position: absolute;
     top: 50%;
     -webkit-transition: all 400ms;
@@ -598,7 +591,7 @@ tr {
     -moz-transition-delay: 0.2s;
     -o-transition-delay: 0.2s;
     opacity: 0;
-    /*text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;*/
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 .artwork-number-hover {
@@ -637,7 +630,7 @@ tr {
 
 .grid-item-3 {
     min-height: 100px;
-    width: 18.9%;
+    width: 27%;
     margin: 20px 3% 0 3%;
     float: left;
     -webkit-transition: all 200ms;
@@ -647,17 +640,23 @@ tr {
 }
 @media screen and (max-width: 768px) {
     .grid-item-3 {
-        width: 89%;
+        width: 94%;
         margin: auto 20px;
         position: relative;
     }
+
     .grid-item {
         margin-bottom: 5%;
     }
+
     .grid {
-        margin: 150px auto 0;
-        overflow: visible;
+        margin: 0 7px;
+        overflow: hidden;
         width: 90%;
+    }
+
+    .artwork-number-span {
+        font-size: 35px;
     }
 }
 
@@ -1494,10 +1493,12 @@ img {
     border-width: 15px 0 15px 26px;
     border-color: transparent transparent transparent #fff;
 }
+
 #video-holder img,
 #video-holder .plybtn {
     cursor: pointer;
 }
+
 #video-holder img,
 #video-holder iframe,
 #video-holder .plybtn,
@@ -1505,12 +1506,14 @@ img {
     position: absolute;
     z-index: 10;
 }
+
 #video-holder .plybtn,
 #video-holder .plybtn:before {
     top: 50%;
     left: 50%;
     transform: translate3d(-50%, -50%, 0);
 }
+
 #video-holder iframe {
     top: 0;
     left: 0;

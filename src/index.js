@@ -1,8 +1,8 @@
 import Markup from './raw.html';
-import './styles/fonts/Druk-Wide-Bold.otf';
-import './styles/fonts/Graphik-Regular.otf';
+import './styles/fonts/HarbourMedium.ttf';
 import './styles/main.css';
 import './styles/overwrites.css';
+import './styles/embed-container.css';
 
 let O = {
     start: function (options) {
