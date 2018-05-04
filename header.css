@@ -1,0 +1,25 @@
+.custom-header {
+    background: url(https://addons.redbull.com/us/a2w/images/banner.jpg) no-repeat center center/cover;
+    width: 100%;
+    text-align: center
+}
+
+.custom-header__logo {
+    max-width: 200px;
+    margin: 100px 0;
+    padding: 20px;
+    width: 80%
+}
+
+@media only screen and (min-width: 779px) {
+    .custom-header__logo {
+        max-width: 200px;
+    }
+
+}
+
+@media only screen and (min-width: 1153px) {
+    .custom-header__logo {
+        max-width: 200px;
+    }
+}
