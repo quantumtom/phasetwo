@@ -1,7 +1,7 @@
 {
-  "name": "roxrite",
+  "name": "a2w",
   "version": "1.1.0",
-  "description": "RoxRite Phase Two",
+  "description": "Artists to Watch",
   "repository": "https://github.com/quantumtom/phasetwo",
   "main": "index.js",
   "scripts": {
