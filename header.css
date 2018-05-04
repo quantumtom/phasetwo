@@ -5,21 +5,20 @@
 }
 
 .custom-header__logo {
-    max-width: 200px;
-    margin: 100px 0;
-    padding: 20px;
+    max-width: 800px;
+    margin: 21% 2% 2% 2%;
     width: 80%
 }
 
 @media only screen and (min-width: 779px) {
     .custom-header__logo {
-        max-width: 200px;
+        margin: 19% auto 1%
     }
-
 }
 
 @media only screen and (min-width: 1153px) {
     .custom-header__logo {
-        max-width: 200px;
+        margin: 286px auto -200px;
+        padding: 0 0 270px
     }
 }
