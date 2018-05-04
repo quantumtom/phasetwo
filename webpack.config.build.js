@@ -17,9 +17,9 @@ module.exports = merge(webpackConfig, {
     output: {
         filename: '[name]-[hash].js',
         path: path.resolve(__dirname, 'dist'),
-        library: 'roxrite',
+        library: 'a2wLib',
         libraryTarget: 'amd',
-        publicPath: 'https://addons.redbull.com/us/phasetwo/'
+        publicPath: 'https://addons.redbull.com/us/a2w/'
     }
 
 });
