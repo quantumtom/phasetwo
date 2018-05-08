@@ -124,6 +124,8 @@ import Blazy from 'blazy';
             document.querySelectorAll('.artwork-number').forEach(function(el) {
                 el.classList.remove('artwork-number-hover');
             });
+        } else {
+
         }
 
         if (validTrigger) {
@@ -368,71 +370,84 @@ import Blazy from 'blazy';
 
     function bindEvents() {
         let transitionEvent = whichTransitionEvent();
-
-        // Grid item clicks
-        elms.grid.addEventListener('click', function(e) {
-            if (isMobile()) {
-                openingByHover = 1;
-
-                currentImage = e.target.parentNode.dataset.id;
-
-                e.target.parentNode.firstElementChild.classList.add('artwork-number-hover');
-                e.target.classList.add('artwork-number-hover');
-                e.target.parentNode.classList.add('artwork-number-hover');
-
-                updateHash();
-
-            } else {
-                // console.log(e.target.parentNode.dataset.id);
-                currentImage = e.target.parentNode.dataset.id;
-                // console.log(currentImage);
-                // console.log(e.target.nodeName);
-                // console.log(typeof e.target.nodeName);
-
-                elms.artContent.classList.remove('slide-content-left');
-
-                openInfoOverlay(e);
-            }
-
-
-        }, false);
-
-        // Grid item hovers
-        if (!isMobile()) {
-            elms.grid.addEventListener("mouseover", function(e) {
-                e.stopPropagation();
-
-                if (e.target.nodeName == "IMG") {
-                    e.target.parentNode.firstElementChild.classList.add('artwork-number-hover');
-                }
-
-                if (e.target.nodeName == "SPAN" && e.target.classList.contains('artwork-number')) {
-                    e.target.classList.add('artwork-number-hover');
-                }
-
-                if (e.target.nodeName == "SPAN" && e.target.classList.contains('artwork-number-span')) {
-                    e.target.parentNode.classList.add('artwork-number-hover');
-                }
-            });
-
-            elms.grid.addEventListener("mouseout", function(e) {
-                e.stopPropagation();
-
-                if (e.target.nodeName == "IMG" ) {
-                    e.target.parentNode.firstElementChild.classList.remove('artwork-number-hover');
-                }
-
-                if (e.target.nodeName == "SPAN" && e.target.classList.contains('artwork-number')) {
-                    e.target.classList.remove('artwork-number-hover');
-                }
-
-                if (e.target.nodeName == "SPAN" && e.target.classList.contains('artwork-number-span')) {
-                    e.target.parentNode.classList.remove('artwork-number-hover');
-                }
-            });
-        }
-
-
+        //
+        // // Grid item clicks
+        // elms.grid.addEventListener('click', function(e) {
+        //     if (isMobile()) {
+        //         openingByHover = 1;
+        //
+        //         currentImage = e.target.parentNode.dataset.id;
+        //
+        //         e.target.parentNode.firstElementChild.classList.add('artwork-number-hover');
+        //         e.target.classList.add('artwork-number-hover');
+        //         e.target.parentNode.classList.add('artwork-number-hover');
+        //
+        //         updateHash();
+        //
+        //     } else {
+        //         openingByHover = 0;
+        //
+        //         document.querySelectorAll('.artwork-number').forEach(function(el) {
+        //             console.dir(el);
+        //             el.classList.add('artwork-number-hover');
+        //         });
+        //
+        //         updateHash();
+        //     }
+        //
+        //
+        // }, false);
+        //
+        // // Grid item hovers
+        // if (!isMobile()) {
+        //     elms.grid.addEventListener("mouseover", function(e) {
+        //         e.stopPropagation();
+        //
+        //         if (e.target.nodeName == "IMG") {
+        //             e.target.parentNode.firstElementChild.classList.add('artwork-number-hover');
+        //         }
+        //
+        //         if (e.target.nodeName == "SPAN" && e.target.classList.contains('artwork-number')) {
+        //             e.target.classList.add('artwork-number-hover');
+        //         }
+        //
+        //         if (e.target.nodeName == "SPAN" && e.target.classList.contains('artwork-number-span')) {
+        //             e.target.parentNode.classList.add('artwork-number-hover');
+        //         }
+        //     });
+        //
+        //     elms.grid.addEventListener("mouseout", function(e) {
+        //         e.stopPropagation();
+        //
+        //         if (e.target.nodeName == "IMG" ) {
+        //             e.target.parentNode.firstElementChild.classList.remove('artwork-number-hover');
+        //         }
+        //
+        //         if (e.target.nodeName == "SPAN" && e.target.classList.contains('artwork-number')) {
+        //             e.target.classList.remove('artwork-number-hover');
+        //         }
+        //
+        //         if (e.target.nodeName == "SPAN" && e.target.classList.contains('artwork-number-span')) {
+        //             e.target.parentNode.classList.remove('artwork-number-hover');
+        //         }
+        //     });
+        // } else {
+        //     elms.grid.addEventListener(transitionEvent, function(e) {
+        //         if (e.target.nodeName == 'SPAN' && e.target.classList.contains('artwork-number-span') && openingByHover) {
+        //             setTimeout(function() {
+        //                 e.target.style.opacity = 0;
+        //             }, 1000);
+        //
+        //             setTimeout(function() {
+        //                 e.target.style.display = 'none';
+        //                 e.target.parentNode.parentNode.classList.add('grid-current-item');
+        //                 // openInfoOverlay(e);
+        //             }, 800);
+        //         }
+        //     });
+        // }
+        //
+        //
         // elms.aboutCloseDesktop.addEventListener('click', function(e) {
         //     elms.afterBar.classList.add('after-bar-full');
         //     elms.overlayInsideTop.classList.add('overlay-inside-top-padder');
@@ -535,22 +550,6 @@ import Blazy from 'blazy';
         //     window.scroll({top: 0, behavior: 'smooth' });
         // });
         //
-        if (isMobile()) {
-            elms.grid.addEventListener(transitionEvent, function(e) {
-                if (e.target.nodeName == 'SPAN' && e.target.classList.contains('artwork-number-span') && openingByHover) {
-                    setTimeout(function() {
-                        // e.target.style.opacity = 0;
-                    }, 400);
-
-                    setTimeout(function() {
-                        // e.target.style.display = 'none';
-                        e.target.parentNode.parentNode.classList.add('grid-current-item');
-                        openInfoOverlay(e);
-                    }, 800);
-                }
-            });
-        }
-
         // window.addEventListener('scroll', function(e) {
         //     (window.scrollY > 0) ? elms.arrowUp.classList.remove('opacity-null') : elms.arrowUp.classList.add('opacity-null');
         // });
@@ -613,7 +612,9 @@ import Blazy from 'blazy';
     function modifyHeader() {
         let headerPanel = document.getElementsByClassName('header__panel')[0];
 
-        headerPanel.style.background = 'transparent';
+        if (headerPanel) {
+            headerPanel.style.background = 'transparent';
+        }
     }
 
     function init() {

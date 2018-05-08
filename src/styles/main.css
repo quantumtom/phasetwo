@@ -1,14 +1,14 @@
 @font-face {
-    font-family: HarbourMedium;
+    font-family: MaisonBold;
     font-weight: bold;
-    src: url("./fonts/HarbourMedium.ttf") format("truetype");
+    src: url("./fonts/MaisonNeue-Book.woff2") format("opentype");
 }
 
 body {
     padding: 0;
     margin: 0;
     background-color: #000000;
-    font-family: HarbourMedium, sans-serif;
+    font-family: MaisonBold, sans-serif;
     /*overflow: hidden;*/
 }
 
@@ -29,7 +29,7 @@ p {
 }
 
 h1, h2, h3 {
-    font-family: HarbourMedium, sans-serif;
+    font-family: MaisonBold, sans-serif;
 }
 
 h2 {
@@ -47,10 +47,6 @@ h4 {
     text-transform: uppercase;
     padding-bottom: 0;
     margin-bottom: 5px;
-}
-
-tr {
-    line-height: 1.1em;
 }
 
 #header {
@@ -472,9 +468,12 @@ tr {
 }
 
 .grid {
-    margin: 30px auto 0;
+    background: url(https://addons.redbull.com/us/a2w/images/RBM_A2W_Photo_Frame_Square-01-md.png) no-repeat center 0 scroll;
+    background-size: 100%;
+    margin: auto;
     overflow: hidden;
-    min-width: 250px;
+    padding: 26% 10%;
+    width: auto;
 }
 
 .grid-hide {
@@ -526,7 +525,6 @@ tr {
 }
 
 .grid-item {
-    margin-bottom: 30%;
     position: relative;
     -webkit-transition: all 200ms ease-in-out;
     -moz-transition: all 200ms ease-in-out;
@@ -534,35 +532,20 @@ tr {
     transition: all 200ms ease-in-out;
 }
 
+.grid-item-caption {
+    line-height: 80%;
+    margin: 20px 0;
+}
+
 .artwork-number {
-    position: absolute;
     bottom: 0;
-    z-index: 1;
     color: white;
-    /* right: 0; */
-    /* background-color: rgba(255,255,255,0.2); */
-    /*padding-top: 4px;*/
-    /* text-align: center; */
     display: inline-block;
-    opacity: 0;
-    /*left: 50%;*/ /* small square */
-    /*top: 50%;*/ /* small square */
-    /*width: 42%;*/ /* small square */
-    /*height: 20%;*/ /* small square */
-    top: -1px;
     height: 100%;
-    /*width: 100%;*/
-    width: 0;
+    font-family: MaisonBold, sans-serif;
     font-size: 30px;
-    letter-spacing: 3px;
-    /*margin-left: -21%;*/ /* small square */
-    /*margin-top: -10%;*/ /* small square */
-    -webkit-transition: all 200ms;
-    -moz-transition: all 200ms;
-    -o-transition: all 200ms;
     transition: all 200ms;
     text-align: center;
-    font-family: HarbourMedium, sans-serif;
 }
 
 @media screen and (min-width: 768px) {
@@ -574,23 +557,11 @@ tr {
 }
 
 .artwork-number-span {
-    font-size: 15px;
-    font-family: HarbourMedium, sans-serif;
-    position: absolute;
-    top: 50%;
-    -webkit-transition: all 400ms;
-    -moz-transition: all 400ms;
-    -o-transition: all 400ms;
+    font-family: MaisonBold, sans-serif;
+    margin: 10px 0 0 0;
     transition: all 400ms;
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     transition-delay: 0.2s;
-    -webkit-transition-delay: 0.2s;
-    -moz-transition-delay: 0.2s;
-    -o-transition-delay: 0.2s;
-    opacity: 0;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
@@ -630,33 +601,45 @@ tr {
 
 .grid-item-3 {
     min-height: 100px;
-    width: 27%;
-    margin: 20px 3% 0 3%;
+    width: 30%;
+    margin: auto 1%;
     float: left;
     -webkit-transition: all 200ms;
     -moz-transition: all 200ms;
     -o-transition: all 200ms;
     transition: all 200ms;
 }
+
 @media screen and (max-width: 768px) {
-    .grid-item-3 {
-        width: 94%;
-        margin: auto 20px;
-        position: relative;
+    .grid-item {
+        margin-bottom: auto;
     }
 
-    .grid-item {
-        margin-bottom: 5%;
+    .grid-item :hover, .grid-item:active{
     }
 
     .grid {
-        margin: 0 7px;
+        background: url(https://addons.redbull.com/us/a2w/images/RBM_A2W_Photo_Frame_Square-01-md.png) no-repeat center 0% scroll;
+        background-size: 100%;
+        margin: auto;
+        min-width: 250px;
         overflow: hidden;
-        width: 90%;
+        padding: 30% 0 30% 7%;
+        width: auto;
+    }
+
+    .grid-item-3 {
+        min-height: 100px;
+        width: 29%;
+        float: left;
+        -webkit-transition: all 200ms;
+        -moz-transition: all 200ms;
+        -o-transition: all 200ms;
+        transition: all 200ms;
     }
 
     .artwork-number-span {
-        font-size: 35px;
+        font-size: 35%;
     }
 }
 

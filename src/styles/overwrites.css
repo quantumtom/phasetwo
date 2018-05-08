@@ -31,6 +31,10 @@
 }
 
 .spotify-container {
-    text-align: center;
-    width: 100%;
+    margin: 0;
+    width: auto;
+}
+
+.content {
+    margin: 0;
 }

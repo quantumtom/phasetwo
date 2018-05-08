@@ -1,24 +1,35 @@
 .custom-header {
     background: url(https://addons.redbull.com/us/a2w/images/banner.jpg) no-repeat center center/cover;
     width: 100%;
-    text-align: center
+    text-align: center;
 }
 
 .custom-header__logo {
     max-width: 800px;
     margin: 21% 2% 2% 2%;
-    width: 80%
+    width: 80%;
 }
 
 @media only screen and (min-width: 779px) {
     .custom-header__logo {
-        margin: 19% auto 1%
+        margin: 19% auto 1%;
     }
 }
 
 @media only screen and (min-width: 1153px) {
     .custom-header__logo {
         margin: 286px auto -200px;
-        padding: 0 0 270px
+        padding: 0 0 270px;
     }
 }
+
+@media only screen and (min-width: 780px) {
+    .caption-and-content-layout__caption-container {
+        padding-top: 0;
+    }
+
+    .inline-content-panel-layout__content {
+        padding: 0;
+    }
+}
+
