@@ -1,0 +1,34 @@
+@media all and (max-device-width: 768px) {
+    .grid-item {
+        margin-bottom: auto;
+    }
+
+    .grid {
+        background-size: 100%;
+        margin: auto;
+        min-width: 250px;
+        padding: 0;
+        width: 100%;
+    }
+
+    .grid-item-caption {
+        margin: 0 0 20px 0;
+        text-align: center;
+    }
+
+    .grid-item-3 {
+        margin: auto;
+        min-height: 100px;
+        width: 80%;
+        float: none;
+        -webkit-transition: all 200ms;
+        -moz-transition: all 200ms;
+        -o-transition: all 200ms;
+        transition: all 200ms;
+    }
+
+    .artwork-number-span {
+        font-size: 80%;
+    }
+
+}

@@ -368,192 +368,192 @@ import Blazy from 'blazy';
         }
     }
 
-    function bindEvents() {
-        let transitionEvent = whichTransitionEvent();
-        //
-        // // Grid item clicks
-        // elms.grid.addEventListener('click', function(e) {
-        //     if (isMobile()) {
-        //         openingByHover = 1;
-        //
-        //         currentImage = e.target.parentNode.dataset.id;
-        //
-        //         e.target.parentNode.firstElementChild.classList.add('artwork-number-hover');
-        //         e.target.classList.add('artwork-number-hover');
-        //         e.target.parentNode.classList.add('artwork-number-hover');
-        //
-        //         updateHash();
-        //
-        //     } else {
-        //         openingByHover = 0;
-        //
-        //         document.querySelectorAll('.artwork-number').forEach(function(el) {
-        //             console.dir(el);
-        //             el.classList.add('artwork-number-hover');
-        //         });
-        //
-        //         updateHash();
-        //     }
-        //
-        //
-        // }, false);
-        //
-        // // Grid item hovers
-        // if (!isMobile()) {
-        //     elms.grid.addEventListener("mouseover", function(e) {
-        //         e.stopPropagation();
-        //
-        //         if (e.target.nodeName == "IMG") {
-        //             e.target.parentNode.firstElementChild.classList.add('artwork-number-hover');
-        //         }
-        //
-        //         if (e.target.nodeName == "SPAN" && e.target.classList.contains('artwork-number')) {
-        //             e.target.classList.add('artwork-number-hover');
-        //         }
-        //
-        //         if (e.target.nodeName == "SPAN" && e.target.classList.contains('artwork-number-span')) {
-        //             e.target.parentNode.classList.add('artwork-number-hover');
-        //         }
-        //     });
-        //
-        //     elms.grid.addEventListener("mouseout", function(e) {
-        //         e.stopPropagation();
-        //
-        //         if (e.target.nodeName == "IMG" ) {
-        //             e.target.parentNode.firstElementChild.classList.remove('artwork-number-hover');
-        //         }
-        //
-        //         if (e.target.nodeName == "SPAN" && e.target.classList.contains('artwork-number')) {
-        //             e.target.classList.remove('artwork-number-hover');
-        //         }
-        //
-        //         if (e.target.nodeName == "SPAN" && e.target.classList.contains('artwork-number-span')) {
-        //             e.target.parentNode.classList.remove('artwork-number-hover');
-        //         }
-        //     });
-        // } else {
-        //     elms.grid.addEventListener(transitionEvent, function(e) {
-        //         if (e.target.nodeName == 'SPAN' && e.target.classList.contains('artwork-number-span') && openingByHover) {
-        //             setTimeout(function() {
-        //                 e.target.style.opacity = 0;
-        //             }, 1000);
-        //
-        //             setTimeout(function() {
-        //                 e.target.style.display = 'none';
-        //                 e.target.parentNode.parentNode.classList.add('grid-current-item');
-        //                 // openInfoOverlay(e);
-        //             }, 800);
-        //         }
-        //     });
-        // }
-        //
-        //
-        // elms.aboutCloseDesktop.addEventListener('click', function(e) {
-        //     elms.afterBar.classList.add('after-bar-full');
-        //     elms.overlayInsideTop.classList.add('overlay-inside-top-padder');
-        //     elms.overlayMedia.classList.add('overlay-media-hidden');
-        //
-        // }, false);
-        //
-        // elms.aboutCloseMobile.addEventListener('click', function(e) {
-        //     elms.afterBar.classList.add('after-bar-full');
-        //     elms.overlayInsideTop.classList.add('overlay-inside-top-padder');
-        //     elms.overlayMedia.classList.add('overlay-media-hidden');
-        //
-        // }, false);
-        //
-        // elms.next.addEventListener("click", nextImage, false);
-        // elms.previous.addEventListener("click", previousImage, false);
-        //
-        // elms.nextMobile.addEventListener("click", nextImage, false);
-        // elms.previousMobile.addEventListener("click", previousImage, false);
-        //
-        // // Open the "About" overlay
-        // elms.btnOpenAbout.addEventListener("click", openAboutOverlay, false);
-        //
-        // // On Content
-        // elms.artContent.addEventListener(transitionEvent, function(e) {
-        //     if (this.classList.contains("slide-content-left") && elms.overlay.classList.contains('info-overlay-open')) {
-        //         this.classList.remove("slide-content-left");
-        //         // elms.overlayMedia.classList.add('overlay-media-hidden');
-        //         elms.overlayMedia.classList.remove('overlay-media-hidden');
-        //         displayArtworkInfo(currentImage);
-        //         changeImage(currentImage);
-        //     }
-        // }, false);
-        //
-        // elms.overlay.addEventListener(transitionEvent, function(e) {
-        //     if (e.propertyName == 'opacity' && this.classList.contains('info-overlay-open') && !elms.afterBar.classList.contains('after-bar-full')) {
-        //         elms.body.classList.add('no-scroll');
-        //         elms.afterBar.classList.remove('after-bar-full');
-        //         elms.overlay.scrollTop = 0;
-        //     }
-        // }, false);
-        //
-        // elms.afterBar.addEventListener(transitionEvent, function(e) {
-        //     windowWidthCheck();
-        //     if (elms.overlay.classList.contains("info-overlay-open") && e.propertyName == 'background-color' && !this.classList.contains('after-bar-full')) {
-        //         // elms.overlayMedia.classList.remove('overlay-media-hidden');
-        //         elms.wrapper.classList.remove('opacity-zero');
-        //         elms.overlay.classList.remove('js-hash-call');
-        //         if (!isMobile()) {
-        //             elms.artContent.classList.remove('slide-content-left');
-        //         }
-        //
-        //     }
-        //
-        //     if (elms.overlay.classList.contains("info-overlay-open") && this.classList.contains('after-bar-full') && !elms.overlay.classList.contains('js-hash-call') && !this.classList.contains('arrow-click')) { /* Side Scroll added  just !this.classList.contains('arrow-click')*/
-        //         // elms.overlay.classList.remove("info-overlay-open");
-        //         overlayClose(e);
-        //     }
-        //
-        //     if (this.classList.contains('arrow-click')) { /* Side Scroll added */
-        //         elms.afterBar.classList.remove("arrow-click"); /* Side Scroll added */
-        //         elms.afterBar.classList.remove("after-bar-full"); /* Side Scroll added */
-        //         // elms.overlayMedia.classList.remove('overlay-media-hidden'); /* Side Scroll added */
-        //         elms.overlayInsideTop.classList.remove('overlay-inside-top-padder'); /* Side Scroll added */
-        //     }
-        //
-        // }, false);
-        //
-        // document.addEventListener('keydown', function(e) {
-        //     let keyCode = e.keyCode;
-        //
-        //     if (elms.overlay.classList.contains("info-overlay-open")) {
-        //         // Left Arrow Click
-        //         if (keyCode == 37) {
-        //             previousImage(e);
-        //         }
-        //
-        //         // Right Arrow Click
-        //         if (keyCode == 39) {
-        //             nextImage(e);
-        //         }
-        //     }
-        // }, false);
-        //
-        // elms.overlayCloseAbout.addEventListener('click', function() {
-        //     elms.body.classList.remove('no-scroll');
-        //     elms.aboutOverlay.classList.remove("about-overlay-open");
-        //     elms.btnOpenAbout.classList.remove("open");
-        //     this.style.opacity = 0;
-        //
-        //     for (let i = 0; i < elms.aboutAnimation.length; i++) {
-        //         elms.aboutAnimation[i].classList.remove('about-animation-' + i);
-        //     }
-        //
-        //     history.pushState("", document.title, window.location.pathname);
-        // }, false);
-        //
-        // elms.arrowUp.addEventListener('click', function(e) {
-        //     e.preventDefault();
-        //     window.scroll({top: 0, behavior: 'smooth' });
-        // });
-        //
-        // window.addEventListener('scroll', function(e) {
-        //     (window.scrollY > 0) ? elms.arrowUp.classList.remove('opacity-null') : elms.arrowUp.classList.add('opacity-null');
-        // });
-    }
+    // function bindEvents() {
+    //     let transitionEvent = whichTransitionEvent();
+    //
+    //     // Grid item clicks
+    //     elms.grid.addEventListener('click', function(e) {
+    //         if (isMobile()) {
+    //             openingByHover = 1;
+    //
+    //             currentImage = e.target.parentNode.dataset.id;
+    //
+    //             e.target.parentNode.firstElementChild.classList.add('artwork-number-hover');
+    //             e.target.classList.add('artwork-number-hover');
+    //             e.target.parentNode.classList.add('artwork-number-hover');
+    //
+    //             updateHash();
+    //
+    //         } else {
+    //             openingByHover = 0;
+    //
+    //             document.querySelectorAll('.artwork-number').forEach(function(el) {
+    //                 console.dir(el);
+    //                 el.classList.add('artwork-number-hover');
+    //             });
+    //
+    //             updateHash();
+    //         }
+    //
+    //
+    //     }, false);
+    //
+    //     // Grid item hovers
+    //     if (!isMobile()) {
+    //         elms.grid.addEventListener("mouseover", function(e) {
+    //             e.stopPropagation();
+    //
+    //             if (e.target.nodeName == "IMG") {
+    //                 e.target.parentNode.firstElementChild.classList.add('artwork-number-hover');
+    //             }
+    //
+    //             if (e.target.nodeName == "SPAN" && e.target.classList.contains('artwork-number')) {
+    //                 e.target.classList.add('artwork-number-hover');
+    //             }
+    //
+    //             if (e.target.nodeName == "SPAN" && e.target.classList.contains('artwork-number-span')) {
+    //                 e.target.parentNode.classList.add('artwork-number-hover');
+    //             }
+    //         });
+    //
+    //         elms.grid.addEventListener("mouseout", function(e) {
+    //             e.stopPropagation();
+    //
+    //             if (e.target.nodeName == "IMG" ) {
+    //                 e.target.parentNode.firstElementChild.classList.remove('artwork-number-hover');
+    //             }
+    //
+    //             if (e.target.nodeName == "SPAN" && e.target.classList.contains('artwork-number')) {
+    //                 e.target.classList.remove('artwork-number-hover');
+    //             }
+    //
+    //             if (e.target.nodeName == "SPAN" && e.target.classList.contains('artwork-number-span')) {
+    //                 e.target.parentNode.classList.remove('artwork-number-hover');
+    //             }
+    //         });
+    //     } else {
+    //         elms.grid.addEventListener(transitionEvent, function(e) {
+    //             if (e.target.nodeName == 'SPAN' && e.target.classList.contains('artwork-number-span') && openingByHover) {
+    //                 setTimeout(function() {
+    //                     e.target.style.opacity = 0;
+    //                 }, 1000);
+    //
+    //                 setTimeout(function() {
+    //                     e.target.style.display = 'none';
+    //                     e.target.parentNode.parentNode.classList.add('grid-current-item');
+    //                     // openInfoOverlay(e);
+    //                 }, 800);
+    //             }
+    //         });
+    //     }
+    //
+    //
+    //     elms.aboutCloseDesktop.addEventListener('click', function(e) {
+    //         elms.afterBar.classList.add('after-bar-full');
+    //         elms.overlayInsideTop.classList.add('overlay-inside-top-padder');
+    //         elms.overlayMedia.classList.add('overlay-media-hidden');
+    //
+    //     }, false);
+    //
+    //     elms.aboutCloseMobile.addEventListener('click', function(e) {
+    //         elms.afterBar.classList.add('after-bar-full');
+    //         elms.overlayInsideTop.classList.add('overlay-inside-top-padder');
+    //         elms.overlayMedia.classList.add('overlay-media-hidden');
+    //
+    //     }, false);
+    //
+    //     elms.next.addEventListener("click", nextImage, false);
+    //     elms.previous.addEventListener("click", previousImage, false);
+    //
+    //     elms.nextMobile.addEventListener("click", nextImage, false);
+    //     elms.previousMobile.addEventListener("click", previousImage, false);
+    //
+    //     // Open the "About" overlay
+    //     elms.btnOpenAbout.addEventListener("click", openAboutOverlay, false);
+    //
+    //     // On Content
+    //     elms.artContent.addEventListener(transitionEvent, function(e) {
+    //         if (this.classList.contains("slide-content-left") && elms.overlay.classList.contains('info-overlay-open')) {
+    //             this.classList.remove("slide-content-left");
+    //             // elms.overlayMedia.classList.add('overlay-media-hidden');
+    //             elms.overlayMedia.classList.remove('overlay-media-hidden');
+    //             displayArtworkInfo(currentImage);
+    //             changeImage(currentImage);
+    //         }
+    //     }, false);
+    //
+    //     elms.overlay.addEventListener(transitionEvent, function(e) {
+    //         if (e.propertyName == 'opacity' && this.classList.contains('info-overlay-open') && !elms.afterBar.classList.contains('after-bar-full')) {
+    //             elms.body.classList.add('no-scroll');
+    //             elms.afterBar.classList.remove('after-bar-full');
+    //             elms.overlay.scrollTop = 0;
+    //         }
+    //     }, false);
+    //
+    //     elms.afterBar.addEventListener(transitionEvent, function(e) {
+    //         windowWidthCheck();
+    //         if (elms.overlay.classList.contains("info-overlay-open") && e.propertyName == 'background-color' && !this.classList.contains('after-bar-full')) {
+    //             // elms.overlayMedia.classList.remove('overlay-media-hidden');
+    //             elms.wrapper.classList.remove('opacity-zero');
+    //             elms.overlay.classList.remove('js-hash-call');
+    //             if (!isMobile()) {
+    //                 elms.artContent.classList.remove('slide-content-left');
+    //             }
+    //
+    //         }
+    //
+    //         if (elms.overlay.classList.contains("info-overlay-open") && this.classList.contains('after-bar-full') && !elms.overlay.classList.contains('js-hash-call') && !this.classList.contains('arrow-click')) { /* Side Scroll added  just !this.classList.contains('arrow-click')*/
+    //             // elms.overlay.classList.remove("info-overlay-open");
+    //             overlayClose(e);
+    //         }
+    //
+    //         if (this.classList.contains('arrow-click')) { /* Side Scroll added */
+    //             elms.afterBar.classList.remove("arrow-click"); /* Side Scroll added */
+    //             elms.afterBar.classList.remove("after-bar-full"); /* Side Scroll added */
+    //             // elms.overlayMedia.classList.remove('overlay-media-hidden'); /* Side Scroll added */
+    //             elms.overlayInsideTop.classList.remove('overlay-inside-top-padder'); /* Side Scroll added */
+    //         }
+    //
+    //     }, false);
+    //
+    //     document.addEventListener('keydown', function(e) {
+    //         let keyCode = e.keyCode;
+    //
+    //         if (elms.overlay.classList.contains("info-overlay-open")) {
+    //             // Left Arrow Click
+    //             if (keyCode == 37) {
+    //                 previousImage(e);
+    //             }
+    //
+    //             // Right Arrow Click
+    //             if (keyCode == 39) {
+    //                 nextImage(e);
+    //             }
+    //         }
+    //     }, false);
+    //
+    //     elms.overlayCloseAbout.addEventListener('click', function() {
+    //         elms.body.classList.remove('no-scroll');
+    //         elms.aboutOverlay.classList.remove("about-overlay-open");
+    //         elms.btnOpenAbout.classList.remove("open");
+    //         this.style.opacity = 0;
+    //
+    //         for (let i = 0; i < elms.aboutAnimation.length; i++) {
+    //             elms.aboutAnimation[i].classList.remove('about-animation-' + i);
+    //         }
+    //
+    //         history.pushState("", document.title, window.location.pathname);
+    //     }, false);
+    //
+    //     elms.arrowUp.addEventListener('click', function(e) {
+    //         e.preventDefault();
+    //         window.scroll({top: 0, behavior: 'smooth' });
+    //     });
+    //
+    //     window.addEventListener('scroll', function(e) {
+    //         (window.scrollY > 0) ? elms.arrowUp.classList.remove('opacity-null') : elms.arrowUp.classList.add('opacity-null');
+    //     });
+    // }
 
     // function checkHash() {
     //     let hash = window.location.hash;
@@ -621,7 +621,7 @@ import Blazy from 'blazy';
         let ready = true;
 
         if (ready) {
-            document.querySelector('#cs-wrapper').style.display = "block";
+            // document.querySelector('#cs-wrapper').style.display = "block";
 
             blazy();
 
@@ -660,5 +660,5 @@ import Blazy from 'blazy';
 
     init();
 
-    bindEvents();
+    // bindEvents();
 })();

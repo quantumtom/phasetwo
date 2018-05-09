@@ -36,5 +36,6 @@
 }
 
 .content {
-    margin: 0;
+    margin: auto;
+    width: 80%;
 }
