@@ -12,7 +12,9 @@
     }
 
     .grid-item-caption {
+        line-height: 75%;
         margin: 0 0 20px 0;
+        min-height: 50px;
         text-align: center;
     }
 
@@ -28,7 +30,7 @@
     }
 
     .artwork-number-span {
-        font-size: 80%;
+        font-size: 75%;
     }
 
 }
