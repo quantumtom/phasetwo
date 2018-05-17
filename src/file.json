@@ -31,10 +31,10 @@
     "name": "",
     "description": "",
     "artist": "",
-    "artistrul": "",
+    "artisturl": "",
     "gridsrc": "images/artwork-opt/003-t.jpg",
     "src": "images/artwork-opt/003.jpg",
-    "type": "image",
+    "type": "",
     "original": ""
   },
   {
@@ -43,10 +43,10 @@
     "name": "",
     "description": "",
     "artist": "",
-    "artistrul": "",
+    "artisturl": "",
     "gridsrc": "images/artwork-opt/004-t.jpg",
     "src": "images/artwork-opt/004.jpg",
-    "type": "image",
+    "type": "",
     "original": ""
   },
   {
@@ -68,7 +68,7 @@
     "name": "",
     "description": "",
     "artist": "",
-    "artistrul": "",
+    "artisturl": "",
     "gridsrc": "images/artwork-opt/006-t.jpg",
     "src": "images/artwork-opt/006.jpg",
     "type": "image",
@@ -93,10 +93,10 @@
     "name": "",
     "description": "",
     "artist": "",
-    "artistrul": "",
+    "artisturl": "",
     "gridsrc": "images/artwork-opt/008-t.jpg",
     "src": "images/artwork-opt/008.jpg",
-    "type": "image",
+    "type": "",
     "original": ""
   },
   {
@@ -118,10 +118,10 @@
     "name": "",
     "description": "",
     "artist": "",
-    "artistrul": "",
+    "artisturl": "",
     "gridsrc": "images/artwork-opt/010-t.jpg",
     "src": "images/artwork-opt/010.jpg",
-    "type": "image",
+    "type": "",
     "original": ""
   },
   {
@@ -143,10 +143,10 @@
     "name": "",
     "description": "",
     "artist": "",
-    "artistrul": "",
+    "artisturl": "",
     "gridsrc": "images/artwork-opt/012-t.jpg",
     "src": "images/artwork-opt/012.jpg",
-    "type": "image",
+    "type": "",
     "original": ""
   },
   {
@@ -155,10 +155,10 @@
     "name": "",
     "description": "",
     "artist": "",
-    "artistrul": "",
+    "artisturl": "",
     "gridsrc": "images/artwork-opt/013-t.jpg",
     "src": "images/artwork-opt/013.jpg",
-    "type": "image",
+    "type": "",
     "original": ""
   },
   {
@@ -167,7 +167,7 @@
     "name": "Bboy Battle</br>Petaluma, CA",
     "description": "This event in Petaluma, CA wasn’t particularly memorable for RoxRite, but it served more of a purpose than mere practice. “Some of those little local ones,” he said, “they didn’t really have much talent, they’re just kind of like, ‘Enter; you might battle one or two guys and then you win. That’s it.’ I was 16 or 17—so you just try to put your name up.” Crushing small competitions was always a good way to bolster the rep of a fledgling dancer. You never knew who might be judging: an influential b-boy from a legendary crew who could spread the word about you (or want to recruit you) or just a new friend or mentor. And of course, you might not be able to pass up an opportunity to show your skills. (November 2000)",
     "artist": "Stephen Halker",
-    "artistrul": "http://stephenhalker.weebly.com/",
+    "artisturl": "http://stephenhalker.weebly.com/",
     "gridsrc": "images/artwork-opt/014-t.gif",
     "src": "images/artwork-opt/014.gif",
     "type": "image",
@@ -203,10 +203,10 @@
     "name": "",
     "description": "",
     "artist": "",
-    "artistrul": "",
+    "artisturl": "",
     "gridsrc": "images/artwork-opt/017-t.jpg",
     "src": "images/artwork-opt/017.jpg",
-    "type": "image",
+    "type": "",
     "original": ""
   },
   {
@@ -227,10 +227,10 @@
     "name": "",
     "description": "",
     "artist": "",
-    "artistrul": "",
+    "artisturl": "",
     "gridsrc": "images/artwork-opt/019-t.jpg",
     "src": "images/artwork-opt/019.jpg",
-    "type": "image",
+    "type": "",
     "original": ""
   },
   {
@@ -239,10 +239,10 @@
     "name": "",
     "description": "",
     "artist": "",
-    "artistrul": "",
+    "artisturl": "",
     "gridsrc": "images/artwork-opt/020-t.jpg",
     "src": "images/artwork-opt/020.jpg",
-    "type": "image",
+    "type": "",
     "original": ""
   },
   {
@@ -251,10 +251,10 @@
     "name": "",
     "description": "",
     "artist": "",
-    "artistrul": "",
+    "artisturl": "",
     "gridsrc": "images/artwork-opt/021-t.jpg",
     "src": "images/artwork-opt/021.jpg",
-    "type": "image",
+    "type": "",
     "original": ""
   },
   {
@@ -263,10 +263,10 @@
     "name": "",
     "description": "",
     "artist": "",
-    "artistrul": "",
+    "artisturl": "",
     "gridsrc": "images/artwork-opt/022-t.jpg",
     "src": "images/artwork-opt/022.jpg",
-    "type": "image",
+    "type": "",
     "original": ""
   },
   {
@@ -287,10 +287,10 @@
     "name": "",
     "description": "",
     "artist": "",
-    "artistrul": "",
+    "artisturl": "",
     "gridsrc": "images/artwork-opt/024-t.jpg",
     "src": "images/artwork-opt/024.jpg",
-    "type": "image",
+    "type": "",
     "original": ""
   },
   {
@@ -311,10 +311,10 @@
     "name": "",
     "description": "",
     "artist": "",
-    "artistrul": "",
+    "artisturl": "",
     "gridsrc": "images/artwork-opt/026-t.jpg",
     "src": "images/artwork-opt/026.jpg",
-    "type": "image",
+    "type": "",
     "original": ""
   },
   {
@@ -335,10 +335,10 @@
     "name": "",
     "description": "",
     "artist": "",
-    "artistrul": "",
+    "artisturl": "",
     "gridsrc": "images/artwork-opt/028-t.jpg",
     "src": "images/artwork-opt/028.jpg",
-    "type": "image",
+    "type": "",
     "original": ""
   },
   {
@@ -359,10 +359,10 @@
     "name": "",
     "description": "",
     "artist": "",
-    "artistrul": "",
+    "artisturl": "",
     "gridsrc": "images/artwork-opt/030-t.jpg",
     "src": "images/artwork-opt/030.jpg",
-    "type": "image",
+    "type": "",
     "original": ""
   },
   {
@@ -383,10 +383,10 @@
     "name": "",
     "description": "",
     "artist": "",
-    "artistrul": "",
+    "artisturl": "",
     "gridsrc": "images/artwork-opt/032-t.jpg",
     "src": "images/artwork-opt/032.jpg",
-    "type": "image",
+    "type": "",
     "original": ""
   },
   {
@@ -395,10 +395,10 @@
     "name": "",
     "description": "",
     "artist": "",
-    "artistrul": "",
+    "artisturl": "",
     "gridsrc": "images/artwork-opt/033-t.jpg",
     "src": "images/artwork-opt/033.jpg",
-    "type": "image",
+    "type": "",
     "original": ""
   },
   {
@@ -407,10 +407,10 @@
     "name": "",
     "description": "",
     "artist": "",
-    "artistrul": "",
+    "artisturl": "",
     "gridsrc": "images/artwork-opt/034-t.jpg",
     "src": "images/artwork-opt/034.jpg",
-    "type": "image",
+    "type": "",
     "original": ""
   },
   {
@@ -431,10 +431,10 @@
     "name": "",
     "description": "",
     "artist": "",
-    "artistrul": "",
+    "artisturl": "",
     "gridsrc": "images/artwork-opt/036-t.jpg",
     "src": "images/artwork-opt/036.jpg",
-    "type": "image",
+    "type": "",
     "original": ""
   },
   {
@@ -443,10 +443,10 @@
     "name": "",
     "description": "",
     "artist": "",
-    "artistrul": "",
+    "artisturl": "",
     "gridsrc": "images/artwork-opt/037-t.jpg",
     "src": "images/artwork-opt/037.jpg",
-    "type": "image",
+    "type": "",
     "original": ""
   },
   {
@@ -455,10 +455,10 @@
     "name": "",
     "description": "",
     "artist": "",
-    "artistrul": "",
+    "artisturl": "",
     "gridsrc": "images/artwork-opt/038-t.jpg",
     "src": "images/artwork-opt/038.jpg",
-    "type": "image",
+    "type": "",
     "original": ""
   },
   {
@@ -467,10 +467,10 @@
     "name": "",
     "description": "",
     "artist": "",
-    "artistrul": "",
+    "artisturl": "",
     "gridsrc": "images/artwork-opt/039-t.jpg",
     "src": "images/artwork-opt/039.jpg",
-    "type": "image",
+    "type": "",
     "original": ""
   },
   {
@@ -479,10 +479,10 @@
     "name": "",
     "description": "",
     "artist": "",
-    "artistrul": "",
+    "artisturl": "",
     "gridsrc": "images/artwork-opt/040-t.jpg",
     "src": "images/artwork-opt/040.jpg",
-    "type": "image",
+    "type": "",
     "original": ""
   },
   {
@@ -491,10 +491,10 @@
     "name": "",
     "description": "",
     "artist": "",
-    "artistrul": "",
+    "artisturl": "",
     "gridsrc": "images/artwork-opt/041-t.jpg",
     "src": "images/artwork-opt/041.jpg",
-    "type": "image",
+    "type": "",
     "original": ""
   },
   {
@@ -503,10 +503,10 @@
     "name": "",
     "description": "",
     "artist": "",
-    "artistrul": "",
+    "artisturl": "",
     "gridsrc": "images/artwork-opt/042-t.gif",
     "src": "images/artwork-opt/042.gif",
-    "type": "image",
+    "type": "",
     "original": ""
   },
   {
@@ -515,10 +515,10 @@
     "name": "",
     "description": "",
     "artist": "",
-    "artistrul": "",
+    "artisturl": "",
     "gridsrc": "images/artwork-opt/043-t.jpg",
     "src": "images/artwork-opt/043.jpg",
-    "type": "image",
+    "type": "",
     "original": ""
   },
   {
@@ -527,10 +527,10 @@
     "name": "",
     "description": "",
     "artist": "",
-    "artistrul": "",
+    "artisturl": "",
     "gridsrc": "images/artwork-opt/044-t.jpg",
     "src": "images/artwork-opt/044.jpg",
-    "type": "image",
+    "type": "",
     "original": ""
   },
   {
@@ -539,10 +539,10 @@
     "name": "",
     "description": "",
     "artist": "",
-    "artistrul": "",
+    "artisturl": "",
     "gridsrc": "images/artwork-opt/045-t.jpg",
     "src": "images/artwork-opt/045.jpg",
-    "type": "image",
+    "type": "",
     "original": ""
   },
   {
@@ -551,10 +551,10 @@
     "name": "",
     "description": "",
     "artist": "",
-    "artistrul": "",
+    "artisturl": "",
     "gridsrc": "images/artwork-opt/046-t.jpg",
     "src": "images/artwork-opt/046.jpg",
-    "type": "image",
+    "type": "",
     "original": ""
   },
   {
@@ -576,10 +576,10 @@
     "name": "",
     "description": "",
     "artist": "",
-    "artistrul": "",
+    "artisturl": "",
     "gridsrc": "images/artwork-opt/048-t.jpg",
     "src": "images/artwork-opt/048.jpg",
-    "type": "image",
+    "type": "",
     "original": ""
   },
   {
@@ -613,10 +613,10 @@
     "name": "",
     "description": "",
     "artist": "",
-    "artistrul": "",
+    "artisturl": "",
     "gridsrc": "images/artwork-opt/051-t.jpg",
     "src": "images/artwork-opt/051.jpg",
-    "type": "image",
+    "type": "",
     "original": ""
   },
   {
@@ -638,10 +638,10 @@
     "name": "",
     "description": "",
     "artist": "",
-    "artistrul": "",
+    "artisturl": "",
     "gridsrc": "images/artwork-opt/053-t.jpg",
     "src": "images/artwork-opt/053.jpg",
-    "type": "image",
+    "type": "",
     "original": ""
   },
   {
@@ -650,10 +650,10 @@
     "name": "",
     "description": "",
     "artist": "",
-    "artistrul": "",
+    "artisturl": "",
     "gridsrc": "images/artwork-opt/054-t.jpg",
     "src": "images/artwork-opt/054.jpg",
-    "type": "image",
+    "type": "",
     "original": ""
   },
   {
@@ -662,10 +662,10 @@
     "name": "",
     "description": "",
     "artist": "",
-    "artistrul": "",
+    "artisturl": "",
     "gridsrc": "images/artwork-opt/055-t.jpg",
     "src": "images/artwork-opt/055.jpg",
-    "type": "image",
+    "type": "",
     "original": ""
   },
   {
@@ -686,10 +686,10 @@
     "name": "",
     "description": "",
     "artist": "",
-    "artistrul": "",
+    "artisturl": "",
     "gridsrc": "images/artwork-opt/057-t.gif",
     "src": "images/artwork-opt/057.gif",
-    "type": "image",
+    "type": "",
     "original": ""
   },
   {
@@ -698,10 +698,10 @@
     "name": "",
     "description": "",
     "artist": "",
-    "artistrul": "",
+    "artisturl": "",
     "gridsrc": "images/artwork-opt/058-t.jpg",
     "src": "images/artwork-opt/058.jpg",
-    "type": "image",
+    "type": "",
     "original": ""
   },
   {
@@ -723,10 +723,10 @@
     "name": "",
     "description": "",
     "artist": "",
-    "artistrul": "",
+    "artisturl": "",
     "gridsrc": "images/artwork-opt/060-t.jpg",
     "src": "images/artwork-opt/060.jpg",
-    "type": "image",
+    "type": "",
     "original": ""
   },
   {
@@ -735,10 +735,10 @@
     "name": "",
     "description": "",
     "artist": "",
-    "artistrul": "",
+    "artisturl": "",
     "gridsrc": "images/artwork-opt/061-t.jpg",
     "src": "images/artwork-opt/061.jpg",
-    "type": "image",
+    "type": "",
     "original": ""
   },
   {
@@ -747,7 +747,7 @@
     "name": "",
     "description": "",
     "artist": "",
-    "artistrul": "",
+    "artisturl": "",
     "gridsrc": "images/artwork-opt/062-t.jpg",
     "src": "images/artwork-opt/062.jpg",
     "type": "image",
@@ -759,10 +759,10 @@
     "name": "",
     "description": "",
     "artist": "",
-    "artistrul": "",
+    "artisturl": "",
     "gridsrc": "images/artwork-opt/063-t.jpg",
     "src": "images/artwork-opt/063.jpg",
-    "type": "image",
+    "type": "",
     "original": ""
   },
   {
@@ -783,10 +783,10 @@
     "name": "",
     "description": "",
     "artist": "",
-    "artistrul": "",
+    "artisturl": "",
     "gridsrc": "images/artwork-opt/065-t.jpg",
     "src": "images/artwork-opt/065.jpg",
-    "type": "image",
+    "type": "",
     "original": ""
   },
   {
@@ -795,10 +795,10 @@
     "name": "",
     "description": "",
     "artist": "",
-    "artistrul": "",
+    "artisturl": "",
     "gridsrc": "images/artwork-opt/066-t.gif",
     "src": "images/artwork-opt/066.gif",
-    "type": "image",
+    "type": "",
     "original": ""
   },
   {
@@ -807,10 +807,10 @@
     "name": "",
     "description": "",
     "artist": "",
-    "artistrul": "",
-    "gridsrc": "images/artwork-opt/067-t.jpg",
-    "src": "images/artwork-opt/067.jpg",
-    "type": "image",
+    "artisturl": "",
+    "gridsrc": "images/artwork-opt/067-t.gif",
+    "src": "images/artwork-opt/067.gif",
+    "type": "",
     "original": ""
   },
   {
@@ -819,10 +819,10 @@
     "name": "",
     "description": "",
     "artist": "",
-    "artistrul": "",
+    "artisturl": "",
     "gridsrc": "images/artwork-opt/068-t.jpg",
     "src": "images/artwork-opt/068.jpg",
-    "type": "image",
+    "type": "",
     "original": ""
   },
   {
@@ -844,10 +844,10 @@
     "name": "",
     "description": "",
     "artist": "",
-    "artistrul": "",
+    "artisturl": "",
     "gridsrc": "images/artwork-opt/070-t.gif",
     "src": "images/artwork-opt/070.gif",
-    "type": "image",
+    "type": "",
     "original": ""
   },
   {
@@ -856,10 +856,10 @@
     "name": "",
     "description": "",
     "artist": "",
-    "artistrul": "",
+    "artisturl": "",
     "gridsrc": "images/artwork-opt/071-t.gif",
     "src": "images/artwork-opt/071.gif",
-    "type": "image",
+    "type": "",
     "original": ""
   },
   {
@@ -868,10 +868,10 @@
     "name": "",
     "description": "",
     "artist": "",
-    "artistrul": "",
+    "artisturl": "",
     "gridsrc": "images/artwork-opt/072-t.gif",
     "src": "images/artwork-opt/072.gif",
-    "type": "image",
+    "type": "",
     "original": ""
   },
   {
@@ -880,10 +880,10 @@
     "name": "",
     "description": "",
     "artist": "",
-    "artistrul": "",
+    "artisturl": "",
     "gridsrc": "images/artwork-opt/073-t.jpg",
     "src": "images/artwork-opt/073.jpg",
-    "type": "image",
+    "type": "",
     "original": ""
   },
   {
@@ -892,10 +892,10 @@
     "name": "",
     "description": "",
     "artist": "",
-    "artistrul": "",
+    "artisturl": "",
     "gridsrc": "images/artwork-opt/074-t.jpg",
     "src": "images/artwork-opt/074.jpg",
-    "type": "image",
+    "type": "",
     "original": ""
   },
   {
@@ -904,10 +904,10 @@
     "name": "",
     "description": "",
     "artist": "",
-    "artistrul": "",
+    "artisturl": "",
     "gridsrc": "images/artwork-opt/075-t.jpg",
     "src": "images/artwork-opt/075.jpg",
-    "type": "image",
+    "type": "",
     "original": ""
   },
   {
@@ -916,10 +916,10 @@
     "name": "",
     "description": "",
     "artist": "",
-    "artistrul": "",
+    "artisturl": "",
     "gridsrc": "images/artwork-opt/076-t.jpg",
     "src": "images/artwork-opt/076.jpg",
-    "type": "image",
+    "type": "",
     "original": ""
   },
   {
@@ -928,10 +928,10 @@
     "name": "",
     "description": "",
     "artist": "",
-    "artistrul": "",
+    "artisturl": "",
     "gridsrc": "images/artwork-opt/077-t.jpg",
     "src": "images/artwork-opt/077.jpg",
-    "type": "image",
+    "type": "",
     "original": ""
   },
   {
@@ -952,10 +952,10 @@
     "name": "",
     "description": "",
     "artist": "",
-    "artistrul": "",
+    "artisturl": "",
     "gridsrc": "images/artwork-opt/079-t.jpg",
     "src": "images/artwork-opt/079.jpg",
-    "type": "image",
+    "type": "",
     "original": ""
   },
   {
@@ -964,10 +964,10 @@
     "name": "",
     "description": "",
     "artist": "",
-    "artistrul": "",
+    "artisturl": "",
     "gridsrc": "images/artwork-opt/080-t.jpg",
     "src": "images/artwork-opt/080.jpg",
-    "type": "image",
+    "type": "",
     "original": ""
   },
   {
@@ -988,10 +988,10 @@
     "name": "",
     "description": "",
     "artist": "",
-    "artistrul": "",
+    "artisturl": "",
     "gridsrc": "images/artwork-opt/082-t.jpg",
     "src": "images/artwork-opt/082.jpg",
-    "type": "image",
+    "type": "",
     "original": ""
   },
   {
@@ -1000,10 +1000,10 @@
     "name": "",
     "description": "",
     "artist": "",
-    "artistrul": "",
+    "artisturl": "",
     "gridsrc": "images/artwork-opt/083-t.jpg",
     "src": "images/artwork-opt/083.jpg",
-    "type": "image",
+    "type": "",
     "original": ""
   },
   {
@@ -1012,10 +1012,10 @@
     "name": "",
     "description": "",
     "artist": "",
-    "artistrul": "",
+    "artisturl": "",
     "gridsrc": "images/artwork-opt/084-t.jpg",
     "src": "images/artwork-opt/084.jpg",
-    "type": "image",
+    "type": "",
     "original": ""
   },
   {
@@ -1024,10 +1024,10 @@
     "name": "",
     "description": "",
     "artist": "",
-    "artistrul": "",
+    "artisturl": "",
     "gridsrc": "images/artwork-opt/085-t.jpg",
     "src": "images/artwork-opt/085.jpg",
-    "type": "image",
+    "type": "",
     "original": ""
   },
   {
@@ -1036,10 +1036,10 @@
     "name": "",
     "description": "",
     "artist": "",
-    "artistrul": "",
+    "artisturl": "",
     "gridsrc": "images/artwork-opt/086-t.jpg",
     "src": "images/artwork-opt/086.jpg",
-    "type": "image",
+    "type": "",
     "original": ""
   },
   {
@@ -1048,10 +1048,10 @@
     "name": "",
     "description": "",
     "artist": "",
-    "artistrul": "",
-    "gridsrc": "images/artwork-opt/087-t.jpg",
-    "src": "images/artwork-opt/087.jpg",
-    "type": "image",
+    "artisturl": "",
+    "gridsrc": "images/artwork-opt/087-t.gif",
+    "src": "images/artwork-opt/087.gif",
+    "type": "",
     "original": ""
   },
   {
@@ -1060,10 +1060,10 @@
     "name": "",
     "description": "",
     "artist": "",
-    "artistrul": "",
+    "artisturl": "",
     "gridsrc": "images/artwork-opt/088-t.jpg",
     "src": "images/artwork-opt/088.jpg",
-    "type": "image",
+    "type": "",
     "original": ""
   },
   {
@@ -1072,10 +1072,10 @@
     "name": "",
     "description": "",
     "artist": "",
-    "artistrul": "",
+    "artisturl": "",
     "gridsrc": "images/artwork-opt/089-t.jpg",
     "src": "images/artwork-opt/089.jpg",
-    "type": "image",
+    "type": "",
     "original": ""
   },
   {
@@ -1084,10 +1084,10 @@
     "name": "",
     "description": "",
     "artist": "",
-    "artistrul": "",
+    "artisturl": "",
     "gridsrc": "images/artwork-opt/090-t.jpg",
     "src": "images/artwork-opt/090.jpg",
-    "type": "image",
+    "type": "",
     "original": ""
   },
   {
@@ -1096,10 +1096,10 @@
     "name": "",
     "description": "",
     "artist": "",
-    "artistrul": "",
+    "artisturl": "",
     "gridsrc": "images/artwork-opt/091-t.jpg",
     "src": "images/artwork-opt/091.jpg",
-    "type": "image",
+    "type": "",
     "original": ""
   },
   {
@@ -1108,10 +1108,10 @@
     "name": "",
     "description": "",
     "artist": "",
-    "artistrul": "",
-    "gridsrc": "images/artwork-opt/092-t.jpg",
-    "src": "images/artwork-opt/092.jpg",
-    "type": "image",
+    "artisturl": "",
+    "gridsrc": "images/artwork-opt/092-t.gif",
+    "src": "images/artwork-opt/092.gif",
+    "type": "",
     "original": ""
   },
   {
@@ -1120,10 +1120,10 @@
     "name": "",
     "description": "",
     "artist": "",
-    "artistrul": "",
-    "gridsrc": "images/artwork-opt/093-t.jpg",
-    "src": "images/artwork-opt/093.jpg",
-    "type": "image",
+    "artisturl": "",
+    "gridsrc": "images/artwork-opt/093-t.gif",
+    "src": "images/artwork-opt/093.gif",
+    "type": "",
     "original": ""
   },
   {
@@ -1132,10 +1132,10 @@
     "name": "",
     "description": "",
     "artist": "",
-    "artistrul": "",
+    "artisturl": "",
     "gridsrc": "images/artwork-opt/094-t.jpg",
     "src": "images/artwork-opt/094.jpg",
-    "type": "image",
+    "type": "",
     "original": ""
   },
   {
@@ -1144,10 +1144,10 @@
     "name": "",
     "description": "",
     "artist": "",
-    "artistrul": "",
+    "artisturl": "",
     "gridsrc": "images/artwork-opt/095-t.jpg",
     "src": "images/artwork-opt/095.jpg",
-    "type": "image",
+    "type": "",
     "original": ""
   },
   {
@@ -1156,10 +1156,10 @@
     "name": "",
     "description": "",
     "artist": "",
-    "artistrul": "",
+    "artisturl": "",
     "gridsrc": "images/artwork-opt/096-t.jpg",
     "src": "images/artwork-opt/096.jpg",
-    "type": "image",
+    "type": "",
     "original": ""
   },
   {
@@ -1168,10 +1168,10 @@
     "name": "",
     "description": "",
     "artist": "",
-    "artistrul": "",
+    "artisturl": "",
     "gridsrc": "images/artwork-opt/097-t.jpg",
     "src": "images/artwork-opt/097.jpg",
-    "type": "image",
+    "type": "",
     "original": ""
   },
   {
@@ -1180,10 +1180,10 @@
     "name": "",
     "description": "",
     "artist": "",
-    "artistrul": "",
+    "artisturl": "",
     "gridsrc": "images/artwork-opt/098-t.jpg",
     "src": "images/artwork-opt/098.jpg",
-    "type": "image",
+    "type": "",
     "original": ""
   },
   {
@@ -1192,10 +1192,22 @@
     "name": "",
     "description": "",
     "artist": "",
-    "artistrul": "",
+    "artisturl": "",
     "gridsrc": "images/artwork-opt/099-t.jpg",
     "src": "images/artwork-opt/099.jpg",
-    "type": "image",
+    "type": "",
+    "original": ""
+  },
+  {
+    "id": 100,
+    "year": 9999,
+    "name": "",
+    "description": "",
+    "artist": "",
+    "artisturl": "",
+    "gridsrc": "images/artwork-opt/100-t.jpg",
+    "src": "images/artwork-opt/100.jpg",
+    "type": "",
     "original": ""
   }
 ]
