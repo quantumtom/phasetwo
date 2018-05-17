@@ -1,15 +1,19 @@
 import jsonFile from './file.json';
-import Blazy from './scripts/blazy.js';
-import ColorThief from './scripts/color-thief.js';
+import Blazy from 'blazy';
+import ColorThief from 'color-thief-standalone';
 
 // main.js Start HERE:
 (function () {
+    let gridSize, gridLayout, currentSizer; //gridParentWidth
+    let allImages = [];
     let currentImage, totalElements;
-    // let emptyPixel = "data:image/png;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==";
+    let emptyPixel = "data:image/png;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==";
 
     let assetPath = "https://addons.redbull.com/us/phasetwo/dist/";
 
     let openingByHover = 0;
+
+    let scrollSpeeds = [8,10,8,10];
 
     //For Swipping:
     let touchstartX = 0,
@@ -17,15 +21,18 @@ import ColorThief from './scripts/color-thief.js';
         touchendX = 0,
         touchendY = 0;
 
+    // let hashTrue = false;
+
     let elms = {
         body: document.getElementsByTagName("body")[0],
         imageHolder : document.getElementById('image-holder'),
         videoHolder: document.querySelectorAll("#video-holder"),
         grid: document.querySelector('.grid'),
+        // gridItems: document.querySelector('.grid-items'),
         overlay: document.querySelector('.overlay'),
         overlayControls: document.querySelector('.overlay-controls'),
         overlayControlsMobile: document.querySelector('.overlay-controls-mobile'),
-        aboutOverlay: document.querySelector('.overlay-about'),
+        overlayAbout: document.querySelector('.overlay-about'),
         overlayMedia: document.querySelector('.overlay-media'),
         overlayInsideTop: document.querySelector('.overlay-inside-top'),
         loader: document.getElementById('loader'),
@@ -37,7 +44,7 @@ import ColorThief from './scripts/color-thief.js';
         next: document.getElementById('btn-next'),
         previousMobile: document.getElementById('btn-previous-mobile'),
         nextMobile: document.getElementById('btn-next-mobile'),
-        btnOpenAbout: document.getElementById('btn-about'),
+        about: document.getElementById('btn-about'),
         aboutMobile: document.getElementById('btn-about-mobile'),
         arrowUp: document.querySelector('.arrow-up'),
         aboutCloseDesktop: document.querySelector('.btn-overlay-close-desktop'),
@@ -52,7 +59,35 @@ import ColorThief from './scripts/color-thief.js';
         artworkArtist: document.getElementById('artwork-artist'),
         artworkArtistSite: document.getElementById('artwork-artist-site'),
         artworkPost: document.getElementById('artwork-original-post'),
+        // facebookArtistShare: document.getElementById('fb-social'),
+        // twitterArtistShare: document.getElementById('tw-social'),
         afterBar: document.querySelector(".after-bar")
+    };
+
+    let overlayPosition = {
+        w: 0,
+        h: 0,
+        left: 0,
+        top: 0
+    };
+
+    gridSize = (isMobile()) ? 2 : 5;
+    currentSizer = (isMobile()) ? "sizer-0" : "sizer-2";
+
+    // Helpers
+    function debounce(func, wait, immediate) {
+        let timeout;
+        return function() {
+            let context = this, args = arguments;
+            let later = function() {
+                timeout = null;
+                if (!immediate) func.apply(context, args);
+            };
+            let callNow = immediate && !timeout;
+            clearTimeout(timeout);
+            timeout = setTimeout(later, wait);
+            if (callNow) func.apply(context, args);
+        };
     };
 
     function isMobile() {
@@ -78,43 +113,159 @@ import ColorThief from './scripts/color-thief.js';
         }
     }
 
+    function addDesktopGrid() {
+        // Inital Row
+
+        for (let i = 0; i < 4; i++) {
+            let el = document.createElement("div");
+            el.className = 'col-' + i + ' grid-item-3' ;
+            el.dataset.scrollspeed = scrollSpeeds[i];
+            elms.grid.appendChild(el);
+        }
+
+        for (let i = 0; i < jsonFile.length; i++) {
+            let colDecider = i % 4;
+
+            let el = document.createElement("div");
+            el.className = 'grid-item';
+            el.dataset.type = jsonFile[i].type;
+            el.dataset.id = i;
+            el.dataset.current = jsonFile[i].id;
+
+            // console.log(jsonFile[i], jsonFile[i].id);
+
+            let artworkNumber = document.createElement("span");
+            artworkNumber.className = "artwork-number";
+
+            let id = jsonFile[i].id;
+            if (id < 10) {
+                id = "0" + id;
+            }
+
+            let hoverSpanNumber = document.createElement("span");
+            hoverSpanNumber.className = "artwork-number-span";
+            hoverSpanNumber.innerHTML = id;
+
+            artworkNumber.appendChild(hoverSpanNumber);
+            el.appendChild(artworkNumber);
+
+            let img = document.createElement("img");
+            img.className = "b-lazy animate js-hover-image";
+            img.src = emptyPixel;
+            img.dataset.src = assetPath + jsonFile[i].gridsrc;
+
+            img.addEventListener( "load", function() {
+                el.appendChild(img);
+
+            }());
+
+            document.querySelector('.col-' + colDecider).appendChild(el);
+        }
+
+        moveIt(document.querySelectorAll('[data-scrollspeed]'));
+    }
+
+    function moveIt(selector){
+        let instances = [];
+
+        let arrayirize = Array.from(selector);
+
+        arrayirize.forEach(function(el){
+            instances.push(new moveItItem(el));
+        });
+
+        window.addEventListener('scroll', function(){
+            let scrollTop = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
+
+            instances.forEach(function(inst){
+                inst.update(scrollTop);
+            });
+        }, {passive: false});
+    }
+
+    let moveItItem = function(el){
+        this.el = el;
+        this.speed = parseInt(this.el.getAttribute('data-scrollspeed'));
+    };
+
+    moveItItem.prototype.update = function(scrollTop){
+        if ( scrollTop + window.innerHeight <= document.body.clientHeight + 99) {
+            this.el.style.transform = 'translateY(' +  -(scrollTop / this.speed) + 'px)';
+        } /* else {
+            this.el.style.transform = 'translateY(0px)';
+        }*/
+    };
+
+    function addMobileGrid() {
+        // Inital Row
+
+        for (let i = 0; i < jsonFile.length; i++) {
+            let el = document.createElement("div");
+            el.className = 'grid-item-0';
+            el.dataset.type = jsonFile[i].type;
+            el.dataset.id = i;
+            el.dataset.current = jsonFile[i].id;
+
+            let artworkNumber = document.createElement("span");
+            artworkNumber.className = "artwork-number";
+
+            let id = jsonFile[i].id;
+            if (id < 10) {
+                id = "0" + id;
+            }
+
+            let hoverSpanNumber = document.createElement("span");
+            hoverSpanNumber.className = "artwork-number-span";
+            hoverSpanNumber.innerHTML = id;
+
+            artworkNumber.appendChild(hoverSpanNumber);
+            el.appendChild(artworkNumber);
+
+            let img = document.createElement("img");
+            img.className = "b-lazy animate js-hover-image";
+            img.src = emptyPixel;
+            img.dataset.src = assetPath + jsonFile[i].gridsrc;
+
+            img.addEventListener( "load", function() {
+                el.appendChild(img);
+            }());
+
+            elms.grid.appendChild(el);
+        }
+    }
+
     function blazy() {
         window.bLazy = new Blazy({
             container: '.img-container',
-            success: function (element) {
-                let colorThief;
-                setTimeout(function() {
-                    colorThief = new ColorThief();
-
-                    element.dataset.dominant = 'rgb(' + colorThief.getColor(element) + ')';
-                },50);
+            success: function(element){
+                // setTimeout(function() {
+                //     let colorThief = new ColorThief();
+                //
+                //     element.dataset.dominant = 'rgb(' + colorThief.getColor(element) + ')';
+                // },50);
             }
         });
     }
 
-    function openAboutOverlay(e) {
+    function overlayAbout(e) {
+        e.preventDefault();
         overlayClose(e);
 
         elms.body.classList.add('no-scroll');
         elms.overlayCloseAbout.style.opacity = 1;
 
-        for (let i = 0; i < elms.btnOpenAbout.children.length; i++) {
-            elms.btnOpenAbout.children[i].removeAttribute('style');
+        for (let i = 0; i < elms.about.children.length; i++) {
+            elms.about.children[i].removeAttribute('style');
         }
 
         for (let i = 0; i < elms.aboutAnimation.length; i++) {
             elms.aboutAnimation[i].classList.add('about-animation-' + i);
         }
 
-        // This is the open/close indicator.
-        if (elms.btnOpenAbout.classList.toggle("open")) {
-            elms.aboutOverlay.classList.add("about-overlay-open");
-        } else {
-            elms.aboutOverlay.classList.remove("about-overlay-open");
-        }
+        (elms.about.classList.toggle("open")) ? elms.overlayAbout.classList.add("about-overlay-open") : elms.overlayAbout.classList.remove("about-overlay-open");
 
         if (window.history && window.history.pushState) {
-            if (elms.btnOpenAbout.classList.contains("open")) {
+            if (elms.about.classList.contains("open")) {
                 history.pushState("", document.title, window.location.pathname + '#about');
             } else {
                 history.pushState("", document.title, window.location.pathname);
@@ -122,9 +273,8 @@ import ColorThief from './scripts/color-thief.js';
         }
     }
 
-    function openInfoOverlay(e) {
-        let targetNodeName = e.target.nodeName;
-        let validTrigger = (targetNodeName == "SPAN" || targetNodeName == "IMG");
+    function overlayOpen(e) {
+        // e.preventDefault();
 
         if (isMobile()) {
             openingByHover = 0;
@@ -133,16 +283,16 @@ import ColorThief from './scripts/color-thief.js';
             });
         }
 
-        if (validTrigger) {
+        if (e.target.nodeName == "IMG" || e.target.nodeName == "SPAN") {
             if (isMobile()) {
                 elms.artContent.classList.remove('slide-content-left');
             }
-            elms.btnOpenAbout.classList.add('overlay-open');
+            elms.about.classList.add('overlay-open');
             elms.afterBar.classList.remove('after-bar-full');
             elms.overlayInsideTop.classList.remove('overlay-inside-top-padder');
         }
 
-        if (validTrigger) {
+        if (e.target && e.target.nodeName == "IMG" || e.target.nodeName == "SPAN") {
             elms.overlay.removeAttribute("style");
             elms.overlay.classList.add("info-overlay-open");
             elms.overlay.classList.add("info-overlay-open-index");
@@ -157,7 +307,7 @@ import ColorThief from './scripts/color-thief.js';
 
         }
 
-        if (!isNaN(window.location.hash) && validTrigger) {
+        if (!isNaN(window.location.hash) && (e.target.nodeName == "IMG" || e.target.nodeName == "SPAN")) {
             updateHash();
         }
 
@@ -168,6 +318,7 @@ import ColorThief from './scripts/color-thief.js';
             }
         }, 1000);
 
+        // elms.overlayMedia.classList.remove('overlay-media-hidden');
         windowWidthCheck();
     }
 
@@ -229,7 +380,7 @@ import ColorThief from './scripts/color-thief.js';
         elms.overlayInsideTop.classList.remove('overlay-inside-top-padder');
         elms.wrapper.classList.add('opacity-zero');
 
-        elms.btnOpenAbout.classList.remove('overlay-open');
+        elms.about.classList.remove('overlay-open');
         elms.overlayMedia.classList.add('overlay-media-hidden');
 
         document.querySelectorAll('.grid-item').forEach(function(el) {
@@ -250,11 +401,12 @@ import ColorThief from './scripts/color-thief.js';
     function getId(el) {
         // Remove old image
         let id = el.parentNode.getAttribute("data-id");
+        let color = el.nextSibling.getAttribute("data-dominant");
 
         currentImage = id;
 
-        displayArtworkInfo(id);
-        changeImage(id);
+        displayArtworkInfo(id,color);
+        changeImage(id, color);
     }
 
     function nextImage(e) {
@@ -299,11 +451,10 @@ import ColorThief from './scripts/color-thief.js';
         }
     }
 
-    function displayArtworkInfo(id) {
+    function displayArtworkInfo(id, color) {
         let vals = jsonFile[id];
 
-        let color = '#cccccc';
-
+        // elms.loader.style.display = 'block';
         elms.loader.style.visibility = 'hidden';
 
         elms.artworkId.innerHTML = '#' + (parseInt(vals.id));
@@ -381,71 +532,99 @@ import ColorThief from './scripts/color-thief.js';
         }
     }
 
-    /**
-     *
-     */
     function bindEvents() {
         let transitionEvent = whichTransitionEvent();
 
-        // Grid item clicks
         elms.grid.addEventListener("click", function(e) {
-            if (isMobile()) {
-                openingByHover = 1;
-
-                currentImage = parseInt(e.target.parentNode.getAttribute('data-id'));
-
-                if (e.target.nodeName == "IMG") {
-                    elms.afterBar.style.backgroundColor = e.target.getAttribute('data-dominant');
-                    e.target.parentNode.firstElementChild.classList.add('artwork-number-hover');
-                    e.target.parentNode.firstElementChild.style.backgroundColor = e.target.getAttribute('data-dominant');
-                }
-
-                if (e.target.nodeName == "SPAN" && e.target.classList.contains('artwork-number')) {
-                    e.target.classList.add('artwork-number-hover');
-                }
-
-                if (e.target.nodeName == "SPAN" && e.target.classList.contains('artwork-number-span')) {
-                    e.target.parentNode.classList.add('artwork-number-hover');
-                }
-            } else {
+            if (!isMobile()) {
                 currentImage = parseInt(e.target.parentNode.getAttribute('data-id'));
 
                 elms.artContent.classList.remove('slide-content-left');
 
-                if (e.target.nodeName == "IMG" || e.target.nodeName == "SPAN") {
-                    openInfoOverlay(e);
+                if (e.target.nodeName == "IMG" || e.target.nodeName == "SPAN" ) {
+                    // document.querySelectorAll('.grid-item').forEach(function(el) {
+                    //  el.classList.add('grid-hide');
+                    // });
+                    if (e.target.nodeName == "IMG" ) {
+                        elms.afterBar.style.backgroundColor = e.target.getAttribute('data-dominant');
+                    }
+
+                    if (e.target.nodeName == "SPAN" && e.target.classList.contains('artwork-number')) {
+                        elms.afterBar.style.backgroundColor = e.target.parentNode.childNodes[1].getAttribute('data-dominant');
+                    }
+
+                    if (e.target.nodeName == "SPAN" && e.target.classList.contains('artwork-number-span')) {
+                        elms.afterBar.style.backgroundColor = e.target.parentNode.nextSibling.getAttribute('data-dominant');
+                    }
+
+                    e.target.parentNode.classList.add('grid-current-item');
+
+                    overlayOpen(e);
+                }
+            } else {
+                openingByHover = 1;
+
+                currentImage = parseInt(e.target.parentNode.getAttribute('data-id'));
+
+                if (e.target.nodeName == "IMG" ) {
+                    elms.afterBar.style.backgroundColor = e.target.getAttribute('data-dominant');
+                    e.target.previousSibling.classList.add('artwork-number-hover');
+                    e.target.previousSibling.style.backgroundColor = e.target.getAttribute('data-dominant');
+                }
+
+                if (e.target.nodeName == "SPAN" && e.target.classList.contains('artwork-number')) {
+                    e.target.classList.add('artwork-number-hover');
+                    e.target.style.backgroundColor = e.target.nextSibling.getAttribute('data-dominant');
+                }
+
+                if (e.target.nodeName == "SPAN" && e.target.classList.contains('artwork-number-span')) {
+                    e.target.parentNode.classList.add('artwork-number-hover');
+                    e.target.parentNode.style.backgroundColor = e.target.parentNode.nextSibling.getAttribute('data-dominant');
                 }
             }
 
         }, false);
 
-        // Grid item hovers
         if (!isMobile()) {
             elms.grid.addEventListener("mouseover", function(e) {
                 e.stopPropagation();
+                // e.target.previousSibling.lastChild.removeAttribute('style');
 
                 if (e.target.nodeName == "IMG") {
-                    e.target.parentNode.firstElementChild.classList.add('artwork-number-hover');
+                    e.target.previousSibling.firstChild.style.display = 'inline-block';
+                    e.target.previousSibling.classList.add('artwork-number-hover');
+                    e.target.previousSibling.style.backgroundColor = e.target.getAttribute('data-dominant');
                 }
 
                 if (e.target.nodeName == "SPAN" && e.target.classList.contains('artwork-number')) {
+                    // e.target.style.opacity = 1;
                     e.target.classList.add('artwork-number-hover');
+                    e.target.firstChild.style.opacity = 1;
+                    // e.target.nextSibling.classList.add('hoveroony');
+                    e.target.style.backgroundColor = e.target.nextSibling.getAttribute('data-dominant');
                 }
 
                 if (e.target.nodeName == "SPAN" && e.target.classList.contains('artwork-number-span')) {
+                    e.target.style.opacity = 1;
                     e.target.parentNode.classList.add('artwork-number-hover');
+                    e.target.style.display = 'inline-block';
                 }
             });
 
             elms.grid.addEventListener("mouseout", function(e) {
                 e.stopPropagation();
-
                 if (e.target.nodeName == "IMG" ) {
-                    e.target.parentNode.firstElementChild.classList.remove('artwork-number-hover');
+                    // e.target.previousSibling.firstChild.style.opacity = 0;
+                    e.target.previousSibling.classList.remove('artwork-number-hover');
+                    // e.target.previousSibling.firstChild.style.display = 'none';
                 }
 
                 if (e.target.nodeName == "SPAN" && e.target.classList.contains('artwork-number')) {
+                    e.target.firstChild.style.opacity = 0;
+                    e.target.firstChild.style.display = "none";
                     e.target.classList.remove('artwork-number-hover');
+                    // document.querySelector('.artwork-number-span').style.display = 'none';
+                    // e.target.nextSibling.classList.remove('hoveroony');
                 }
 
                 if (e.target.nodeName == "SPAN" && e.target.classList.contains('artwork-number-span')) {
@@ -475,8 +654,7 @@ import ColorThief from './scripts/color-thief.js';
         elms.nextMobile.addEventListener("click", nextImage, false);
         elms.previousMobile.addEventListener("click", previousImage, false);
 
-        // Open the "About" overlay
-        elms.btnOpenAbout.addEventListener("click", openAboutOverlay, false);
+        elms.about.addEventListener("click", overlayAbout, false);
 
         // On Content
         elms.artContent.addEventListener(transitionEvent, function(e) {
@@ -484,7 +662,7 @@ import ColorThief from './scripts/color-thief.js';
                 this.classList.remove("slide-content-left");
                 // elms.overlayMedia.classList.add('overlay-media-hidden');
                 elms.overlayMedia.classList.remove('overlay-media-hidden');
-                displayArtworkInfo(currentImage);
+                displayArtworkInfo(currentImage, document.querySelectorAll("[data-id='"+ currentImage +"']")[0].lastChild.getAttribute("data-dominant"));
                 changeImage(currentImage);
             }
         }, false);
@@ -507,7 +685,7 @@ import ColorThief from './scripts/color-thief.js';
                     elms.artContent.classList.remove('slide-content-left');
                 }
 
-                // elms.afterBar.style.backgroundColor = document.querySelectorAll("[data-id='"+ currentImage +"']")[0].lastChild.getAttribute("data-dominant");
+                elms.afterBar.style.backgroundColor = document.querySelectorAll("[data-id='"+ currentImage +"']")[0].lastChild.getAttribute("data-dominant");
             }
 
             if (elms.overlay.classList.contains("info-overlay-open") && this.classList.contains('after-bar-full') && !elms.overlay.classList.contains('js-hash-call') && !this.classList.contains('arrow-click')) { /* Side Scroll added  just !this.classList.contains('arrow-click')*/
@@ -520,7 +698,7 @@ import ColorThief from './scripts/color-thief.js';
                 elms.afterBar.classList.remove("after-bar-full"); /* Side Scroll added */
                 // elms.overlayMedia.classList.remove('overlay-media-hidden'); /* Side Scroll added */
                 elms.overlayInsideTop.classList.remove('overlay-inside-top-padder'); /* Side Scroll added */
-                // elms.afterBar.style.backgroundColor = document.querySelectorAll("[data-id='"+ currentImage +"']")[0].lastChild.getAttribute("data-dominant");
+                elms.afterBar.style.backgroundColor = document.querySelectorAll("[data-id='"+ currentImage +"']")[0].lastChild.getAttribute("data-dominant");
                 // changeImage(currentImage);
             }
 
@@ -544,8 +722,8 @@ import ColorThief from './scripts/color-thief.js';
 
         elms.overlayCloseAbout.addEventListener('click', function() {
             elms.body.classList.remove('no-scroll');
-            elms.aboutOverlay.classList.remove("about-overlay-open");
-            elms.btnOpenAbout.classList.remove("open");
+            elms.overlayAbout.classList.remove("about-overlay-open");
+            elms.about.classList.remove("open");
             this.style.opacity = 0;
 
             for (let i = 0; i < elms.aboutAnimation.length; i++) {
@@ -575,13 +753,13 @@ import ColorThief from './scripts/color-thief.js';
             elms.grid.addEventListener(transitionEvent, function(e) {
                 if (e.target.nodeName == 'SPAN' && e.target.classList.contains('artwork-number-span') && openingByHover) {
                     setTimeout(function() {
-                        // e.target.style.opacity = 0;
+                        e.target.style.opacity = 0;
                     }, 400);
 
                     setTimeout(function() {
-                        // e.target.style.display = 'none';
+                        e.target.style.display = 'none';
                         e.target.parentNode.parentNode.classList.add('grid-current-item');
-                        openInfoOverlay(e);
+                        overlayOpen(e);
                     }, 800);
                 }
             });
@@ -609,9 +787,8 @@ import ColorThief from './scripts/color-thief.js';
 
         // Check for about
         if (!!hash && hash.substring(1) === 'about') {
-            elms.aboutOverlay.classList.add("about-overlay-open");
-            // elms.btnOpenAbout is the button that opens the overlay
-            elms.btnOpenAbout.classList.add("open");
+            elms.overlayAbout.classList.add("about-overlay-open");
+            elms.about.classList.add("open");
 
             elms.body.classList.add('no-scroll');
             elms.overlayCloseAbout.style.opacity = 1;
@@ -641,12 +818,15 @@ import ColorThief from './scripts/color-thief.js';
 
                 currentImage = id;
 
-                elms.btnOpenAbout.classList.add('overlay-open');
+                elms.about.classList.add('overlay-open');
 
-                displayArtworkInfo(currentImage);
-                changeImage(currentImage);
+                displayArtworkInfo(currentImage, document.querySelectorAll("[data-id='"+ currentImage +"']")[0].lastChild.getAttribute("data-dominant"));
+                changeImage(currentImage, "rgb(191, 191, 191)");
 
                 setTimeout(function() {
+                    let color = document.querySelectorAll("[data-id='"+ currentImage +"']")[0].lastChild.getAttribute("data-dominant");
+                    elms.afterBar.style.backgroundColor = color;
+                    // elms.afterBar.style.boxShadow = "0px 4px 5px 0px " + color;
                     elms.grid.classList.remove('hide');
                     elms.overlayMedia.classList.remove('overlay-media-hidden');
                 }, 500);
@@ -675,23 +855,23 @@ import ColorThief from './scripts/color-thief.js';
             return parseInt(a.id) - parseInt(b.id);
         });
 
-        // totalElements = jsonFile.length;
-        //
-        // jsonFile.forEach(function(el) {
-        //     allImages.push(el.src);
-        // });
-        //
-        // let ready = preLoad(allImages);
-        let ready = true;
+        totalElements = jsonFile.length;
+
+        jsonFile.forEach(function(el) {
+            allImages.push(el.gridsrc);
+        });
+
+        let ready = preLoad(allImages);
 
         if (ready) {
             document.querySelector('#cs-wrapper').style.display = "block";
+            // document.querySelector(".content").style.display = "block";
 
-            // if (isMobile() || window.innerWidth < 500) {
-            //     addMobileGrid();
-            // } else {
-            //     addDesktopGrid();
-            // }
+            if (isMobile() || window.innerWidth < 500) {
+                addMobileGrid();
+            } else {
+                addDesktopGrid();
+            }
 
             blazy();
 
@@ -706,6 +886,8 @@ import ColorThief from './scripts/color-thief.js';
 
         }
 
+        bindEvents();
+
         if (window.history && window.history.pushState) {
             window.onpopstate = function() {
                 checkHash();
@@ -714,10 +896,10 @@ import ColorThief from './scripts/color-thief.js';
                     overlayClose(e, false);
 
                     elms.body.classList.remove('no-scroll');
-                    elms.aboutOverlay.classList.remove("about-overlay-open");
-                    elms.btnOpenAbout.classList.remove("open");
+                    elms.overlayAbout.classList.remove("about-overlay-open");
+                    elms.about.classList.remove("open");
                     elms.overlayCloseAbout.style.opacity = 1;
-              }
+                }
             };
         }
 
@@ -727,6 +909,4 @@ import ColorThief from './scripts/color-thief.js';
     }
 
     init();
-
-    bindEvents();
 })();
