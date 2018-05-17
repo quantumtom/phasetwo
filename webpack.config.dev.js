@@ -8,7 +8,7 @@ module.exports = merge(webpackConfig, {
     output: {
         pathinfo: true,
         publicPath: '/',
-        library: 'pfc',
+        library: 'roxrite-lib',
         libraryTarget: 'umd',
         filename: '[name].js'
     }
