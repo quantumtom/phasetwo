@@ -1,7 +1,7 @@
 {
-  "name": "phasetwo",
+  "name": "p3",
   "version": "1.0.1",
-  "description": "RoxRite Phase Two",
+  "description": "Release Candidate",
   "main": "index.js",
   "scripts": {
     "dev": "cross-env NODE_ENV=dev webpack-dev-server --hot --open --progress --config webpack.config.dev.js",
@@ -16,6 +16,7 @@
     "cross-env": "^5.1.3",
     "css-loader": "^0.28.10",
     "ejs-loader": "^0.3.0",
+    "eslint": "^4.19.1",
     "file-loader": "^1.1.9",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^2.30.1",
@@ -24,5 +25,9 @@
     "webpack": "^3.11.0",
     "webpack-dev-server": "^2.11.2",
     "webpack-merge": "^4.1.2"
+  },
+  "dependencies": {
+    "blazy": "^1.8.2",
+    "color-thief-standalone": "^1.0.3"
   }
 }
