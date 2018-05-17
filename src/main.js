@@ -1,4 +1,4 @@
-import jsonFile from './file.json';
+import jsonFile from './wins.json';
 import Blazy from 'blazy';
 import ColorThief from 'color-thief-standalone';
 
