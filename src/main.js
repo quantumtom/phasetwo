@@ -1,14 +1,12 @@
 import jsonFile from './battles.json';
 import Blazy from 'blazy';
-import ColorThief from '@paulavery/color-thief';
+// import ColorThief from 'color-thief';
 
 // main.js Start HERE:
 (function () {
-    let gridSize;
-    let currentSizer;
+    let gridSize, currentSizer;
     let allImages = [];
-    let currentImage;
-    let totalElements;
+    let currentImage, totalElements;
     let emptyPixel = "data:image/png;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==";
 
     let assetPath = "https://addons.redbull.com/us/phasetwo/dist/";
@@ -64,6 +62,13 @@ import ColorThief from '@paulavery/color-thief';
         // facebookArtistShare: document.getElementById('fb-social'),
         // twitterArtistShare: document.getElementById('tw-social'),
         afterBar: document.querySelector(".after-bar")
+    };
+
+    let overlayPosition = {
+        w: 0,
+        h: 0,
+        left: 0,
+        top: 0
     };
 
     gridSize = (isMobile()) ? 2 : 5;
@@ -156,7 +161,6 @@ import ColorThief from '@paulavery/color-thief';
 
             img.addEventListener( "load", function() {
                 el.appendChild(img);
-
             }());
 
             document.querySelector(colDecider).appendChild(el);
@@ -237,12 +241,12 @@ import ColorThief from '@paulavery/color-thief';
     function blazy() {
         window.bLazy = new Blazy({
             container: '.img-container',
-            success: function(element){
-                setTimeout(function() {
-                    let colorThief = new ColorThief();
-
-                    element.dataset.dominant = 'rgb(' + colorThief.getColor(element) + ')';
-                },50);
+            success: function(element) {
+                // setTimeout(function() {
+                //     let colorThief = new ColorThief();
+                //
+                //     element.dataset.dominant = 'rgb(' + colorThief.getColor(element) + ')';
+                // },50);
             }
         });
     }
@@ -498,6 +502,7 @@ import ColorThief from '@paulavery/color-thief';
             img.src = assetPath + vals.src;
 
             img.onload = function() {
+                console.info('Add overlay image');
                 elms.loader.style.visibility = 'hidden';
                 document.getElementById("image-holder").appendChild(img);
             };
