@@ -8,9 +8,9 @@
   "email": "cornyn@gmail.com",
   "license": "UNLICENSED",
   "scripts": {
-    "dev": "cross-env NODE_ENV=dev webpack-dev-server --hot --open --progress --config webpack.config.dev.js",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --mode=development --hot --open --progress --config webpack.config.dev.js",
     "start": "export NODE_ENV=development && webpack-dev-server --hot --inline --open --progress",
-    "build": "export NODE_ENV=production && webpack --config webpack.config.build.js",
+    "build": "export NODE_ENV=production && webpack --mode=production --config webpack.config.build.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
