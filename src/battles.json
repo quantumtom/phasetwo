@@ -34,7 +34,7 @@
     "artisturl": "",
     "gridsrc": "images/artwork-opt/003-t.jpg",
     "src": "images/artwork-opt/003.jpg",
-    "type": "",
+    "type": "image",
     "original": ""
   },
   {
@@ -46,7 +46,7 @@
     "artisturl": "",
     "gridsrc": "images/artwork-opt/004-t.jpg",
     "src": "images/artwork-opt/004.jpg",
-    "type": "",
+    "type": "image",
     "original": ""
   },
   {
@@ -96,7 +96,7 @@
     "artisturl": "",
     "gridsrc": "images/artwork-opt/008-t.jpg",
     "src": "images/artwork-opt/008.jpg",
-    "type": "",
+    "type": "image",
     "original": ""
   },
   {
@@ -121,7 +121,7 @@
     "artisturl": "",
     "gridsrc": "images/artwork-opt/010-t.jpg",
     "src": "images/artwork-opt/010.jpg",
-    "type": "",
+    "type": "image",
     "original": ""
   },
   {
@@ -146,7 +146,7 @@
     "artisturl": "",
     "gridsrc": "images/artwork-opt/012-t.jpg",
     "src": "images/artwork-opt/012.jpg",
-    "type": "",
+    "type": "image",
     "original": ""
   },
   {
@@ -158,7 +158,7 @@
     "artisturl": "",
     "gridsrc": "images/artwork-opt/013-t.jpg",
     "src": "images/artwork-opt/013.jpg",
-    "type": "",
+    "type": "image",
     "original": ""
   },
   {
@@ -242,7 +242,7 @@
     "artisturl": "",
     "gridsrc": "images/artwork-opt/020-t.jpg",
     "src": "images/artwork-opt/020.jpg",
-    "type": "",
+    "type": "image",
     "original": ""
   },
   {
@@ -254,7 +254,7 @@
     "artisturl": "",
     "gridsrc": "images/artwork-opt/021-t.jpg",
     "src": "images/artwork-opt/021.jpg",
-    "type": "",
+    "type": "image",
     "original": ""
   },
   {
@@ -266,7 +266,7 @@
     "artisturl": "",
     "gridsrc": "images/artwork-opt/022-t.jpg",
     "src": "images/artwork-opt/022.jpg",
-    "type": "",
+    "type": "image",
     "original": ""
   },
   {
@@ -290,7 +290,7 @@
     "artisturl": "",
     "gridsrc": "images/artwork-opt/024-t.jpg",
     "src": "images/artwork-opt/024.jpg",
-    "type": "",
+    "type": "image",
     "original": ""
   },
   {
@@ -362,7 +362,7 @@
     "artisturl": "",
     "gridsrc": "images/artwork-opt/030-t.jpg",
     "src": "images/artwork-opt/030.jpg",
-    "type": "",
+    "type": "image",
     "original": ""
   },
   {
@@ -386,7 +386,7 @@
     "artisturl": "",
     "gridsrc": "images/artwork-opt/032-t.jpg",
     "src": "images/artwork-opt/032.jpg",
-    "type": "",
+    "type": "image",
     "original": ""
   },
   {
@@ -398,7 +398,7 @@
     "artisturl": "",
     "gridsrc": "images/artwork-opt/033-t.jpg",
     "src": "images/artwork-opt/033.jpg",
-    "type": "",
+    "type": "image",
     "original": ""
   },
   {
@@ -410,7 +410,7 @@
     "artisturl": "",
     "gridsrc": "images/artwork-opt/034-t.jpg",
     "src": "images/artwork-opt/034.jpg",
-    "type": "",
+    "type": "image",
     "original": ""
   },
   {
@@ -434,7 +434,7 @@
     "artisturl": "",
     "gridsrc": "images/artwork-opt/036-t.jpg",
     "src": "images/artwork-opt/036.jpg",
-    "type": "",
+    "type": "image",
     "original": ""
   },
   {
@@ -446,7 +446,7 @@
     "artisturl": "",
     "gridsrc": "images/artwork-opt/037-t.jpg",
     "src": "images/artwork-opt/037.jpg",
-    "type": "",
+    "type": "image",
     "original": ""
   },
   {
@@ -458,7 +458,7 @@
     "artisturl": "",
     "gridsrc": "images/artwork-opt/038-t.jpg",
     "src": "images/artwork-opt/038.jpg",
-    "type": "",
+    "type": "image",
     "original": ""
   },
   {
@@ -470,7 +470,7 @@
     "artisturl": "",
     "gridsrc": "images/artwork-opt/039-t.jpg",
     "src": "images/artwork-opt/039.jpg",
-    "type": "",
+    "type": "image",
     "original": ""
   },
   {
@@ -482,7 +482,7 @@
     "artisturl": "",
     "gridsrc": "images/artwork-opt/040-t.jpg",
     "src": "images/artwork-opt/040.jpg",
-    "type": "",
+    "type": "image",
     "original": ""
   },
   {
@@ -494,7 +494,7 @@
     "artisturl": "",
     "gridsrc": "images/artwork-opt/041-t.jpg",
     "src": "images/artwork-opt/041.jpg",
-    "type": "",
+    "type": "image",
     "original": ""
   },
   {
@@ -506,7 +506,7 @@
     "artisturl": "",
     "gridsrc": "images/artwork-opt/042-t.gif",
     "src": "images/artwork-opt/042.gif",
-    "type": "",
+    "type": "image",
     "original": ""
   },
   {
@@ -518,7 +518,7 @@
     "artisturl": "",
     "gridsrc": "images/artwork-opt/043-t.jpg",
     "src": "images/artwork-opt/043.jpg",
-    "type": "",
+    "type": "image",
     "original": ""
   },
   {
@@ -530,7 +530,7 @@
     "artisturl": "",
     "gridsrc": "images/artwork-opt/044-t.jpg",
     "src": "images/artwork-opt/044.jpg",
-    "type": "",
+    "type": "image",
     "original": ""
   },
   {
@@ -542,7 +542,7 @@
     "artisturl": "",
     "gridsrc": "images/artwork-opt/045-t.jpg",
     "src": "images/artwork-opt/045.jpg",
-    "type": "",
+    "type": "image",
     "original": ""
   },
   {
@@ -554,7 +554,7 @@
     "artisturl": "",
     "gridsrc": "images/artwork-opt/046-t.jpg",
     "src": "images/artwork-opt/046.jpg",
-    "type": "",
+    "type": "image",
     "original": ""
   },
   {
@@ -579,7 +579,7 @@
     "artisturl": "",
     "gridsrc": "images/artwork-opt/048-t.jpg",
     "src": "images/artwork-opt/048.jpg",
-    "type": "",
+    "type": "image",
     "original": ""
   },
   {
@@ -616,7 +616,7 @@
     "artisturl": "",
     "gridsrc": "images/artwork-opt/051-t.jpg",
     "src": "images/artwork-opt/051.jpg",
-    "type": "",
+    "type": "image",
     "original": ""
   },
   {
@@ -641,7 +641,7 @@
     "artisturl": "",
     "gridsrc": "images/artwork-opt/053-t.jpg",
     "src": "images/artwork-opt/053.jpg",
-    "type": "",
+    "type": "image",
     "original": ""
   },
   {
@@ -653,7 +653,7 @@
     "artisturl": "",
     "gridsrc": "images/artwork-opt/054-t.jpg",
     "src": "images/artwork-opt/054.jpg",
-    "type": "",
+    "type": "image",
     "original": ""
   },
   {
@@ -665,7 +665,7 @@
     "artisturl": "",
     "gridsrc": "images/artwork-opt/055-t.jpg",
     "src": "images/artwork-opt/055.jpg",
-    "type": "",
+    "type": "image",
     "original": ""
   },
   {
@@ -689,7 +689,7 @@
     "artisturl": "",
     "gridsrc": "images/artwork-opt/057-t.gif",
     "src": "images/artwork-opt/057.gif",
-    "type": "",
+    "type": "image",
     "original": ""
   },
   {
@@ -701,7 +701,7 @@
     "artisturl": "",
     "gridsrc": "images/artwork-opt/058-t.jpg",
     "src": "images/artwork-opt/058.jpg",
-    "type": "",
+    "type": "image",
     "original": ""
   },
   {
@@ -726,7 +726,7 @@
     "artisturl": "",
     "gridsrc": "images/artwork-opt/060-t.jpg",
     "src": "images/artwork-opt/060.jpg",
-    "type": "",
+    "type": "image",
     "original": ""
   },
   {
@@ -738,7 +738,7 @@
     "artisturl": "",
     "gridsrc": "images/artwork-opt/061-t.jpg",
     "src": "images/artwork-opt/061.jpg",
-    "type": "",
+    "type": "image",
     "original": ""
   },
   {
@@ -762,7 +762,7 @@
     "artisturl": "",
     "gridsrc": "images/artwork-opt/063-t.jpg",
     "src": "images/artwork-opt/063.jpg",
-    "type": "",
+    "type": "image",
     "original": ""
   },
   {
@@ -786,7 +786,7 @@
     "artisturl": "",
     "gridsrc": "images/artwork-opt/065-t.jpg",
     "src": "images/artwork-opt/065.jpg",
-    "type": "",
+    "type": "image",
     "original": ""
   },
   {
@@ -798,7 +798,7 @@
     "artisturl": "",
     "gridsrc": "images/artwork-opt/066-t.gif",
     "src": "images/artwork-opt/066.gif",
-    "type": "",
+    "type": "image",
     "original": ""
   },
   {
@@ -810,7 +810,7 @@
     "artisturl": "",
     "gridsrc": "images/artwork-opt/067-t.gif",
     "src": "images/artwork-opt/067.gif",
-    "type": "",
+    "type": "image",
     "original": ""
   },
   {
@@ -822,7 +822,7 @@
     "artisturl": "",
     "gridsrc": "images/artwork-opt/068-t.jpg",
     "src": "images/artwork-opt/068.jpg",
-    "type": "",
+    "type": "image",
     "original": ""
   },
   {
@@ -847,7 +847,7 @@
     "artisturl": "",
     "gridsrc": "images/artwork-opt/070-t.gif",
     "src": "images/artwork-opt/070.gif",
-    "type": "",
+    "type": "image",
     "original": ""
   },
   {
@@ -859,7 +859,7 @@
     "artisturl": "",
     "gridsrc": "images/artwork-opt/071-t.gif",
     "src": "images/artwork-opt/071.gif",
-    "type": "",
+    "type": "image",
     "original": ""
   },
   {
@@ -871,7 +871,7 @@
     "artisturl": "",
     "gridsrc": "images/artwork-opt/072-t.gif",
     "src": "images/artwork-opt/072.gif",
-    "type": "",
+    "type": "image",
     "original": ""
   },
   {
@@ -883,7 +883,7 @@
     "artisturl": "",
     "gridsrc": "images/artwork-opt/073-t.jpg",
     "src": "images/artwork-opt/073.jpg",
-    "type": "",
+    "type": "image",
     "original": ""
   },
   {
@@ -895,7 +895,7 @@
     "artisturl": "",
     "gridsrc": "images/artwork-opt/074-t.jpg",
     "src": "images/artwork-opt/074.jpg",
-    "type": "",
+    "type": "image",
     "original": ""
   },
   {
@@ -907,7 +907,7 @@
     "artisturl": "",
     "gridsrc": "images/artwork-opt/075-t.jpg",
     "src": "images/artwork-opt/075.jpg",
-    "type": "",
+    "type": "image",
     "original": ""
   },
   {
@@ -919,7 +919,7 @@
     "artisturl": "",
     "gridsrc": "images/artwork-opt/076-t.jpg",
     "src": "images/artwork-opt/076.jpg",
-    "type": "",
+    "type": "image",
     "original": ""
   },
   {
@@ -931,7 +931,7 @@
     "artisturl": "",
     "gridsrc": "images/artwork-opt/077-t.jpg",
     "src": "images/artwork-opt/077.jpg",
-    "type": "",
+    "type": "image",
     "original": ""
   },
   {
@@ -991,7 +991,7 @@
     "artisturl": "",
     "gridsrc": "images/artwork-opt/082-t.jpg",
     "src": "images/artwork-opt/082.jpg",
-    "type": "",
+    "type": "image",
     "original": ""
   },
   {
@@ -1003,7 +1003,7 @@
     "artisturl": "",
     "gridsrc": "images/artwork-opt/083-t.jpg",
     "src": "images/artwork-opt/083.jpg",
-    "type": "",
+    "type": "image",
     "original": ""
   },
   {
@@ -1015,7 +1015,7 @@
     "artisturl": "",
     "gridsrc": "images/artwork-opt/084-t.jpg",
     "src": "images/artwork-opt/084.jpg",
-    "type": "",
+    "type": "image",
     "original": ""
   },
   {
@@ -1039,7 +1039,7 @@
     "artisturl": "",
     "gridsrc": "images/artwork-opt/086-t.jpg",
     "src": "images/artwork-opt/086.jpg",
-    "type": "",
+    "type": "image",
     "original": ""
   },
   {
@@ -1051,7 +1051,7 @@
     "artisturl": "",
     "gridsrc": "images/artwork-opt/087-t.gif",
     "src": "images/artwork-opt/087.gif",
-    "type": "",
+    "type": "image",
     "original": ""
   },
   {
@@ -1063,7 +1063,7 @@
     "artisturl": "",
     "gridsrc": "images/artwork-opt/088-t.jpg",
     "src": "images/artwork-opt/088.jpg",
-    "type": "",
+    "type": "image",
     "original": ""
   },
   {
@@ -1075,7 +1075,7 @@
     "artisturl": "",
     "gridsrc": "images/artwork-opt/089-t.jpg",
     "src": "images/artwork-opt/089.jpg",
-    "type": "",
+    "type": "image",
     "original": ""
   },
   {
@@ -1087,7 +1087,7 @@
     "artisturl": "",
     "gridsrc": "images/artwork-opt/090-t.jpg",
     "src": "images/artwork-opt/090.jpg",
-    "type": "",
+    "type": "image",
     "original": ""
   },
   {
@@ -1099,7 +1099,7 @@
     "artisturl": "",
     "gridsrc": "images/artwork-opt/091-t.jpg",
     "src": "images/artwork-opt/091.jpg",
-    "type": "",
+    "type": "image",
     "original": ""
   },
   {
@@ -1111,7 +1111,7 @@
     "artisturl": "",
     "gridsrc": "images/artwork-opt/092-t.gif",
     "src": "images/artwork-opt/092.gif",
-    "type": "",
+    "type": "image",
     "original": ""
   },
   {
@@ -1123,7 +1123,7 @@
     "artisturl": "",
     "gridsrc": "images/artwork-opt/093-t.gif",
     "src": "images/artwork-opt/093.gif",
-    "type": "",
+    "type": "image",
     "original": ""
   },
   {
@@ -1135,7 +1135,7 @@
     "artisturl": "",
     "gridsrc": "images/artwork-opt/094-t.jpg",
     "src": "images/artwork-opt/094.jpg",
-    "type": "",
+    "type": "image",
     "original": ""
   },
   {
@@ -1147,7 +1147,7 @@
     "artisturl": "",
     "gridsrc": "images/artwork-opt/095-t.jpg",
     "src": "images/artwork-opt/095.jpg",
-    "type": "",
+    "type": "image",
     "original": ""
   },
   {
@@ -1159,7 +1159,7 @@
     "artisturl": "",
     "gridsrc": "images/artwork-opt/096-t.jpg",
     "src": "images/artwork-opt/096.jpg",
-    "type": "",
+    "type": "image",
     "original": ""
   },
   {
@@ -1171,7 +1171,7 @@
     "artisturl": "",
     "gridsrc": "images/artwork-opt/097-t.jpg",
     "src": "images/artwork-opt/097.jpg",
-    "type": "",
+    "type": "image",
     "original": ""
   },
   {
@@ -1183,7 +1183,7 @@
     "artisturl": "",
     "gridsrc": "images/artwork-opt/098-t.jpg",
     "src": "images/artwork-opt/098.jpg",
-    "type": "",
+    "type": "image",
     "original": ""
   },
   {
@@ -1195,7 +1195,7 @@
     "artisturl": "",
     "gridsrc": "images/artwork-opt/099-t.jpg",
     "src": "images/artwork-opt/099.jpg",
-    "type": "",
+    "type": "image",
     "original": ""
   },
   {
@@ -1207,7 +1207,7 @@
     "artisturl": "",
     "gridsrc": "images/artwork-opt/100-t.jpg",
     "src": "images/artwork-opt/100.jpg",
-    "type": "",
+    "type": "image",
     "original": ""
   }
 ]
