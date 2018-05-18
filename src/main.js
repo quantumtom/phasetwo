@@ -1,12 +1,14 @@
-import jsonFile from './wins.json';
+import jsonFile from './battles.json';
 import Blazy from 'blazy';
-import ColorThief from 'color-thief-standalone';
+import ColorThief from '@paulavery/color-thief';
 
 // main.js Start HERE:
 (function () {
-    let gridSize, gridLayout, currentSizer; //gridParentWidth
+    let gridSize;
+    let currentSizer;
     let allImages = [];
-    let currentImage, totalElements;
+    let currentImage;
+    let totalElements;
     let emptyPixel = "data:image/png;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==";
 
     let assetPath = "https://addons.redbull.com/us/phasetwo/dist/";
@@ -64,13 +66,6 @@ import ColorThief from 'color-thief-standalone';
         afterBar: document.querySelector(".after-bar")
     };
 
-    let overlayPosition = {
-        w: 0,
-        h: 0,
-        left: 0,
-        top: 0
-    };
-
     gridSize = (isMobile()) ? 2 : 5;
     currentSizer = (isMobile()) ? "sizer-0" : "sizer-2";
 
@@ -115,41 +110,46 @@ import ColorThief from 'color-thief-standalone';
 
     function addDesktopGrid() {
         // Inital Row
+        let el = document.createElement("div");
+        let colDecider;
+        let artworkNumber;
+        let id;
+        let hoverSpanNumber;
+        let img;
 
         for (let i = 0; i < 4; i++) {
-            let el = document.createElement("div");
+            el = document.createElement("div");
             el.className = 'col-' + i + ' grid-item-3' ;
             el.dataset.scrollspeed = scrollSpeeds[i];
             elms.grid.appendChild(el);
         }
 
         for (let i = 0; i < jsonFile.length; i++) {
-            let colDecider = i % 4;
+            colDecider = '.col-' + (i % 4).toString();
 
-            let el = document.createElement("div");
+            el = document.createElement("div");
             el.className = 'grid-item';
             el.dataset.type = jsonFile[i].type;
             el.dataset.id = i;
             el.dataset.current = jsonFile[i].id;
 
-            // console.log(jsonFile[i], jsonFile[i].id);
-
-            let artworkNumber = document.createElement("span");
+            artworkNumber = document.createElement("span");
             artworkNumber.className = "artwork-number";
 
-            let id = jsonFile[i].id;
+            id = jsonFile[i].id;
+
             if (id < 10) {
                 id = "0" + id;
             }
 
-            let hoverSpanNumber = document.createElement("span");
+            hoverSpanNumber = document.createElement("span");
             hoverSpanNumber.className = "artwork-number-span";
             hoverSpanNumber.innerHTML = id;
 
             artworkNumber.appendChild(hoverSpanNumber);
             el.appendChild(artworkNumber);
 
-            let img = document.createElement("img");
+            img = document.createElement("img");
             img.className = "b-lazy animate js-hover-image";
             img.src = emptyPixel;
             img.dataset.src = assetPath + jsonFile[i].gridsrc;
@@ -159,7 +159,7 @@ import ColorThief from 'color-thief-standalone';
 
             }());
 
-            document.querySelector('.col-' + colDecider).appendChild(el);
+            document.querySelector(colDecider).appendChild(el);
         }
 
         moveIt(document.querySelectorAll('[data-scrollspeed]'));
@@ -238,11 +238,11 @@ import ColorThief from 'color-thief-standalone';
         window.bLazy = new Blazy({
             container: '.img-container',
             success: function(element){
-                // setTimeout(function() {
-                //     let colorThief = new ColorThief();
-                //
-                //     element.dataset.dominant = 'rgb(' + colorThief.getColor(element) + ')';
-                // },50);
+                setTimeout(function() {
+                    let colorThief = new ColorThief();
+
+                    element.dataset.dominant = 'rgb(' + colorThief.getColor(element) + ')';
+                },50);
             }
         });
     }
@@ -705,7 +705,7 @@ import ColorThief from 'color-thief-standalone';
         }, false);
 
         document.addEventListener('keydown', function(e) {
-            let keyCode = e.keyCode;
+            let keyCode = e.code;
 
             if (elms.overlay.classList.contains("info-overlay-open")) {
                 // Left Arrow Click
