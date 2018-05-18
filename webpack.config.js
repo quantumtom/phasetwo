@@ -1,7 +1,8 @@
 const path = require('path');
 const exportPlugin = require('./exportPlugin');
-const HTMLWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const HTMLWebpackPlugin = require('html-webpack-plugin');
+const appHtmlTitle = 'Webpack Compilation';
 
 module.exports = {
     entry: {
@@ -11,9 +12,8 @@ module.exports = {
     output: {
         filename: '[name]-[hash].js',
         path: path.resolve(__dirname, 'dist'),
-        // publicPath: 'dist/',
         publicPath: 'https://addons.redbull.com/us/phasetwo/dist/',
-        library: 'phasetwo',
+        library: 'phase3-lib',
         libraryTarget: 'amd'
     },
     module: {
@@ -58,5 +58,9 @@ module.exports = {
     plugins: [
         new exportPlugin(),
         new CleanWebpackPlugin(['dist/*']),
+        new HTMLWebpackPlugin({
+            template: path.join(__dirname, 'src/index.ejs'),
+            title: appHtmlTitle
+        })
     ]
 };
