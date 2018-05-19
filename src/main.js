@@ -1,4 +1,4 @@
-import jsonFile from './battles.json';
+import jsonFile from './wins.json';
 import Blazy from 'blazy';
 // import ColorThief from 'color-thief';
 
@@ -517,16 +517,20 @@ import Blazy from 'blazy';
     }
 
     function setUpVideo(data) {
-        for (let i = 0; i < elms.videoHolder.length; i++) {
-            let source = "https://img.youtube.com/vi/" + data.video + "/sddefault.jpg";
+        let source;
+        let image;
+        let iframe;
 
-            let image = new Image();
+        for (let i = 0; i < elms.videoHolder.length; i++) {
+            source = "https://img.youtube.com/vi/" + data.video + "/sddefault.jpg";
+
+            image = new Image();
             image.src = source;
             image.addEventListener( "load", function() {
                 elms.videoHolder[ i ].appendChild( image );
             }( i ) );
 
-            let iframe = document.createElement( "iframe" );
+            iframe = document.createElement( "iframe" );
 
             iframe.setAttribute( "allowfullscreen", "true" );
             iframe.setAttribute( "frameborder", "0" );
