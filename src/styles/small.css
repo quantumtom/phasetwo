@@ -1,6 +1,7 @@
 @media all and (max-device-width: 768px) {
     .grid-item {
         margin-bottom: auto;
+        min-height: 0;
     }
 
     .grid {
@@ -14,7 +15,6 @@
     .grid-item-caption {
         line-height: 75%;
         margin: 0 0 20px 0;
-        min-height: 50px;
         text-align: center;
     }
 
