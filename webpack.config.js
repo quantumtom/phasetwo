@@ -1,6 +1,7 @@
 const path = require('path');
 const exportPlugin = require('./exportPlugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     mode: 'development',
@@ -8,13 +9,6 @@ module.exports = {
     entry: {
         index: './src/index.js',
         main: './src/main.js'
-    },
-    output: {
-        filename: '[name]-[hash].js',
-        path: path.resolve(__dirname, 'dist'),
-        publicPath: 'https://addons.redbull.com/us/reign/',
-        library: 'reignLib',
-        libraryTarget: 'amd'
     },
     module: {
         rules: [
@@ -57,6 +51,10 @@ module.exports = {
     },
     plugins: [
         new CleanWebpackPlugin(['dist/*']),
-        new exportPlugin()
+        new exportPlugin(),
+        new HtmlWebpackPlugin({
+            template: path.join(__dirname, './src/index.ejs'),
+            title: 'custom-script-example'
+        })
     ]
 };
