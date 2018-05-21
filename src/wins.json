@@ -120,7 +120,7 @@
   {
     "id": "10",
     "year": "June 2000",
-    "type": "GIF",
+    "type": "image",
     "video": "",
     "title": "June 2000<br />Mighty 4<br />Palo Alto, CA",
     "name": "Mighty 4<br />Palo Alto, CA",
@@ -176,7 +176,7 @@
   {
     "id": "14",
     "year": "November 2000",
-    "type": "GIF",
+    "type": "image",
     "video": "",
     "title": "November 2000<br />Bboy Battle<br />Petaluma, CA",
     "name": "Bboy Battle<br />Petaluma, CA",
@@ -204,7 +204,7 @@
   {
     "id": "16",
     "year": "August 2001",
-    "type": "GIF",
+    "type": "image",
     "video": "",
     "title": "August 2001<br />Hip-Hop Nationa Dance Battle<br />San Francisco, CA",
     "name": "Hip-Hop Nation Dance Battle<br />San Francisco, CA",
@@ -274,7 +274,7 @@
   {
     "id": "21",
     "year": "March 2003",
-    "type": "video",
+    "type": "image",
     "video": "",
     "title": "March 2003<br />Breaking 4 Peace<br />San Francisco, CA",
     "name": "Breaking 4 Peace<br />San Francisco, CA",
@@ -288,7 +288,7 @@
   {
     "id": "22",
     "year": "March 2003",
-    "type": "video",
+    "type": "image",
     "video": "",
     "title": "March 2003<br />Octagon<br />San Jose, CA",
     "name": "Octagon<br />San Jose, CA",
@@ -400,7 +400,7 @@
   {
     "id": "30",
     "year": "April 2004",
-    "type": "video",
+    "type": "image",
     "video": "",
     "title": "April 2004<br />Toe 2 Toe<br />Greensville, NC",
     "name": "Toe 2 Toe<br />Greensville, NC",
@@ -470,7 +470,7 @@
   {
     "id": "35",
     "year": "February 2005",
-    "type": "GIF",
+    "type": "image",
     "video": "",
     "title": "February 2005<br />Ashes 2 Ashes<br />Portland, OR",
     "name": "Ashes 2 Ashes<br />Portland, OR",
@@ -568,7 +568,7 @@
   {
     "id": "42",
     "year": "July 2006",
-    "type": "GIF",
+    "type": "image",
     "video": "",
     "title": "July 2006<br />Breakdown 16<br />San Francisco, CA",
     "name": "Breakdown 16<br />San Francisco, CA",
@@ -778,7 +778,7 @@
   {
     "id": "57",
     "year": "June 2008",
-    "type": "GIF",
+    "type": "image",
     "video": "",
     "title": "June 2008<br />All Nation NY Heat<br />Brooklyn, NY",
     "name": "All Nation NY Heat<br />Brooklyn, NY",
@@ -904,7 +904,7 @@
   {
     "id": "66",
     "year": "January 2010",
-    "type": "GIF",
+    "type": "image",
     "video": "",
     "title": "January 2010<br />Harikoro 10-year anniversary<br />Houston, TX",
     "name": "Harikoro 10-year anniversary<br />Houston, TX",
@@ -918,7 +918,7 @@
   {
     "id": "67",
     "year": "February 2010",
-    "type": "GIF",
+    "type": "image",
     "video": "",
     "title": "February 2010<br />Unbreakable<br />Richmond, VA",
     "name": "Unbreakable<br />Richmond, VA",
@@ -960,7 +960,7 @@
   {
     "id": "70",
     "year": "May 2010",
-    "type": "GIF",
+    "type": "image",
     "video": "",
     "title": "May 2010<br />Warsaw Challenge<br />Warsaw Polland",
     "name": "Warsaw Challenge<br />Warsaw Polland",
@@ -974,7 +974,7 @@
   {
     "id": "71",
     "year": "July 2010",
-    "type": "GIF",
+    "type": "image",
     "video": "",
     "title": "July 2010<br />Poland Battle<br />Poland",
     "name": "Poland Battle<br />Poland",
@@ -988,7 +988,7 @@
   {
     "id": "72",
     "year": "July 2010",
-    "type": "GIF",
+    "type": "image",
     "video": "",
     "title": "July 2010<br />Dance Camp Battle<br />Czech Republic",
     "name": "Dance Camp Battle<br />Czech Republic",
@@ -1072,7 +1072,7 @@
   {
     "id": "78",
     "year": "February 2012",
-    "type": "GIF",
+    "type": "image",
     "video": "",
     "title": "February 2012<br />The Bug Out<br />San Diego, CA",
     "name": "The Bug Out<br />San Diego, CA",
@@ -1198,7 +1198,7 @@
   {
     "id": "87",
     "year": "Dec. 2014",
-    "type": "GIF",
+    "type": "image",
     "video": "",
     "title": "Dec. 2014<br />2 Birds 1 Stone<br />San Jose, CA",
     "name": "2 Birds 1 Stone<br />San Jose, CA",
@@ -1268,7 +1268,7 @@
   {
     "id": "92",
     "year": "June 2017",
-    "type": "GIF",
+    "type": "image",
     "video": "",
     "title": "June 2017<br />United Style<br />Boston, MA",
     "name": "United Style<br />Boston, MA",
@@ -1282,7 +1282,7 @@
   {
     "id": "93",
     "year": "July 2017",
-    "type": "GIF",
+    "type": "image",
     "video": "",
     "title": "July 2017<br />Style Elements Anniversary<br />San Jose, CA",
     "name": "Style Elements Anniversary<br />San Jose, CA",
