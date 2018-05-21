@@ -5,8 +5,7 @@ module.exports = merge(webpackConfig, {
 
     mode: 'development',
 
-    devtool: 'eval',
-    // devtool: 'cheap-module-source-map',
+    devtool: 'cheap-module-source-map',
 
     output: {
         pathinfo: true,
