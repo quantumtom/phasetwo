@@ -1,6 +1,6 @@
 {
-  "name": "reign",
-  "version": "1.1.0",
+  "name": "custom-script-example",
+  "version": "0.1.0",
   "description": "Webpack Custom Script Compiler",
   "repository": "https://github.com/quantumtom/phasetwo",
   "main": "index.js",
@@ -12,7 +12,7 @@
   "author": "",
   "email": "cornyn@gmail.com",
   "license": "UNLICENSED",
-  "url": "https://www.redbull.com/us-en/events/reign-usa",
+  "url": "",
   "devDependencies": {
     "clean-webpack-plugin": "^0.1.19",
     "cross-env": "^5.1.3",
@@ -23,8 +23,8 @@
     "file-loader": "^1.1.11",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
+    "path": "^0.12.7",
     "style-loader": "^0.21.0",
-    "url-loader": "^1.0.1",
     "webpack": "^4.6.0",
     "webpack-cli": "^2.0.14",
     "webpack-dev-server": "^3.1.3",
