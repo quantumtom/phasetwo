@@ -823,7 +823,7 @@ import Blazy from 'blazy';
                 elms.artContent.classList.remove('slide-content-left');
                 elms.afterBar.classList.remove('after-bar-full');
 
-                currentImage = id;
+                currentImage = parseInt(hash.substring(1));
 
                 elms.about.classList.add('overlay-open');
 
