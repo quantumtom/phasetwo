@@ -570,7 +570,6 @@ tr {
 }
 
 .grid-item {
-    background: white;
     margin-bottom: 30%;
     position: relative;
     -webkit-transition: all 200ms ease-in-out;
