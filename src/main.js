@@ -409,7 +409,7 @@ import Blazy from 'blazy';
 
         currentImage = id;
 
-        displayArtworkInfo(id,color);
+        displayArtworkInfo(id);
         changeImage(id, color);
     }
 
@@ -455,8 +455,10 @@ import Blazy from 'blazy';
         }
     }
 
-    function displayArtworkInfo(id, color) {
+    function displayArtworkInfo(id) {
         let vals = jsonFile[id];
+        // let color = document.querySelectorAll("[data-id='"+ id +"']")[0].lastChild.getAttribute("data-dominant");
+        let color = '#aaa';
 
         // elms.loader.style.display = 'block';
         elms.loader.style.visibility = 'hidden';
@@ -499,10 +501,9 @@ import Blazy from 'blazy';
             elms.videoHolder[0].style.display = "none";
 
             let img = document.createElement("img");
-            img.src = assetPath + vals.src;
+            img.src = assetPath + vals.gridsrc;
 
             img.onload = function() {
-                console.info('Add overlay image');
                 elms.loader.style.visibility = 'hidden';
                 document.getElementById("image-holder").appendChild(img);
             };
@@ -671,7 +672,8 @@ import Blazy from 'blazy';
                 this.classList.remove("slide-content-left");
                 // elms.overlayMedia.classList.add('overlay-media-hidden');
                 elms.overlayMedia.classList.remove('overlay-media-hidden');
-                displayArtworkInfo(currentImage, document.querySelectorAll("[data-id='"+ currentImage +"']")[0].lastChild.getAttribute("data-dominant"));
+                // displayArtworkInfo(currentImage, document.querySelectorAll("[data-id='"+ currentImage +"']")[0].lastChild.getAttribute("data-dominant"));
+                displayArtworkInfo(currentImage);
                 changeImage(currentImage);
             }
         }, false);
@@ -821,20 +823,15 @@ import Blazy from 'blazy';
                 elms.artContent.classList.remove('slide-content-left');
                 elms.afterBar.classList.remove('after-bar-full');
 
-                let id = jsonFile.findIndex(function(el) {
-                    return el.id === parseInt(hash.substring(1));
-                });
-
                 currentImage = id;
 
                 elms.about.classList.add('overlay-open');
 
-                displayArtworkInfo(currentImage, document.querySelectorAll("[data-id='"+ currentImage +"']")[0].lastChild.getAttribute("data-dominant"));
+                displayArtworkInfo(currentImage);
                 changeImage(currentImage, "rgb(191, 191, 191)");
 
                 setTimeout(function() {
-                    let color = document.querySelectorAll("[data-id='"+ currentImage +"']")[0].lastChild.getAttribute("data-dominant");
-                    elms.afterBar.style.backgroundColor = color;
+                    elms.afterBar.style.backgroundColor = '#aaa';
                     // elms.afterBar.style.boxShadow = "0px 4px 5px 0px " + color;
                     elms.grid.classList.remove('hide');
                     elms.overlayMedia.classList.remove('overlay-media-hidden');
@@ -860,9 +857,9 @@ import Blazy from 'blazy';
 
     function init() {
 
-        jsonFile.sort(function (a, b) {
-            return parseInt(a.id) - parseInt(b.id);
-        });
+        // jsonFile.sort(function (a, b) {
+        //     return parseInt(a.id) - parseInt(b.id);
+        // });
 
         totalElements = jsonFile.length;
 
@@ -870,7 +867,8 @@ import Blazy from 'blazy';
             allImages.push(el.gridsrc);
         });
 
-        let ready = preLoad(allImages);
+        // let ready = preLoad(allImages);
+        let ready = true;
 
         if (ready) {
             document.querySelector('#cs-wrapper').style.display = "block";
