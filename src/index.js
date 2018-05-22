@@ -1,5 +1,4 @@
 import Markup from './raw.html';
-import './styles/fonts/MaisonNeue-Bold.woff2';
 import './styles/pan-zoom.css';
 import './styles/main.css';
 import './styles/medium.css';

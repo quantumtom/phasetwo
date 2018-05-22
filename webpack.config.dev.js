@@ -10,7 +10,7 @@ module.exports = merge(webpackConfig, {
     output: {
         pathinfo: true,
         publicPath: '/',
-        library: 'a2wDevLib',
+        library: 'kb-pov-dev-lib',
         libraryTarget: 'umd',
         filename: '[name].js'
     }

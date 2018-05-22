@@ -1,7 +1,7 @@
 {
-  "name": "a2w",
-  "version": "1.1.0",
-  "description": "Artists to Watch",
+  "name": "kbpov",
+  "version": "1.0.0",
+  "description": "Kris Bryant POV",
   "repository": "https://github.com/quantumtom/phasetwo",
   "main": "index.js",
   "scripts": {
@@ -16,6 +16,7 @@
     "cross-env": "^5.1.3",
     "css-loader": "^0.28.11",
     "ejs-loader": "^0.3.0",
+    "eslint": "^4.19.1",
     "file-loader": "^1.1.9",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",

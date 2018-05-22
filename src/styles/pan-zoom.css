@@ -19,12 +19,7 @@ figure {
     width: 100%;
     height: 100%;
     opacity: 0;
-    /*animation*/
-
-    animation: slideShow 24s linear infinite 0s;
-    -o-animation: slideShow 24s linear infinite 0s;
-    -moz-animation: slideShow 24s linear infinite 0s;
-    -webkit-animation: slideShow 24s linear infinite 0s;
+    animation: slideShow 12s linear infinite 0s;
 }
 
 figurecaption {
@@ -36,47 +31,26 @@ figurecaption {
 
 .pic-1 {
     opacity: 1;
-    background: url(https://addons.redbull.com/us/a2w/images/rb_a2w_cove_small.jpg) no-repeat top left;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: 500%;
+    background: url(https://image.redbull.com/rbcom/0100/0/052/2017/03/21/8493108d-801a-45ab-8d8d-ce47a64ca7f4.jpeg) no-repeat center center;
+    background-size: cover;
 }
 
 .pic-2 {
-    animation-delay: 3s;
-    -o-animation-delay: 3s;
-    -moz--animation-delay: 3s;
-    -webkit-animation-delay: 3s;
-    background: url(https://addons.redbull.com/us/a2w/images/rb_a2w_cove_small.jpg) no-repeat center top;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
+    animation-delay: 6s;
+    background: url(https://image.redbull.com/rbcom/0100/0/010/2015/04/17/1331717678622_2.jpg) no-repeat top center;
     background-size: cover;
 }
 
 .pic-3 {
-    animation-delay: 6s;
-    -o-animation-delay: 6s;
-    -moz--animation-delay: 6s;
-    -webkit-animation-delay: 6s;
-    background: url(https://addons.redbull.com/us/a2w/images/rb_a2w_cove_small.jpg) no-repeat top right;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: 500%;
+    animation-delay: 9s;
+    background: url(https://image.redbull.com/rbcom/0100/0/010/2015/04/17/1331717680141_5.JPG) no-repeat center center;
+    background-size: cover;
 }
 
 .pic-4 {
-    animation-delay: 9s;
-    -o-animation-delay: 9s;
-    -moz--animation-delay: 9s;
-    -webkit-animation-delay: 9s;
-    background: url(https://addons.redbull.com/us/a2w/images/rb_a2w_cove_small.jpg) no-repeat center top;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: 500%;
+    animation-delay: 12s;
+    background: url(https://image.redbull.com/rbcom/0100/0/052/2017/03/21/ffcae28a-0345-4ec6-a749-1200991a2e44.jpeg) no-repeat top left;
+    background-size: cover;
 }
 /* keyframes*/
 
@@ -84,10 +58,9 @@ figurecaption {
 slideShow {  0% {
     opacity: 0;
     transform:scale(1);
-    -ms-transform:scale(1);
 }
     5% {
-        opacity: 1
+        opacity: 1;
     }
     25% {
         opacity: 1;
@@ -95,71 +68,13 @@ slideShow {  0% {
     30% {
         opacity: 0;
         transform:scale(1.1);
-        -ms-transform:scale(1.1);
+    }
+    50% {
+        opacity: 0;
+        transform:scale(1.1);
     }
     100% {
         opacity: 0;
-        transform:scale(1);
-        -ms-transformm:scale(1);
-    }
-}
-@-o-keyframes
-slideShow {  0% {
-    opacity: 0;
-    -o-transform:scale(1);
-}
-    5% {
-        opacity: 1
-    }
-    25% {
-        opacity: 1;
-    }
-    30% {
-        opacity: 0;
-        -o-transform:scale(1.1);
-    }
-    100% {
-        opacity: 0;
-        -o-transformm:scale(1);
-    }
-}
-@-moz-keyframes
-slideShow {  0% {
-    opacity: 0;
-    -moz-transform:scale(1);
-}
-    5% {
-        opacity: 1
-    }
-    25% {
-        opacity: 1;
-    }
-    30% {
-        opacity: 0;
-        -moz-transform:scale(1.1);
-    }
-    100% {
-        opacity: 0;
-        -moz-transformm:scale(1);
-    }
-}
-@-webkit-keyframes
-slideShow {  0% {
-    opacity: 0;
-    -webkit-transform:scale(1);
-}
-    5% {
-        opacity: 1
-    }
-    25% {
-        opacity: 1;
-    }
-    30% {
-        opacity: 0;
-        -webkit-transform:scale(1.1);
-    }
-    100% {
-        opacity: 0;
-        -webkit-transformm:scale(1);
+        transform:scale(1.1);
     }
 }

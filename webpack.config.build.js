@@ -17,9 +17,9 @@ module.exports = merge(webpackConfig, {
     output: {
         filename: '[name]-[hash].js',
         path: path.resolve(__dirname, 'dist'),
-        library: 'a2wLib',
+        library: 'kb-pov-prod-lib',
         libraryTarget: 'amd',
-        publicPath: 'https://addons.redbull.com/us/a2w/'
+        publicPath: 'https://addons.redbull.com/us/kbpov/'
     }
 
 });
