@@ -3,8 +3,6 @@ import './styles/pan-zoom.css';
 import './styles/main.css';
 import './styles/medium.css';
 import './styles/small.css';
-import './styles/overwrites.css';
-import './styles/embed-container.css';
 
 let O = {
     start: function (options) {
