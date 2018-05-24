@@ -1,6 +1,6 @@
 {
   "name": "a2w",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Artists to Watch",
   "repository": "https://github.com/quantumtom/phasetwo",
   "main": "index.js",
@@ -15,12 +15,10 @@
     "clean-webpack-plugin": "^0.1.19",
     "cross-env": "^5.1.6",
     "css-loader": "^0.28.11",
-    "ejs-loader": "^0.3.0",
     "eslint": "^4.19.1",
     "file-loader": "^1.1.9",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
-    "postcss-syntax": "^0.24.0",
     "style-loader": "^0.21.0",
     "stylelint": "^9.2.1",
     "url-loader": "^1.0.1",
@@ -30,6 +28,7 @@
     "webpack-merge": "^4.1.2"
   },
   "dependencies": {
-    "blazy": "^1.8.2"
+    "blazy": "^1.8.2",
+    "postcss-syntax": "^0.10.0"
   }
 }
