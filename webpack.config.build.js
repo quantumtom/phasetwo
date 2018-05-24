@@ -22,9 +22,9 @@ module.exports = merge(webpackConfig, {
     output: {
         filename: '[name]-[hash].js',
         path: path.resolve(__dirname, 'dist'),
-        library: 'reign',
+        library: 'example-prod-lib',
         libraryTarget: 'amd',
-        publicPath: 'https://addons.redbull.com/us/reign/'
+        publicPath: 'https://addons.redbull.com/us/example/'
     }
 
 });
