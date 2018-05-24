@@ -1,7 +1,7 @@
 {
-  "name": "phase3",
+  "name": "roxrite-rc",
   "version": "3.0.0",
-  "description": "Release Candidate",
+  "description": "RoxRite100 Phase Three Release Candidate",
   "repository": "https://github.com/quantumtom/phasetwo",
   "main": "index.js",
   "author": "",
@@ -29,7 +29,6 @@
     "webpack-merge": "^4.1.2"
   },
   "dependencies": {
-    "ajv": "^6.5.0",
     "blazy": "^1.8.2"
   }
 }
