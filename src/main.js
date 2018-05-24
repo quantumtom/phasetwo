@@ -241,6 +241,10 @@ import Blazy from 'blazy';
     function blazy() {
         window.bLazy = new Blazy({
             container: '.img-container',
+            /**
+             *  Never got the ColorThief module installed.
+             *  If you ever get it work, uncomment the success callback.
+             */
             success: function(element) {
                 // setTimeout(function() {
                 //     let colorThief = new ColorThief();
