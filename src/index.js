@@ -1,5 +1,7 @@
 import Markup from './raw.html';
 import './styles/main.css';
+import './styles/text-shadow.css';
+import './styles/transparent-header-panel.css';
 
 let O = {
     start: function (options) {
