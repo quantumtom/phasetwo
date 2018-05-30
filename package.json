@@ -1,6 +1,6 @@
 {
-  "name": "custom-script-example",
-  "version": "0.1.0",
+  "name": "straight-rhythm-custom-script",
+  "version": "1.0.1",
   "description": "Webpack Custom Script Compiler",
   "repository": "https://github.com/quantumtom/phasetwo",
   "main": "index.js",
