@@ -1,23 +1,24 @@
-import Blazy from 'blazy';
-
 (function () {
-    function blazy() {
-        window.bLazy = new Blazy({
-            error: function(ele, msg){
-                if (msg === 'missing'){
-                    console.log('data-src is missing');
-                    // data-src is missing
-                }
-                else if (msg === 'invalid') {
-                    console.log('data-src is invalid');
-                    // data-src is invalid
-                }
-            }
-        });
+
+    function addScriptTag () {
+        let src = "https://www.universe.com/embed2.js";
+        let widgetType = "universe-ticket";
+        let targetType = "Listing";
+        let targetId = "catchy-title-tickets-santa-monica-M839PG";
+        let state = "buttonColor=#3A66E5&buttonText=Get Tickets";
+
+        let el = document.createElement('script');
+        el.setAttribute('src', src);
+        el.dataset.widgetType = widgetType;
+        el.dataset.targetType = targetType;
+        el.dataset.targetId = targetId;
+        el.dataset.state = state;
+
+        document.getElementById('main-content').appendChild(el);
     }
 
     function init() {
-        blazy();
+        addScriptTag();
     }
 
     init();

@@ -1,11 +1,8 @@
 const path = require('path');
 const exportPlugin = require('./exportPlugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    mode: 'development',
-
     entry: {
         index: './src/index.js',
         main: './src/main.js'
@@ -50,11 +47,10 @@ module.exports = {
         port: 9000
     },
     plugins: [
-        new CleanWebpackPlugin(['dist/*']),
         new exportPlugin(),
         new HtmlWebpackPlugin({
             template: path.join(__dirname, './src/index.ejs'),
-            title: 'custom-script-example'
+            title: 'straight-rhythm'
         })
     ]
 };
