@@ -1,7 +1,7 @@
 {
   "name": "kbpov",
   "version": "1.0.0",
-  "description": "Kris Bryant POV",
+  "description": "Kris Bryant's POV",
   "repository": "https://github.com/quantumtom/phasetwo",
   "main": "index.js",
   "scripts": {
