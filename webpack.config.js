@@ -54,7 +54,7 @@ module.exports = {
         new exportPlugin(),
         new HtmlWebpackPlugin({
             template: path.join(__dirname, './src/index.ejs'),
-            title: 'custom-script-example'
+            title: 'bulletin-survey'
         })
     ]
 };

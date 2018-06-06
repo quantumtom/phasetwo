@@ -1,7 +1,7 @@
 {
-  "name": "custom-script-example",
-  "version": "1.1.0",
-  "description": "Webpack Custom Script Compiler",
+  "name": "bulletin-survey",
+  "version": "1.0.0",
+  "description": "RedBulletin Survey",
   "repository": "https://github.com/quantumtom/phasetwo",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "email": "cornyn@gmail.com",
+  "email": "nance.justin@gmail.com",
   "license": "UNLICENSED",
   "url": "",
   "devDependencies": {

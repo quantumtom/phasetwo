@@ -12,7 +12,7 @@ module.exports = merge(webpackConfig, {
         new CleanWebpackPlugin(['dist/*']),
         new webpack.optimize.SplitChunksPlugin({
             filename: 'index.js',
-            name: 'reign',
+            name: 'bulletin-survey',
             automaticNameDelimiter: '-',
             chunks: 'all',
             minChunks: 2,
@@ -22,9 +22,9 @@ module.exports = merge(webpackConfig, {
     output: {
         filename: '[name]-[hash].js',
         path: path.resolve(__dirname, 'dist'),
-        library: 'example-prod-lib',
+        library: 'bulletin-survey-prod-lib',
         libraryTarget: 'amd',
-        publicPath: 'https://addons.redbull.com/us/example/'
+        publicPath: 'https://addons.redbull.com/us/bulletin-survey/'
     }
 
 });

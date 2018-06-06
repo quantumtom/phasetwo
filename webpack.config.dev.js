@@ -6,12 +6,12 @@ module.exports = merge(webpackConfig, {
 
     mode: 'development',
 
-    devtool: 'cheap-module-source-map',
+    devtool: 'eval',
 
     output: {
         pathinfo: true,
         publicPath: '/',
-        library: 'example-dev-lib',
+        library: 'bulletin-survey-dev-lib',
         libraryTarget: 'umd',
         filename: '[name].js'
     }
