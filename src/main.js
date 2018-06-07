@@ -1,6 +1,17 @@
 import Blazy from 'blazy';
+import $ from 'jquery';
 
 (function () {
+    $(document).ready(function() {
+
+        /**
+         * Put you jQuery code in here.
+         */
+
+        
+
+    });
+
     function blazy() {
         window.bLazy = new Blazy({
             error: function(ele, msg){
