@@ -5,7 +5,7 @@ import $ from 'jquery';
     $(document).ready(function() {
 
         /**
-         * Put you jQuery code in here.
+         * Put your jQuery code in here.
          */
 
 
