@@ -30,6 +30,7 @@
     "webpack-merge": "^4.1.2"
   },
   "dependencies": {
-    "blazy": "^1.8.2"
+    "blazy": "^1.8.2",
+    "jquery": "^3.3.1"
   }
 }
