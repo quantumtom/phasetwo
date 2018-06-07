@@ -16,25 +16,15 @@ import $ from 'jquery';
      * Add a script tag
      */
 
-    var my_awesome_script = document.createElement('script');
+    let tag = document.createElement('script');
 
-    my_awesome_script.setAttribute('src','http://example.com/site.js');
+    tag.setAttribute('src','http://example.com/site.js');
+    tag.setAttribute('async','async');
 
-    document.head.appendChild(my_awesome_script);
+    document.head.appendChild(tag);
 
     function blazy() {
-        window.bLazy = new Blazy({
-            error: function(ele, msg){
-                if (msg === 'missing'){
-                    console.log('data-src is missing');
-                    // data-src is missing
-                }
-                else if (msg === 'invalid') {
-                    console.log('data-src is invalid');
-                    // data-src is invalid
-                }
-            }
-        });
+        window.bLazy = new Blazy();
     }
 
     function init() {
