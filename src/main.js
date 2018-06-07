@@ -8,9 +8,19 @@ import $ from 'jquery';
          * Put you jQuery code in here.
          */
 
-        
+
 
     });
+
+    /**
+     * Add a script tag
+     */
+
+    var my_awesome_script = document.createElement('script');
+
+    my_awesome_script.setAttribute('src','http://example.com/site.js');
+
+    document.head.appendChild(my_awesome_script);
 
     function blazy() {
         window.bLazy = new Blazy({
