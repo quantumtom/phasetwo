@@ -2,6 +2,17 @@ import Blazy from 'blazy';
 
 
 (function () {
+    /*document.write = function(input) {
+        document.body.innerHTML += input;
+    }*/
+
+    /*var doit = function(src) {
+        var script_tag = document.createElement('script');
+        script_tag.type = 'text/javascript';
+        script_tag.src= src;
+        document.getElementById('main-content').appendChild(script_tag);
+    }*/
+
     function blazy() {
         window.bLazy = new Blazy({
             error: function(ele, msg){
@@ -33,6 +44,7 @@ import Blazy from 'blazy';
         var source = getParameterByName('source');
         var script = document.createElement('script');
         var iframe = '';
+        var survey_src = '';
 
         if(source == 'newsletter'){
             iframe = '<iframe seamless id="survey" src="//www.surveygizmo.com/s3/4354610/newsletter?source=newsletter" frameborder="0"></iframe>';
@@ -43,11 +55,13 @@ import Blazy from 'blazy';
         }
 
         //console.log('IFRAME: ' + iframe);
-        //document.getElementById("iframe-wrapper").innerHTML = iframe;
+        document.getElementById("iframe-wrapper").innerHTML = iframe;
 
-        script.src = 'http' + ( ("https:" == document.location.protocol) ? "s" : "") + '://www.surveygizmo.com/s3/4354610/newsletter?__output=embedjs&__ref=' + escape(document.location.origin + document.location.pathname);
+        /*survey_src = 'http' + ( ("https:" == document.location.protocol) ? "s" : "") + '://www.surveygizmo.com/s3/4354610/newsletter?__output=embedjs&__ref=' + escape(document.location.origin + document.location.pathname);*/
 
-        document.head.appendChild(script);
+        //document.head.appendChild(script);
+
+        //doit(survey_src);
 
         //console.log(iframe.contentWindow.document.body.scrollHeight);
     }
