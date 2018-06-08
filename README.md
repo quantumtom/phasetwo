@@ -5,8 +5,8 @@ https://docs.google.com/document/d/13eFVac0m8K1kDBlqwD-86wTw-l4ELE6KoWzvrrtmqt0/
 
 
 ## Branches (projects) ##
-1. Red Bull Reign USA
- - https://www.redbull.com/us-en/events/reign-usa
+1. Red Bulletin Reader Survey
+ - https://preview.rb3ca-production.redbullaws.com/us-en/projects/the-red-bulletin-reader-survey/newsletter/
 
 
 
