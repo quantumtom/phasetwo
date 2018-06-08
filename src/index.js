@@ -3,6 +3,8 @@ import './styles/main.css';
 import './styles/text-shadow.css';
 import './styles/transparent-header-panel.css';
 
+console.info('loading index.js');
+
 let O = {
     start: function (options) {
         console.log('===================== INDEX START =====================');
