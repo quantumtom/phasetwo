@@ -266,7 +266,6 @@ img {
     position: relative;
     height: 0;
     padding-bottom: 90%;
-    overflow: hidden;
 }
 
 #iframe-wrapper iframe {
@@ -280,25 +279,25 @@ img {
 
 @media screen and (max-width: 599px) {
     #iframe-wrapper {
-        padding-bottom: 150%;
+        padding-bottom: 580%;
     }
 }
 
 @media screen and (min-width: 600px) {
     #iframe-wrapper {
-        padding-bottom: 130%;
+        padding-bottom: 313%;
     }
 }
 
 @media screen and (min-width: 900px) {
     #iframe-wrapper{
-        padding-bottom: 110%;
+        padding-bottom: 161%;
     }
 }
 
 @media screen and (min-width: 1200px) {
     #iframe-wrapper{
-        padding-bottom: 90%;
+        padding-bottom: 115%;
     }
 }
 
