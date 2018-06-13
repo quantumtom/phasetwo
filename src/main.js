@@ -15,9 +15,9 @@ console.info('loading main.js');
         document.getElementById('main-content').appendChild(script_tag);
     }*/
 
-    function blazy() {
+    /*function blazy() {
         window.bLazy = new Blazy();
-    }
+    }*/
 
     function getParameterByName(name, url) {
         if (!url) url = window.location.href;
@@ -30,7 +30,9 @@ console.info('loading main.js');
     }
 
     function init() {
-        blazy();
+        console.log('index init');
+
+        //blazy();
 
         var source = getParameterByName('source');
         var script = document.createElement('script');
