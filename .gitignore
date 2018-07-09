@@ -67,3 +67,6 @@ typings/
 
 # Build distro
 dist/
+
+#package lock
+package-lock.json
