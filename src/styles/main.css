@@ -13,31 +13,14 @@
 .story-page__header {
     margin: 0 auto;
     width: 50%;
-    padding-top: 10%;
-}
-
-.story-hero--image .story-hero__title {
-    color: black;
+    padding-top: 8%;
 }
 
 .story-page__content-item--landscape-image {
     margin-left: -12%;
 }
 
-.story-hero__title {
-    position: absolute;
-    top: -65px;
-    width: 100% !important;
-    margin-left: 0 !important;
-    text-align: center;
-}
-
-.story-meta__time {
-
-}
-
-
-.story-meta__author, .story-meta__trb, .story-meta__trb-logo {
+.story-meta__trb, .story-meta__trb-logo {
     display: none;
 }
 
@@ -63,17 +46,111 @@
     color: #000;
 }
 
-/*** Template 2 ***/
+/******************* Template 2 *******************/
+.story-hero__title {
+    position: absolute;
+    top: -65px;
+    width: 100% !important;
+    margin-left: 0 !important;
+}
+
 .story-hero__image {
     position: fixed;
     top: 0;
     left: 0;
     z-index: -1;
-    height: 500px;
+    height: 600px;
 }
 
 .story-page {
+    top: 600px;
     z-index: 2;
     background: #fff;
 }
 
+.story-hero {
+    height: 0px;
+    min-height: 0px;
+}
+
+.story-page__body::after {
+    content: "";
+    background: #fff;
+    display: block;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+.story-hero__copyright {
+    display: none;
+    position: fixed;
+    top: 550px;
+    right: 50px;
+}
+
+.story-meta__time, .story-meta__author {
+    font-size: 23px;
+    color: #000;
+    font-weight: bold;
+    display: block;
+}
+
+.story-meta__author {
+    margin-top: 15px;
+    text-transform: uppercase;
+}
+
+.story-page__meta {
+    border-bottom: 7px solid #eaeaea;
+    padding-bottom: 30px;
+    margin-bottom: 40px;
+}
+
+.story-meta {
+    margin-left: 0;
+    margin-top: 50px;
+}
+
+.story-hero--image .story-hero__title {
+    color: black;
+    font-size: 4rem;
+    text-transform: uppercase;
+}
+
+.story-page__standfirst {
+    display: none;
+}
+
+.story-page__content-item--landscape-image {
+    float: right;
+    width: 550px;
+}
+
+.story-page__body, .story-page__leaderboard, .story-page__meta {
+    max-width: 1140px;
+}
+
+.story-page__story {
+    width: 100%;
+}
+
+.story-page__content-item {
+    width: 100%;
+}
+
+.story-page__sidebar {
+    display: none;
+}
+
+.inline-content__item--paragraph {
+  width: 50%;
+}
+
+.story-page__content-item--landscape-image, .story-page__content-item--portrait-image {
+  float: right;
+  width: 45%;
+}
