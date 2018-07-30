@@ -105,14 +105,13 @@
 }
 
 .story-page__meta {
-    border-bottom: 7px solid #eaeaea;
-    padding-bottom: 30px;
     margin-bottom: 40px;
 }
 
 .story-meta {
-    margin-left: 0;
     margin-top: 50px;
+    border-bottom: 7px solid #eaeaea;
+    padding-bottom: 30px;
 }
 
 .story-hero--image .story-hero__title {
