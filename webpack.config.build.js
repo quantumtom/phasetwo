@@ -24,7 +24,7 @@ module.exports = merge(webpackConfig, {
         path: path.resolve(__dirname, 'dist'),
         library: 'rebulletin-lib',
         libraryTarget: 'amd',
-        publicPath: 'https://addons.redbull.com/us/redbulletin/template-1/'
+        publicPath: 'https://addons.redbull.com/us/redbulletin/template-3/'
     }
 
 });
