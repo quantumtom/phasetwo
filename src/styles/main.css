@@ -7,7 +7,7 @@
 }
 
 .story-page {
-    top: 60px;
+    top: 660px;
 }
 
 .story-page__header {
@@ -33,13 +33,7 @@
 }
 
 .story-meta__time {
-    position: absolute;
-    top: 89px;
-    width: 100%;
-    text-align: center;
-    left: 0;
-    color: black;
-    font-size: 17px;
+
 }
 
 
@@ -68,3 +62,18 @@
 .image-caption__copyright {
     color: #000;
 }
+
+/*** Template 2 ***/
+.story-hero__image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    height: 500px;
+}
+
+.story-page {
+    z-index: 2;
+    background: #fff;
+}
+
