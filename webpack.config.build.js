@@ -22,9 +22,9 @@ module.exports = merge(webpackConfig, {
     output: {
         filename: '[name]-[hash].js',
         path: path.resolve(__dirname, 'dist'),
-        library: 'example-prod-lib',
+        library: 'krisbpov-lib',
         libraryTarget: 'amd',
-        publicPath: 'https://addons.redbull.com/us/example/'
+        publicPath: 'https://addons.redbull.com/us/krisbpov/'
     }
 
 });
