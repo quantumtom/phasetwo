@@ -1,3 +1,8 @@
+header.header {
+  position: fixed;
+  top: 0;
+}
+
 .header:before {
     display: none;
 }
@@ -7,14 +12,23 @@
 }
 
 .story-page {
-    top: 660px;
+  z-index: 2;
+  background: #fff;
+  margin-top: 680px;
+  position: static;
 }
 
-.story-page__header {
+.story-page .story-page__header {
     margin: 0 auto;
-    width: 50%;
-    padding-top: 8%;
+    max-width: 950px;
+    width: calc((99.99% + 24px)*.666666666666667 - 24px);
+    padding-top: 3%;
 }
+
+.story-hero--image .story-hero__image:after {
+  display: none;
+}
+
 
 .story-page__content-item--landscape-image {
     margin-left: -12%;
@@ -30,7 +44,12 @@
 
 .story-page__standfirst {
     padding-bottom: 20px;
-    border-bottom: 5px solid #eaeaea;
+}
+
+.story-page__standfirst .story-standfirst {
+    font-size: 2rem;
+    font-weight: normal;
+    line-height: 2.3rem;
 }
 
 .inline-image__description {
@@ -46,31 +65,23 @@
     color: #000;
 }
 
-/******************* Template 2 *******************/
-.story-hero__title {
-    position: absolute;
-    top: -65px;
-    width: 100% !important;
-    margin-left: 0 !important;
+.story-hero__title-wrapper .story-hero__title {
+    width: 100%;
+    margin-left: 0;
 }
 
-.story-hero__image {
+.story-page__header .story-hero__content {
+    min-height: 0;
+    height: auto;
+    padding-bottom: 0;
+}
+
+.story-hero__content .story-hero__image, .story-hero__content .story-hero--image {
     position: fixed;
-    top: 0;
+    top: 80px;
     left: 0;
     z-index: -1;
     height: 600px;
-}
-
-.story-page {
-    top: 600px;
-    z-index: 2;
-    background: #fff;
-}
-
-.story-hero {
-    height: 0px;
-    min-height: 0px;
 }
 
 .story-page__body::after {
@@ -111,11 +122,36 @@
 .story-meta {
     margin-top: 50px;
     border-bottom: 7px solid #eaeaea;
-    padding-bottom: 30px;
+    padding-bottom: 50px;
 }
 
 .story-hero--image .story-hero__title {
     color: black;
     font-size: 4rem;
     text-transform: uppercase;
+}
+
+.story-page__content-item .social-media-embed {
+    margin: 0 auto;
+}
+
+.inline-content__item .story-page__content-item--landscape-image {
+    margin: 0 auto;
+    width: 65%;
+}
+
+
+@media only screen and (max-width: 999px) {
+  .story-hero__title-wrapper .story-hero__title {
+    font-size: 3rem;
+  }
+
+  .story-page .story-page__header {
+    width: 100%;
+  }
+
+  .story-page__standfirst .story-standfirst {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
 }
