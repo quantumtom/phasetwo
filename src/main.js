@@ -9,7 +9,7 @@ import Blazy from 'blazy';
     let currentImage, totalElements;
     let emptyPixel = "data:image/png;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==";
 
-    let assetPath = "https://addons.redbull.com/us/phasetwo/dist/";
+    let assetPath = "/";
 
     let openingByHover = 0;
 
