@@ -1,6 +1,9 @@
 {
   "name": "roxrite-rc",
   "version": "3.0.0",
+  "engines": {
+    "node": "18.x"
+  },
   "description": "RoxRite100 Phase Three Release Candidate",
   "repository": "https://github.com/quantumtom/phasetwo",
   "main": "index.js",
