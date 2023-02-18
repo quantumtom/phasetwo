@@ -9,8 +9,8 @@ module.exports = merge(webpackConfig, {
     devtool: 'cheap-module-source-map',
 
     output: {
-        filename: '[name].[contentHash].js',
-        path: path.resolve(__dirname, 'public'),
+        filename: '[name].[contenthash].js',
+        path: path.resolve(__dirname, 'dist'),
         publicPath: '/',
         library: 'phase3-lib',
         libraryTarget: 'amd'

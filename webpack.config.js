@@ -1,6 +1,6 @@
 const path = require('path');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
-const appHtmlTitle = 'Webpack Compilation';
+const appHtmlTitle = 'Roxrite Webpack Compilation';
 
 module.exports = {
     entry: {
