@@ -13,6 +13,11 @@ module.exports = merge(webpackConfig, {
         library: 'phase3-DevLib',
         libraryTarget: 'umd',
         filename: '[name].js'
+    },
+
+    devServer: {
+        compress: true,
+        port: 9000
     }
 
 });

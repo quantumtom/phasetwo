@@ -4,8 +4,8 @@ const appHtmlTitle = 'Webpack Compilation';
 
 module.exports = {
     entry: {
-        index: './src/index.js',
-        main: './src/main.js'
+        index: './public/index.js',
+        main: './public/main.js'
     },
     module: {
         rules: [
@@ -39,13 +39,9 @@ module.exports = {
             }
         ]
     },
-    devServer: {
-        compress: true,
-        port: 9000
-    },
     plugins: [
         new HTMLWebpackPlugin({
-            template: path.join(__dirname, 'src/index.ejs'),
+            template: path.join(__dirname, './public/index.ejs'),
             title: appHtmlTitle
         })
     ]

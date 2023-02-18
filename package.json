@@ -16,8 +16,8 @@
     "dev-build": "export NODE_ENV=development && webpack --mode=development --progress --config webpack.config.build.js",
     "build": "export NODE_ENV=production && webpack --mode=production --progress --config webpack.config.build.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm run build && npm run serve-prod",
-    "serve-local": "webpack serve --open",
+    "start": "npm run serve-prod",
+    "serve-local": "webpack serve --mode=production --open",
     "serve-prod": "webpack serve --mode=production"
   },
   "devDependencies": {
