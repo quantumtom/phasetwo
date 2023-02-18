@@ -4,7 +4,7 @@ const webpackConfig = require('./webpack.config');
 
 module.exports = merge(webpackConfig, {
 
-    mode: 'development',
+    mode: 'production',
 
     devtool: 'cheap-module-source-map',
 
