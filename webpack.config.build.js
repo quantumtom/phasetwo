@@ -11,7 +11,7 @@ module.exports = merge(webpackConfig, {
     output: {
         filename: '[name].[contenthash].js',
         path: path.resolve(__dirname, 'dist'),
-        publicPath: '/',
+        publicPath: '/dist',
         library: 'phase3-lib',
         libraryTarget: 'amd'
     }
