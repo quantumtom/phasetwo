@@ -1,6 +1,5 @@
 const path = require('path');
-const webpack = require('webpack');
-const merge = require('webpack-merge');
+const { merge } = require('webpack-merge');
 const webpackConfig = require('./webpack.config');
 
 module.exports = merge(webpackConfig, {
@@ -9,17 +8,12 @@ module.exports = merge(webpackConfig, {
 
     devtool: 'cheap-module-source-map',
 
-    plugins: [
-        new webpack.optimize.SplitChunksPlugin({
-            names: ['index', 'main']
-        })
-    ],
     output: {
-        filename: '[name]-[hash].js',
-        path: path.resolve(__dirname, 'dist'),
-        library: 'phase3-build-lib',
-        libraryTarget: 'amd',
-        publicPath: '/'
+        filename: '[name]-[contentHash].js',
+        path: path.resolve(__dirname, 'src'),
+        publicPath: '/dist',
+        library: 'phase3-lib',
+        libraryTarget: 'amd'
     }
 
 });
