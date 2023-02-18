@@ -1,5 +1,4 @@
 const path = require('path');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
 const webpack = require('webpack');
 const merge = require('webpack-merge');
 const webpackConfig = require('./webpack.config');
@@ -11,7 +10,6 @@ module.exports = merge(webpackConfig, {
     devtool: 'cheap-module-source-map',
 
     plugins: [
-        new CleanWebpackPlugin(['dist/*']),
         new webpack.optimize.SplitChunksPlugin({
             names: ['index', 'main']
         })

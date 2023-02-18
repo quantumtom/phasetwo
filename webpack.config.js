@@ -1,5 +1,6 @@
 const path = require('path');
 const exportPlugin = require('./exportPlugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const appHtmlTitle = 'Webpack Compilation';
 
@@ -56,6 +57,7 @@ module.exports = {
     },
     plugins: [
         new exportPlugin(),
+        new CleanWebpackPlugin(['dist/*']),
         new HTMLWebpackPlugin({
             template: path.join(__dirname, 'src/index.ejs'),
             title: appHtmlTitle
