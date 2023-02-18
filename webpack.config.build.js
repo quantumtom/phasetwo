@@ -19,7 +19,7 @@ module.exports = merge(webpackConfig, {
         path: path.resolve(__dirname, 'dist'),
         library: 'phase3-build-lib',
         libraryTarget: 'amd',
-        publicPath: 'https://addons.redbull.com/us/phasetwo/dist/'
+        publicPath: '/'
     }
 
 });
