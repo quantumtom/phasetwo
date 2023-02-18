@@ -21,7 +21,6 @@
     "serve-prod": "webpack serve"
   },
   "devDependencies": {
-    "@webpack-cli/serve": "^2.0.1",
     "clean-webpack-plugin": "^4.0.0",
     "cross-env": "^7.0.3",
     "css-loader": "^6.7.3",
@@ -38,6 +37,7 @@
     "webpack-dev-server": "^4.11.1"
   },
   "dependencies": {
-    "blazy": "^1.8.2"
+    "blazy": "^1.8.2",
+    "@webpack-cli/serve": "^2.0.1"
   }
 }
