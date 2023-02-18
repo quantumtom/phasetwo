@@ -15,7 +15,8 @@
     "dev-build": "export NODE_ENV=development && webpack --mode=development --progress --config webpack.config.build.js",
     "build": "export NODE_ENV=production && webpack --mode=production --progress --config webpack.config.build.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npx webpack-cli serve --mode=production"
+    "start": "npx webpack-cli serve --mode=production",
+    "serve": "npm run build && npm run start"
   },
   "devDependencies": {
     "@webpack-cli/serve": "^2.0.1",
