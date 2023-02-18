@@ -1,11 +1,34 @@
 {
-  "name": "phasetwo",
-  "version": "1.0.0",
-  "description": "",
-  "main": "webpack.config.build.js",
+  "name": "roxrite-rc",
+  "version": "3.0.0",
+  "description": "RoxRite100 Phase Three Release Candidate",
+  "repository": "https://github.com/quantumtom/phasetwo",
+  "main": "index.js",
+  "author": "",
+  "email": "cornyn@gmail.com",
+  "license": "UNLICENSED",
   "scripts": {
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --mode=development --hot --inline --open --progress --config webpack.config.dev.js",
+    "build": "export NODE_ENV=production && webpack --mode=production --progress --config webpack.config.build.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC"
+  "devDependencies": {
+    "clean-webpack-plugin": "^0.1.19",
+    "cross-env": "^5.1.6",
+    "css-loader": "^0.28.11",
+    "ejs-loader": "^0.3.0",
+    "eslint": "^4.19.1",
+    "file-loader": "^1.1.9",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "style-loader": "^0.21.0",
+    "url-loader": "^1.0.1",
+    "webpack": "^4.8.3",
+    "webpack-cli": "^2.1.4",
+    "webpack-dev-server": "^3.1.4",
+    "webpack-merge": "^4.1.2"
+  },
+  "dependencies": {
+    "blazy": "^1.8.2"
+  }
 }
