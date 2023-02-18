@@ -14,9 +14,9 @@
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --mode=development --hot --open --progress --config webpack.config.dev.js",
     "dev-build": "export NODE_ENV=development && webpack --mode=development --progress --config webpack.config.build.js",
-    "build": "export NODE_ENV=production && webpack --mode=production --config webpack.config.build.js",
+    "build": "webpack --mode=development --config webpack.config.build.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm run build && npm run serve-prod",
+    "start": "npm run serve-prod",
     "serve-local": "webpack serve --mode=development --open",
     "serve-prod": "webpack serve --mode=development"
   },
