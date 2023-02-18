@@ -2,7 +2,8 @@
   "name": "roxrite-rc",
   "version": "4.0.0",
   "engines": {
-    "node": "19.x"
+    "node": "19.x",
+    "npm": "9.5.0"
   },
   "description": "RoxRite100 Phase Three Release Candidate",
   "repository": "https://github.com/quantumtom/phasetwo",
@@ -15,7 +16,7 @@
     "dev-build": "export NODE_ENV=development && webpack --mode=development --progress --config webpack.config.build.js",
     "build": "export NODE_ENV=production && webpack --mode=production --progress --config webpack.config.build.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npx webpack-cli serve --mode=production",
+    "start": "npx webpack-cli serve",
     "serve": "npm run build && npm run start"
   },
   "devDependencies": {
