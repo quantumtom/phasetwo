@@ -12,6 +12,7 @@
   "license": "private",
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --mode=development --hot --open --progress --config webpack.config.dev.js",
+    "dev-build": "export NODE_ENV=development && webpack --mode=development --progress --config webpack.config.build.js",
     "build": "export NODE_ENV=production && webpack --mode=production --progress --config webpack.config.build.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npx webpack-cli serve --mode=production"
