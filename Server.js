@@ -5,6 +5,7 @@ const path = require('path')
 const app = express()
 
 const SERVER_PORT = process.env.SERVER_PORT || '8080';
+// const SERVER_PORT = process.env.YOUR_PORT || process.env.SERVER_PORT || '8080';
 
 exports.start = () => {
     app.set('port', SERVER_PORT)
@@ -13,6 +14,7 @@ exports.start = () => {
     )
 
     app.use('/', express.static(path.join(__dirname, 'dist')))
+    app.use('/images', express.static(path.join(__dirname, 'src/images')))
 
     app.use(cors())
 }
