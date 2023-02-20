@@ -7,18 +7,14 @@
   },
   "description": "RoxRite100 Phase Three Release Candidate",
   "repository": "https://github.com/quantumtom/phasetwo",
-  "main": "index.js",
   "author": "Tom Cornyn",
   "email": "cornyn@gmail.com",
-  "license": "private",
+  "license": "UNLICENSED",
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --mode=development --hot --open --progress --config webpack.config.dev.js",
-    "dev-build": "export NODE_ENV=development && webpack --mode=development --progress --config webpack.config.build.js",
     "build": "webpack --config webpack.config.build.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm run serve-prod",
-    "serve-local": "webpack serve --mode=development --open",
-    "serve-prod": "webpack serve"
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
     "clean-webpack-plugin": "^4.0.0",
@@ -38,6 +34,10 @@
   },
   "dependencies": {
     "blazy": "^1.8.2",
-    "@webpack-cli/serve": "^2.0.1"
+    "cors": "^2.8.5",
+    "dotenv": "^14.3.2",
+    "express": "^4.17.2",
+    "ejs": "^3.1.8",
+    "grant": "^5.4.19"
   }
 }

@@ -1,3 +1,5 @@
+import './styles/fonts/Druk-Wide-Bold.otf';
+import './styles/fonts/Graphik-Regular.otf';
 import jsonFile from './wins.json';
 import Blazy from 'blazy';
 // import ColorThief from 'color-thief';
@@ -20,8 +22,6 @@ import Blazy from 'blazy';
         touchstartY = 0,
         touchendX = 0,
         touchendY = 0;
-
-    // let hashTrue = false;
 
     let elms = {
         body: document.getElementsByTagName("body")[0],

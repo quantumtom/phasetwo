@@ -1,11 +1,11 @@
 const path = require('path');
-const HTMLWebpackPlugin = require('html-webpack-plugin');
-const appHtmlTitle = 'Roxrite Webpack Compilation';
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const appHtmlTitle = 'Output Management';
 
 module.exports = {
     entry: {
-        index: './public/index.js',
-        main: './public/main.js'
+        index: './src/index.js',
+        main: './src/main.js'
     },
     module: {
         rules: [
@@ -33,16 +33,20 @@ module.exports = {
                 use: [{
                     loader: 'html-loader',
                     options: {
-                        minimize: true
+                        minimize: false
                     }
                 }],
             }
         ]
     },
     plugins: [
-        new HTMLWebpackPlugin({
-            template: path.join(__dirname, './public/index.ejs'),
+        new HtmlWebpackPlugin({
+            template: path.join(__dirname, './src/index.ejs'),
             title: appHtmlTitle
         })
-    ]
+    ],
+    output: {
+        filename: '[name].bundle.js',
+        path: path.resolve(__dirname, 'dist')
+    }
 };
